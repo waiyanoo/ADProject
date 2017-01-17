@@ -52,7 +52,19 @@
                         <a href="ViewItemCatalogue.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Item Catalogue</a>
                     </li>
                     <li>
-                        <a href="UpdateRequisition.aspx"><i class="fa fa-fw fa-table"></i> Update Requsition</a>
+                        <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-table"></i>View Low Level Stock</a>
+                    </li>
+                    <li>
+                        <a href="PurchaseOrder.aspx"><i class="fa fa-fw fa-table"></i>Purchase Order</a>
+                    </li>
+                    <li>
+                        <a href="DeliverOrder.aspx"><i class="fa fa-fw fa-table"></i>Deliver Order</a>
+                    </li>
+                    <li>
+                        <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-table"></i>View Low Level Stock</a>
+                    </li>
+                    <li>
+                        <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-table"></i>View Low Level Stock</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-fw fa-edit"></i> Log Out</a>
