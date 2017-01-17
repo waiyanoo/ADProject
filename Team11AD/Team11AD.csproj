@@ -99,6 +99,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DUser.Master" />
+    <Content Include="RequisitionDetails.aspx" />
+    <Content Include="SClerk.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,6 +120,8 @@
     <Content Include="test.aspx" />
     <Content Include="RequestRequisition.aspx" />
     <Content Include="UpdateRequisition.aspx" />
+    <Content Include="ViewDisbursementList.aspx" />
+    <Content Include="ViewItemCatalogue.aspx" />
     <Content Include="ViewRequisition.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -130,6 +134,20 @@
       <DependentUpon>DUser.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequisitionDetails.aspx.cs">
+      <DependentUpon>RequisitionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequisitionDetails.aspx.designer.cs">
+      <DependentUpon>RequisitionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SClerk.Master.cs">
+      <DependentUpon>SClerk.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SClerk.Master.designer.cs">
+      <DependentUpon>SClerk.Master</DependentUpon>
+    </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +168,20 @@
     </Compile>
     <Compile Include="UpdateRequisition.aspx.designer.cs">
       <DependentUpon>UpdateRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDisbursementList.aspx.cs">
+      <DependentUpon>ViewDisbursementList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDisbursementList.aspx.designer.cs">
+      <DependentUpon>ViewDisbursementList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewItemCatalogue.aspx.cs">
+      <DependentUpon>ViewItemCatalogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewItemCatalogue.aspx.designer.cs">
+      <DependentUpon>ViewItemCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewRequisition.aspx.cs">
       <DependentUpon>ViewRequisition.aspx</DependentUpon>

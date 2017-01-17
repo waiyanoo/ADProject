@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DUser.Master.cs" Inherits="Team11AD.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SClerk.master.cs" Inherits="Team11AD.SClerk" %>
 
 <!DOCTYPE html>
 
@@ -46,10 +46,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="RequestRequisition.aspx"><i class="fa fa-fw fa-dashboard"></i> Request Requisition</a>
+                        <a href="ViewDisbursementList.aspx"><i class="fa fa-fw fa-dashboard"></i> View Disbursement</a>
                     </li>
                     <li>
-                        <a href="ViewRequisition.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Requisition</a>
+                        <a href="ViewItemCatalogue.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Item Catalogue</a>
                     </li>
                     <li>
                         <a href="UpdateRequisition.aspx"><i class="fa fa-fw fa-table"></i> Update Requsition</a>
