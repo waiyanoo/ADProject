@@ -6,10 +6,9 @@
     Deliver Order
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-<div class="panel-body">
-	    <div class="row">
-            
-        <div class="col-lg-4">
+    <div class="panel-body">
+	    <div class="row"> 
+            <div class="col-lg-4">
                 <div class="form-group">
                     <label>PO Number :</label>
                     <asp:DropDownList ID="ddponumber" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -23,7 +22,7 @@
                     <asp:TextBox ID="txtdeliverydate" runat="server" CssClass="form-control">Date Need to find out</asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Deliver Date :</label>
+                    <label>Remark :</label>
                     <asp:TextBox ID="txtremark" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 

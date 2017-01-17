@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add Department.aspx" />
+    <Content Include="AddSupplier.aspx" />
     <Content Include="DeliverOrder.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -121,14 +123,32 @@
     <Content Include="style\js\jquery.js" />
     <Content Include="test.aspx" />
     <Content Include="RequestRequisition.aspx" />
+    <Content Include="UpdateDepartment.aspx" />
     <Content Include="UpdateRequisition.aspx" />
+    <Content Include="UpdateSupplier.aspx" />
+    <Content Include="ViewDepartment.aspx" />
     <Content Include="ViewDisbursementList.aspx" />
     <Content Include="ViewItemCatalogue.aspx" />
     <Content Include="ViewLowLevelStock.aspx" />
     <Content Include="ViewRequisition.aspx" />
+    <Content Include="ViewSupplier.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Department.aspx.cs">
+      <DependentUpon>Add Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add Department.aspx.designer.cs">
+      <DependentUpon>Add Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupplier.aspx.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSupplier.aspx.designer.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DeliverOrder.aspx.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,12 +199,33 @@
     <Compile Include="RequestRequisition.aspx.designer.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UpdateDepartment.aspx.cs">
+      <DependentUpon>UpdateDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateDepartment.aspx.designer.cs">
+      <DependentUpon>UpdateDepartment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateRequisition.aspx.cs">
       <DependentUpon>UpdateRequisition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UpdateRequisition.aspx.designer.cs">
       <DependentUpon>UpdateRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSupplier.aspx.cs">
+      <DependentUpon>UpdateSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSupplier.aspx.designer.cs">
+      <DependentUpon>UpdateSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDepartment.aspx.cs">
+      <DependentUpon>ViewDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDepartment.aspx.designer.cs">
+      <DependentUpon>ViewDepartment.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewDisbursementList.aspx.cs">
       <DependentUpon>ViewDisbursementList.aspx</DependentUpon>
@@ -214,9 +255,30 @@
     <Compile Include="ViewRequisition.aspx.designer.cs">
       <DependentUpon>ViewRequisition.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewSupplier.aspx.cs">
+      <DependentUpon>ViewSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSupplier.aspx.designer.cs">
+      <DependentUpon>ViewSupplier.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{4ea0aca8-df51-40dc-8d9e-5142305f649e}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
+      <Project>{ed009595-f4d1-4dcc-8b52-c34b15905cd9}</Project>
+      <Name>BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1846dc11-1762-4d68-bbcd-aa1abd26d9d0}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
