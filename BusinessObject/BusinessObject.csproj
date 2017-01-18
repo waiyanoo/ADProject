@@ -43,7 +43,7 @@
     <Compile Include="AdjustmentBO.cs" />
     <Compile Include="CategoryBO.cs" />
     <Compile Include="DepartmentBO.cs" />
-    <Compile Include="ItemAdjustment.cs" />
+    <Compile Include="ItemAdjustmentBO.cs" />
     <Compile Include="ItemBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseItemBO.cs" />

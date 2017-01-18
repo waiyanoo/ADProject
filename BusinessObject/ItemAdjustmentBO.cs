@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    public class ItemAdjustment
+    public class ItemAdjustmentBO
     {
         private AdjustmentBO voucherNo;
         private ItemBO itemID;
@@ -65,7 +65,7 @@ namespace BusinessObject
             }
         }
 
-        public ItemAdjustment(AdjustmentBO voucherNo, ItemBO itemID, int adjustQty, string reason)
+        public ItemAdjustmentBO(AdjustmentBO voucherNo, ItemBO itemID, int adjustQty, string reason)
         {
             this.VoucherNo = voucherNo;
             this.ItemID = itemID;
