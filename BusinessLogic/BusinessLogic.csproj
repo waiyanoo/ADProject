@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4EA0ACA8-DF51-40DC-8D9E-5142305F649E}</ProjectGuid>
+    <ProjectGuid>{59C03AF8-BBDA-434B-89CC-5F46813B9CBE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BusinessLogic</RootNamespace>
@@ -41,10 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupplierBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{1846dc11-1762-4d68-bbcd-aa1abd26d9d0}</Project>
+      <Project>{6e4596d6-5b97-41ec-99bf-b0d2a6837b1f}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>

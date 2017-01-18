@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
+
 namespace Team11AD
 {
     public partial class test : System.Web.UI.Page
@@ -14,7 +16,7 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                GridView1.DataSource = GetItem();
+                //GridView1.DataSource = GetItem();
           
                 GridView1.DataBind();
             }
@@ -24,7 +26,7 @@ namespace Team11AD
         
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
        // List<Item> GetItem()

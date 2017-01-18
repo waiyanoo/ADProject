@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    class SupplierBO
+    public class SupplierBO
     {
         private string supplierID;
         private string supplierName;
@@ -116,6 +116,10 @@ namespace BusinessObject
             this.Fax = fax;
             this.Address = address;
             GSTNo1 = gSTNo;
+        }
+        public SupplierBO()
+        {
+
         }
     }
 }

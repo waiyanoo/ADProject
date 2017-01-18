@@ -276,15 +276,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
-      <Project>{4ea0aca8-df51-40dc-8d9e-5142305f649e}</Project>
+      <Project>{59c03af8-bbda-434b-89cc-5f46813b9cbe}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
-      <Project>{ed009595-f4d1-4dcc-8b52-c34b15905cd9}</Project>
+      <Project>{c44540f4-daf3-4cf7-b700-bb0b8b19895b}</Project>
       <Name>BusinessObject</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{1846dc11-1762-4d68-bbcd-aa1abd26d9d0}</Project>
+      <Project>{6e4596d6-5b97-41ec-99bf-b0d2a6837b1f}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>

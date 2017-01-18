@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessObject;
-using DataAccess;
+
+
 
 
 
@@ -20,7 +21,13 @@ namespace Team11AD
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-           // BusinessObject.SupplierBO supplier = new BusinessObject.SupplierBO();
+            SupplierBO supplier = new SupplierBO();
+            supplier.SupplierName = txtname.Text.Trim();
+            supplier.ContactName = txtcontactname.Text.Trim();
+            supplier.Phone = txtphone.Text.Trim();
+            supplier.Fax = txtfax.Text.Trim();
+            supplier.Address = txtaddress.Text.Trim();
+            supplier.GSTNo1 = txtgst.Text.Trim();
             
 
         }
