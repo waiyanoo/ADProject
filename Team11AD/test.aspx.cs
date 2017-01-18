@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataAccess;
 
 namespace Team11AD
 {
@@ -12,11 +13,12 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<string> li = new List<string>();
-            li.Add("rrr");
-            li.Add("ddd");
-            GridView1.DataSource = li;
-            GridView1.DataBind();
+            if (!IsPostBack)
+            {
+                GridView1.DataSource = GetItem();
+          
+                GridView1.DataBind();
+            }
 
         }
 
@@ -25,5 +27,13 @@ namespace Team11AD
         {
 
         }
+
+        List<Item> GetItem()
+        {
+            LogicUniversityEntities model = new LogicUniversityEntities();
+            return model.Items.ToList<Item>();
+        }
+
+        
     }
 }
