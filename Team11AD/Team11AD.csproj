@@ -135,7 +135,6 @@
     <Content Include="UpdateSupplier.aspx" />
     <Content Include="ViewDepartment.aspx" />
     <Content Include="ViewDisbursementList.aspx" />
-    <Content Include="ViewItemCatalogue.aspx" />
     <Content Include="ViewLowLevelStock.aspx" />
     <Content Include="ViewRequisition.aspx" />
     <Content Include="ViewSupplier.aspx" />
@@ -254,13 +253,6 @@
     </Compile>
     <Compile Include="ViewDisbursementList.aspx.designer.cs">
       <DependentUpon>ViewDisbursementList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewItemCatalogue.aspx.cs">
-      <DependentUpon>ViewItemCatalogue.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewItemCatalogue.aspx.designer.cs">
-      <DependentUpon>ViewItemCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewLowLevelStock.aspx.cs">
       <DependentUpon>ViewLowLevelStock.aspx</DependentUpon>
