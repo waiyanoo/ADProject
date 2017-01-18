@@ -15,14 +15,10 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                gvitemcatalog.DataSource = GetItem();
-                gvitemcatalog.DataBind();
+               
             }
         }
 
-        public List<Item> GetItem()
-        {
-            return context.Items.ToList<Item>();
-        }
+      
     }
 }
