@@ -11,22 +11,6 @@
             
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label>Requisition Number :</label>
-                    <asp:TextBox ID="txtrequisitionnumber" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Department Name :</label>
-                    <asp:TextBox ID="txtdepartmentname" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Employee Name :</label>
-                    <asp:TextBox ID="txtemployeename" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-4">
-                <div class="form-group">
                     <label>Item Category :</label>
                     <asp:DropDownList ID="dditemcategory" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
@@ -41,28 +25,15 @@
                 <div class="form-group" style="text-align:right">
                     <asp:Button ID="btnadd" runat="server" Text="Add" CssClass="btn btn-primary"/>
                 </div>
+                
             </div>
+            <div class="col-lg-9"></div>
+            
         </div>
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <table style="width: 100%;" class="table table-bordered">
-                            <tr>
-                                <td>Need </td>
-                                <td>to</td>
-                                <td>Replace</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
+                    <asp:GridView ID="gvitemlist" runat="server"></asp:GridView>
                 </div>
                 <div class="form-group" style="text-align:right">
                      <asp:Button ID="btnsend" runat="server" Text="Send Request" CssClass="btn btn-primary"/>

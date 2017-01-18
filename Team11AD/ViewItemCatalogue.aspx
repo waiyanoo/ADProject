@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <asp:Button ID="btnsearch" runat="server" Text="Search" CssClass="btn btn-primary" />
+                <asp:Button ID="btnsearch" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="btnsearch_Click" />
             </div>
         </div>
         <div class="row">
