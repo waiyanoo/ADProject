@@ -26,5 +26,15 @@ namespace DataAccess
             context.SaveChanges();
             
         }
+
+        public void deleteSupplier(String id)
+        {
+            var supplier = context.Suppliers.FirstOrDefault(s => s.SupplierID == id);
+            if (supplier!= null)
+            {
+                context.Suppliers.Remove(supplier);
+                context.SaveChanges();
+            }
+        }
     }
 }
