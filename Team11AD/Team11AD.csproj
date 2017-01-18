@@ -272,6 +272,9 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{4ea0aca8-df51-40dc-8d9e-5142305f649e}</Project>
       <Name>BusinessLogic</Name>

@@ -40,14 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
-      <Project>{ed009595-f4d1-4dcc-8b52-c34b15905cd9}</Project>
-      <Name>BusinessObject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{1846dc11-1762-4d68-bbcd-aa1abd26d9d0}</Project>
       <Name>DataAccess</Name>

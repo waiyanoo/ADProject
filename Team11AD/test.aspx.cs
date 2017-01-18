@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataAccess;
 
 namespace Team11AD
 {
@@ -28,11 +27,11 @@ namespace Team11AD
 
         }
 
-        List<Item> GetItem()
-        {
-            LogicUniversityEntities model = new LogicUniversityEntities();
-            return model.Items.ToList<Item>();
-        }
+       // List<Item> GetItem()
+       // {
+       //     LogicUniversityEntities model = new LogicUniversityEntities();
+      //      return model.Items.ToList<Item>();
+       // }
 
         
     }

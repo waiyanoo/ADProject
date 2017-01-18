@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BusinessObject;
+using DataAccess;
+
+
 
 namespace Team11AD
 {
@@ -11,6 +15,13 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+           // BusinessObject.SupplierBO supplier = new BusinessObject.SupplierBO();
+            
 
         }
     }

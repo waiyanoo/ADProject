@@ -36,7 +36,7 @@
                     <asp:TextBox ID="txtgst" runat="server" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
                 </div>
                 <div class="form-group" style="text-align:right">
-                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary"/>
+                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click"/>
                 </div>
             </div>
             <div class="col-lg-6">  
