@@ -12,6 +12,10 @@
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
+                    <label>Supplier Code :</label>
+                    <asp:TextBox ID="txtcode" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label>Name :</label>
                     <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>

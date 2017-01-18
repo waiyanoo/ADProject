@@ -109,6 +109,7 @@ namespace BusinessObject
 
         public SupplierBO(string supplierID, string supplierName, string contactName, string phone, string fax, string address, string gSTNo)
         {
+            
             this.SupplierID = supplierID;
             this.SupplierName = supplierName;
             this.ContactName = contactName;

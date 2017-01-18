@@ -13,6 +13,15 @@ namespace Team11AD {
     public partial class AddSupplier {
         
         /// <summary>
+        /// txtcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcode;
+        
+        /// <summary>
         /// txtname control.
         /// </summary>
         /// <remarks>

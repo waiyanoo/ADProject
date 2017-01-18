@@ -44,6 +44,10 @@
     <Compile Include="SupplierBL.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
+      <Project>{c44540f4-daf3-4cf7-b700-bb0b8b19895b}</Project>
+      <Name>BusinessObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{6e4596d6-5b97-41ec-99bf-b0d2a6837b1f}</Project>
       <Name>DataAccess</Name>

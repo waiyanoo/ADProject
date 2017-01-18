@@ -20,30 +20,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    <table style="width: 100%;" class="table table-bordered">
-                            <tr>
-                                <td>Need </td>
-                                <td>to</td>
-                                <td>Replace</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
+                    <asp:GridView ID="gvitemcatalog" runat="server" RowStyle-Wrap="false" CssClass="table table-responsive"></asp:GridView>
                 </div>
                 
             </div>
-            <div class="col-lg-3">
-            </div>
+            
         </div>
     </div>
 </asp:Content>
