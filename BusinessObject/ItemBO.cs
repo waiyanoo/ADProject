@@ -147,5 +147,10 @@ namespace BusinessObject
             this.Bin = bin;
             this.CategoryName = categoryName;
         }
+
+        public ItemBO()
+        {
+
+        }
     }
 }
