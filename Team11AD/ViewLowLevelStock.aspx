@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewLowLevelStock.aspx.cs" Inherits="Team11AD.ViewLowLevelStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    stationary
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     View Low Level Stock

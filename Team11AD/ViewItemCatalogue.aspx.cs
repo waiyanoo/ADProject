@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccess;
+using BusinessLogic;
 
 namespace Team11AD
 {
@@ -15,10 +16,22 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-               
+                ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
+                List<Item> itemlist = vic.FindAllItem();
+
+                gvitemcatalog.DataSource = itemlist;
+                gvitemcatalog.DataBind();
             }
         }
 
-      
+        protected void btnsearch_Click(object sender, EventArgs e)
+        {
+            string itemdesc = txtsearch.Text.Trim();
+            ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
+            List<Item> itemlist = vic.FindItem(itemdesc);
+
+            gvitemcatalog.DataSource = itemlist;
+            gvitemcatalog.DataBind();
+        }
     }
 }
