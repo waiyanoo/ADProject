@@ -108,6 +108,7 @@
     </Content>
     <Content Include="DUser.Master" />
     <Content Include="PurchaseOrder.aspx" />
+    <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
     <Content Include="SClerk.Master" />
     <None Include="Web.Debug.config">
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="PurchaseOrder.aspx.designer.cs">
       <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestAdjustment.aspx.cs">
+      <DependentUpon>RequestAdjustment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestAdjustment.aspx.designer.cs">
+      <DependentUpon>RequestAdjustment.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequisitionDetails.aspx.cs">
       <DependentUpon>RequisitionDetails.aspx</DependentUpon>
