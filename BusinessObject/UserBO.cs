@@ -1,0 +1,151 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BusinessObject
+{
+   public class UserBO
+    {
+        private string userID;
+        private string password;
+        private string name;
+        private string email;
+        private string phone;
+        private string whatsapp;
+        private string image;
+        private DepartmentBO departmentID;
+        private RoleBO roleName;
+
+        public string UserID
+        {
+            get
+            {
+                return userID;
+            }
+
+            set
+            {
+                userID = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+
+            set
+            {
+                password = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+
+        public string Phone
+        {
+            get
+            {
+                return phone;
+            }
+
+            set
+            {
+                phone = value;
+            }
+        }
+
+        public string Whatsapp
+        {
+            get
+            {
+                return whatsapp;
+            }
+
+            set
+            {
+                whatsapp = value;
+            }
+        }
+
+        public string Image
+        {
+            get
+            {
+                return image;
+            }
+
+            set
+            {
+                image = value;
+            }
+        }
+
+        internal DepartmentBO DepartmentID
+        {
+            get
+            {
+                return departmentID;
+            }
+
+            set
+            {
+                departmentID = value;
+            }
+        }
+
+        internal RoleBO RoleName
+        {
+            get
+            {
+                return roleName;
+            }
+
+            set
+            {
+                roleName = value;
+            }
+        }
+
+        public UserBO(string userID, string password, string name, string email, string phone, string whatsapp, string image, DepartmentBO departmentID, RoleBO roleName)
+        {
+            this.UserID = userID;
+            this.Password = password;
+            this.Name = name;
+            this.Email = email;
+            this.Phone = phone;
+            this.Whatsapp = whatsapp;
+            this.Image = image;
+            this.DepartmentID = departmentID;
+            this.RoleName = roleName;
+        }
+    }
+}

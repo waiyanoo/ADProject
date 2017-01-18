@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    class SupplierBO
+    public class SupplierBO
     {
         private string supplierID;
         private string supplierName;
