@@ -42,6 +42,7 @@
   <ItemGroup>
     <Codmpile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DepartmentBL.cs" />
+    <Compile Include="RequestAdjustmentBL.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />

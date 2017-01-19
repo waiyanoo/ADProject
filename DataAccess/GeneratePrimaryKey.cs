@@ -12,10 +12,8 @@ namespace DataAccess
         public string getKeyforAdjustment()
         {
             string id = context.Adjustments.Max(i=> i.VoucherNo);
-            string first = id.Substring(0, 1);
-            int num =Convert.ToInt32( id.Substring(1, id.Length-1))+1;
-            string key = first + num;
-            return key;
+            int key =Convert.ToInt32(id)+1;
+            return key.ToString();
         }
 
         public string getKeyforRequisition()
