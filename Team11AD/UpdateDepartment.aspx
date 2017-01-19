@@ -11,25 +11,41 @@
             <div class="col-lg-1">
             </div>
             <div class="col-lg-5">
+                 <div class="form-group">
+                    <label>Department ID :</label>
+                    <asp:TextBox ID="txtdid" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
                 <div class="form-group">
                     <label>Department Name :</label>
                     <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <label>Head's Name :</label>
-                    <asp:TextBox ID="txtcontactname" runat="server" CssClass="form-control"></asp:TextBox>
+                 <div class="form-group">
+                    <label>Contact Name :</label>
+                    <asp:TextBox ID="tctcname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <label>Collection Point :</label>
+                 <div class="form-group">
+                    <label>Phone :</label>
                     <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <label>Collection Time :</label>
+                 <div class="form-group">
+                    <label>Fax :</label>
                     <asp:TextBox ID="txtfax" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
+                    <label>Head's Name :</label>
+                    <asp:TextBox ID="txthname" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label>Collection Point :</label>
+                    <asp:TextBox ID="txtcpoint" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label>Collection Time :</label>
+                    <asp:TextBox ID="txtctime" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label>Representative :</label>
-                    <asp:TextBox ID="txtaddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="txtrep" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="form-group" style="text-align:right">
                      <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary"/>

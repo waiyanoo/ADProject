@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
 
+
 namespace DataAccess
 {
     public class DepartmentDA
@@ -27,11 +28,30 @@ namespace DataAccess
             context.Departments.Add(department);
             context.SaveChanges();
 
-
+           
            
         }
 
+        public List<Department> getAllDepartment()
+        {
+            return context.Departments.ToList<Department>();
+        }
 
+        public void deleteDepartment(String id)
+
+        {
+            
+            var department = context.Departments.FirstOrDefault(d => d.DepartmentID == id);
+            if (department != null)
+            {
+                context.Departments.Remove(department);
+                context.SaveChanges();
+                
+            }
+
+        }
+
+        
 
     }
 }

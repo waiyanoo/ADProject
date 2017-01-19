@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessObject;
 using DataAccess;
+using BusinessObject;
 
 namespace BusinessLogic
 {
@@ -14,6 +14,19 @@ namespace BusinessLogic
         {
             DepartmentDA dda = new DepartmentDA();
             dda.AddDepartment(dbo);
+        }
+
+        public List<Department> GetAllDepartment()
+        {
+
+            DepartmentDA dda = new DepartmentDA();
+            return dda.getAllDepartment();
+        }
+
+        public void DeleteDepartment(String id)
+        {
+            DepartmentDA dda = new DepartmentDA();
+            dda.deleteDepartment(id);
         }
     }
 }

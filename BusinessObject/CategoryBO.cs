@@ -15,6 +15,11 @@ namespace BusinessObject
             this.CategoryName = categoryName;
         }
 
+        public CategoryBO()
+        {
+
+        }
+
         public string CategoryName
         {
             get
