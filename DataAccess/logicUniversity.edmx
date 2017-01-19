@@ -75,8 +75,8 @@
           <Property Name="PONo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PODate" Type="date" />
           <Property Name="SupplierID" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="DeliverTo" Type="varchar" MaxLength="50" />
-          <Property Name="Attn" Type="varchar" MaxLength="50" />
+          <Property Name="DeliveryDate" Type="date" />
+          <Property Name="DONo" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Requisition">
           <Key>
@@ -125,16 +125,6 @@
           <Property Name="SupplierID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ItemID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="float" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -247,7 +237,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RequisitionItem_Requisition">
-          <End Role="Requisition" Type="Self.Requisition" Multiplicity="1" />
+          <End Role="Requisition" Type="Self.Requisition" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="RequisitionItem" Type="Self.RequisitionItem" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Requisition">
@@ -319,7 +311,6 @@
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SupplierItem" EntityType="Self.SupplierItem" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Item_CategoryName" Association="Self.FK_Item_CategoryName">
             <End Role="Category" EntitySet="Category" />
@@ -460,10 +451,10 @@
           <Property Name="PONo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PODate" Type="DateTime" Precision="0" />
           <Property Name="SupplierID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DeliverTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Attn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PurchaseItems" Relationship="Self.FK_PurchaseItem_PurchaseOrder" FromRole="PurchaseOrder" ToRole="PurchaseItem" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_PurchaseOrder_Supplier" FromRole="PurchaseOrder" ToRole="Supplier" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="0" />
+          <Property Name="DONo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Requisition">
           <Key>
@@ -521,16 +512,6 @@
           <Property Name="Price" Type="Double" />
           <NavigationProperty Name="Item" Relationship="Self.FK_SupplierItem_Item" FromRole="SupplierItem" ToRole="Item" />
           <NavigationProperty Name="Supplier" Relationship="Self.FK_SupplierItem_Supplier" FromRole="SupplierItem" ToRole="Supplier" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -718,7 +699,6 @@
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
           <EntitySet Name="SupplierItems" EntityType="Self.SupplierItem" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK_ItemAdjustment_Adjustment" Association="Self.FK_ItemAdjustment_Adjustment">
             <End Role="Adjustment" EntitySet="Adjustments" />
@@ -849,12 +829,12 @@
           <EntitySetMapping Name="PurchaseOrders">
             <EntityTypeMapping TypeName="LogicUniversityModel.PurchaseOrder">
               <MappingFragment StoreEntitySet="PurchaseOrder">
+                <ScalarProperty Name="DONo" ColumnName="DONo" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
                 <ScalarProperty Name="PONo" ColumnName="PONo" />
                 <ScalarProperty Name="PODate" ColumnName="PODate" />
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
-                <ScalarProperty Name="DeliverTo" ColumnName="DeliverTo" />
-                <ScalarProperty Name="Attn" ColumnName="Attn" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Requisitions">
@@ -905,17 +885,6 @@
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="ItemID" ColumnName="ItemID" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="LogicUniversityModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
