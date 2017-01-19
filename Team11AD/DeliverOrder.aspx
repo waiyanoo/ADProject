@@ -14,12 +14,11 @@
                     <asp:DropDownList ID="ddponumber" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddponumber_SelectedIndexChanged"></asp:DropDownList>
                 </div>
                 <div class="form-group">
-                    <label>DO Number :</label>
+                    <label>DO Number :</label><asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                    ControlToValidate="txtdonumber"
+     ErrorMessage="Delivery Code is a required field."
+   ForeColor="Red"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtdonumber" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Deliver Date :</label>
-                    <asp:TextBox ID="txtdeliverydate" runat="server" CssClass="form-control">Date Need to find out</asp:TextBox>
                 </div>
             </div>
             <div class="col-lg-1"></div>

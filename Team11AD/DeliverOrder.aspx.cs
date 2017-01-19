@@ -20,7 +20,6 @@ namespace Team11AD
                 ddponumber.DataValueField = "PONo";
                 ddponumber.DataBind();
             }
-                
         }
 
         protected void ddponumber_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,9 +38,10 @@ namespace Team11AD
 
             string ponumber = ddponumber.SelectedValue;
             string deliverno = txtdonumber.Text.Trim();
-            string deliverydate = txtdeliverydate.Text.Trim();
-
+            DateTime deliverydate = DateTime.Now;
             dobl.SaveDeliverOrder(ponumber, deliverno, deliverydate);
+                
+            
         }
     }
 }
