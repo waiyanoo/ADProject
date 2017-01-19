@@ -27,6 +27,7 @@ namespace Team11AD
         {
             
             String id = gvdepartment.Rows[e.NewEditIndex].Cells[0].Text;
+            gvdepartment.EditIndex = e.NewEditIndex;
             Response.Redirect("UpdateDepartment.aspx?id=" + id);
 
         }
@@ -45,9 +46,14 @@ namespace Team11AD
 
         protected void gvdepartment_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-           
+
+            
+            String departmentId = (String)gvdepartment.DataKeys[e.RowIndex].Value;
+            TextBox txtdid = (TextBox)gvdepartment.Rows[e.RowIndex].FindControl("txtdid");
+
+
         }
-        
+
 
         protected void gvdepartment_SelectedIndexChanged(object sender, EventArgs e)
         {

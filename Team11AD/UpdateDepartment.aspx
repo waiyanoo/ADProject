@@ -21,7 +21,7 @@
                 </div>
                  <div class="form-group">
                     <label>Contact Name :</label>
-                    <asp:TextBox ID="tctcname" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtcname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                  <div class="form-group">
                     <label>Phone :</label>

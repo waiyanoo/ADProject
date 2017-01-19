@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BusinessObject;
 
 
+
 namespace DataAccess
 {
     public class DepartmentDA
@@ -15,6 +16,7 @@ namespace DataAccess
         public void AddDepartment(DepartmentBO dbo)
         {
             Department department = new Department();
+
             department.DepartmentID = dbo.DepartmentID; 
             department.DepartmentName = dbo.DepartmentName;
             department.ContactName = dbo.ContactName;
@@ -51,7 +53,24 @@ namespace DataAccess
 
         }
 
-        
+        public DepartmentBO getDepartment(String id)
+        {
+            Department department = new Department();
+            department = context.Departments.First(i => i.DepartmentID == id);
 
+            DepartmentBO dbo = new DepartmentBO();
+            dbo.DepartmentID = department.DepartmentID;
+            dbo.DepartmentName = department.DepartmentName;
+            dbo.ContactName = department.ContactName;
+             dbo.Fax = Convert.ToString(department.Fax);
+             dbo.Phone = Convert.ToString(department.Phone);
+             dbo.HeadName = department.HeadName;
+             dbo.CollectionPoint = department.CollectionPoint;
+             dbo.CollectionTime = department.CollectionTime;
+             dbo.Representative = department.Representative;
+             return dbo;
+            
+        }
+    
     }
 }
