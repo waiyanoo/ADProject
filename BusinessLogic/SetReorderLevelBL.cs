@@ -19,11 +19,25 @@ namespace BusinessLogic
             return cList;
         }
 
-        //public List<ItemBO> getItemList(CategoryBO cBO)
-        //{
-            //List<ItemBO> iList;
-            //iList = srlda.
-            //return iList;
-        //}
+        public List<ItemBO> getItemList(CategoryBO cBO)
+        {
+            List<ItemBO> iList;
+            iList = srlda.getItemList(cBO);
+            return iList;
+        }
+
+        public ItemBO getItemInfo(String itemID)
+        {
+            ItemBO iBO = new ItemBO();
+            iBO = srlda.getItemInfo(itemID);
+            return iBO;
+        }
+
+        public Boolean setItemInfo(String itemID, int reorderLevel, int reorderQty)
+        {
+            Boolean writeResult = false;
+            writeResult = srlda.setItemInfo(itemID, reorderLevel, reorderQty);
+            return writeResult;
+        }
     }
 }

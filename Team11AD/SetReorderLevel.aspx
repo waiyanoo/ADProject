@@ -11,15 +11,15 @@
             <div class="col-lg-4">
                 <div class="form-group">
                     <label>Category :</label>
-                    <asp:DropDownList ID="ddcategory" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddcategory_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddcategory" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddcategory_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label>Item Description :</label>
-                    <asp:DropDownList ID="dditem" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="dditem" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="dditem_SelectedIndexChanged"></asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label>Unit of Measurment :</label>
-                    <asp:TextBox ID="txtunit" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtunit" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label>Reorder Level :</label>
@@ -30,7 +30,7 @@
                     <asp:TextBox ID="txtreorderqty" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <asp:Button ID="btnset" runat="server" Text="Set" CssClass="btn btn-primary" />
+                    <asp:Button ID="btnset" runat="server" Text="Set" CssClass="btn btn-primary" OnClick="btnset_Click" />
                 </div>
 
             </div>

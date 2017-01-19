@@ -11,7 +11,7 @@ namespace DataAccess
     {
         LogicUniversityEntities context = new LogicUniversityEntities();
 
-        //retrieve list of category
+        //retrieve list of all categories
         public List<CategoryBO> getCategoryList()
         {
             List<CategoryBO> cList = new List<CategoryBO>();
@@ -26,25 +26,69 @@ namespace DataAccess
             return cList;
         }
 
-        //retrieve list of item
+        //retrieve list of items belonging to that category 
         public List<ItemBO> getItemList(CategoryBO cBO)
         {
             List<ItemBO> iList = new List<ItemBO>();
+            iList.Add(new ItemBO());
             List<Item> lst = context.Items.Where(x => x.Category.CategoryName == cBO.CategoryName).ToList();
-            foreach(Item i in lst)
+            foreach(Item item in lst)
             {
-                ItemBO iBO = new ItemBO();
-                iBO.ItemID = i.ItemID;
-                iBO.Description = i.Description;
-                iBO.ReorderLevel = (i.ReorderLevel == null) ? 0 : (int)i.ReorderLevel;
-                iBO.ReorderQty = (i.ReorderQty == null) ? 0 : (int)i.ReorderQty;
-                iBO.UnitOfMeasure = i.UnitOfMeasure;
-                iBO.CurrentQty = (i.CurrentQty == null) ? 0 : (int)i.CurrentQty;
-                iBO.Price = (i.Price == null) ? 0 : (int)i.Price;
-                iBO.Bin = i.Bin;
-                //iBO.CategoryBO = i.Category;
+                //instantiate ItemBO object using values in entity Item object
+                String itemID = item.ItemID;
+                String description = item.Description;
+                int reorderLevel = (item.ReorderLevel == null) ? 0 : (int)item.ReorderLevel; //database column can be null
+                int reorderQty = (item.ReorderQty == null) ? 0 : (int)item.ReorderQty;
+                String unitOfMeasure = item.UnitOfMeasure;
+                int currentQty = (item.CurrentQty == null) ? 0 : (int)item.CurrentQty;
+                float price = (item.Price == null) ? 0 : (int)item.Price;
+                string bin = item.Bin;
+                CategoryBO categoryName = new CategoryBO(cBO.CategoryName);
+                ItemBO iBO = new ItemBO(itemID, description, reorderLevel, reorderQty, unitOfMeasure, currentQty, price, bin, categoryName);
+
+                iList.Add(iBO);
             }
             return iList;
         }
+
+        //retrieve Item entity object with key 'itemID', instantiate ItemBO, transfer values from Item to ItemBO, return ItemBO
+        public ItemBO getItemInfo(String itemID)
+        {
+            Item item = context.Items.Where(x => x.ItemID == itemID).FirstOrDefault();
+            ItemBO iBO = new ItemBO();
+            try
+            {
+                //if itemID != null, can retrieve item entity object
+                iBO.ItemID = item.ItemID;
+                iBO.Description = item.Description;
+                iBO.ReorderLevel = (item.ReorderLevel == null) ? 0 : (int)item.ReorderLevel;
+                iBO.ReorderQty = (item.ReorderQty == null) ? 0 : (int)item.ReorderQty;
+                iBO.UnitOfMeasure = item.UnitOfMeasure;
+                iBO.CurrentQty = (item.CurrentQty == null) ? 0 : (int)item.CurrentQty;
+                iBO.Price = (item.Price == null) ? 0 : (int)item.Price;
+                iBO.Bin = item.Bin;
+                iBO.CategoryName = new CategoryBO(item.CategoryName);
+            }catch(Exception)
+            {
+                //itemID is null(1st item in iList for dropdownList is blank), item = null, so just return iBO with values unset
+                return iBO;
+            }
+            return iBO;
+        }
+
+        public Boolean setItemInfo(String itemID, int reorderLevel, int reorderQty)
+        {
+            Item item = context.Items.Where(x => x.ItemID == itemID).FirstOrDefault();
+            if(item != null)
+            {
+                item.ReorderLevel = reorderLevel;
+                item.ReorderQty = reorderQty;
+
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
     }
 }
