@@ -94,13 +94,13 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtphone;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// RegularExpressionValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// txtfax control.

@@ -53,11 +53,10 @@
                  <div class="form-group">
                     <label>Phone :</label>
                     <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
-                      <asp:RequiredFieldValidator id="RequiredFieldValidator5" runat="server"
-                    ControlToValidate="txtphone"
-     ErrorMessage="Phone Number is a required field."
-   ForeColor="Red">
-                </asp:RequiredFieldValidator>
+                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+ErrorMessage="RegularExpressionValidator" ControlToValidate="txtphone"
+ValidationExpression="[1-9]{7}" 
+ForeColor="Red">Enter a 7 digit phone number</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="form-group">
@@ -85,7 +84,7 @@
                      <asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
                     ControlToValidate="txtctime"
      ErrorMessage="Collection Time is a required field."
-   ForeColor="Red">
+     ForeColor="Red">
                 </asp:RequiredFieldValidator>
                 </div>
                 <div class="form-group">
@@ -94,7 +93,7 @@
                      <asp:RequiredFieldValidator id="RequiredFieldValidator9" runat="server"
                     ControlToValidate="txtrep"
      ErrorMessage="Representative is a required field."
-   ForeColor="Red">
+     ForeColor="Red">
                 </asp:RequiredFieldValidator>
                 </div>
                 <div class="form-group" style="text-align:right">
