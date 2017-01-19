@@ -53,6 +53,10 @@
                 <div class="form-group">
                     <asp:GridView ID="gvItemList" runat="server" CssClass="table table-striped"></asp:GridView>
                 </div>
+                <div class="form-group" style="text-align:right">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />     
+                </div>
+
             </div>
             <div class="col-lg-3">
             </div>

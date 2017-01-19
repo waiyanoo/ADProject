@@ -58,6 +58,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="DepartmentDA.cs" />
+    <Compile Include="GeneratePrimaryKey.cs" />
     <Compile Include="Item.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>

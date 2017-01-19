@@ -72,8 +72,18 @@ namespace Team11AD
             gvItemList.DataSource = dt;
             gvItemList.DataBind();
 
+        }
 
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            GeneratePrimaryKey gpk = new GeneratePrimaryKey();
 
+            txtreason.Text = gpk.getKeyforAdjustment();
+            //dt = (DataTable)Session["AdjustItem"];
+            //for(int i =0; i<dt.Rows.Count; i++)
+            //{
+
+            //}
         }
     }
     }
