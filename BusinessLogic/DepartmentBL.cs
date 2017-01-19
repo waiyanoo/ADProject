@@ -15,5 +15,18 @@ namespace BusinessLogic
             DepartmentDA dda = new DepartmentDA();
             dda.AddDepartment(dbo);
         }
+
+        public List<Department> GetAllDepartment()
+        {
+
+            DepartmentDA dda = new DepartmentDA();
+            return dda.getAllDepartment();
+        }
+
+        public void DeleteDepartment(String id)
+        {
+            DepartmentDA dda = new DepartmentDA();
+            dda.deleteDepartment(id);
+        }
     }
 }
