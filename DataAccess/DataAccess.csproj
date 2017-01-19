@@ -58,12 +58,14 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="DepartmentDA.cs" />
+    <Compile Include="GeneratePrimaryKey.cs" />
     <Compile Include="Item.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ItemAdjustment.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="ItemAdjustmentDA.cs" />
     <Compile Include="logicUniversity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +97,7 @@
     <Compile Include="Role.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="SetReorderLevelDA.cs" />
     <Compile Include="Supplier.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>

@@ -42,5 +42,20 @@ namespace DataAccess
         {
             return context.Suppliers.ToList<Supplier>();
         }
+
+        public SupplierBO getSupplierbyID(String id)
+        {
+            Supplier supplier = new Supplier();
+            supplier = context.Suppliers.First(i => i.SupplierID==id);
+            SupplierBO sbo = new SupplierBO();
+            sbo.SupplierID = supplier.SupplierID;
+            sbo.SupplierName = supplier.SupplierName;
+            sbo.ContactName = supplier.ContactName;
+            sbo.Phone = supplier.Phone.ToString();
+            sbo.Fax = supplier.Fax.ToString();
+            sbo.Address = supplier.Address;
+            sbo.GSTNo1 = supplier.GSTNo;
+            return sbo;
+        }
     }
 }

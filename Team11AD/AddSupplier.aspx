@@ -12,73 +12,67 @@
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
-                    <label>Supplier Code :</label>
-                    <asp:TextBox ID="txtcode" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                    <label>Supplier Code :</label> <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                     ControlToValidate="txtcode"
      ErrorMessage="Supplier Code is a required field."
    ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtcode" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Name :</label>
-                    <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
-                     <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                    <label>Name :</label><asp:RequiredFieldValidator id="RequiredFieldValidator7" runat="server"
                     ControlToValidate="txtname"
      ErrorMessage="Name is a required field."
      ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Contact Name :</label>
-                    <asp:TextBox ID="txtcontactname" runat="server" CssClass="form-control"></asp:TextBox>
-                     <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+                    <label>Contact Name :</label><asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
                     ControlToValidate="txtcontactname"
       ErrorMessage="Contact Name is a required field."
       ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtcontactname" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Phone :</label>
-                    <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
-                    
-                  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                    <label>Phone :</label><asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
 ErrorMessage="RegularExpressionValidator" ControlToValidate="txtphone"
 ValidationExpression="[1-9]{7}" 
 ForeColor="Red">Enter a 7 digit phone number</asp:RegularExpressionValidator>
+                    <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Fax :</label>
-                    <asp:TextBox ID="txtfax" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator id="RequiredFieldValidator4" runat="server"
+                    <label>Fax :</label> <asp:RequiredFieldValidator id="RequiredFieldValidator9" runat="server"
                     ControlToValidate="txtfax"
       ErrorMessage="Fax is a required field."
    ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                
+                    <asp:TextBox ID="txtfax" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>Address :</label>
-                    <asp:TextBox ID="txtaddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
-                     <asp:RequiredFieldValidator id="RequiredFieldValidator5" runat="server"
+                    <label>Address :</label><asp:RequiredFieldValidator id="RequiredFieldValidator10" runat="server"
                     ControlToValidate="txtaddress"
       ErrorMessage="Address is a required field."
    ForeColor="Red">
                 </asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtaddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label>GST Number :</label>
+                    <label>GST Number :</label><asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"
+                    ErrorMessage="RegularExpressionValidator" ControlToValidate="txtgst"
+                    ValidationExpression="[A-Z]{2}-\d{7}-\d{1}" 
+                    ForeColor="Red">Enter a valid GST Number</asp:RegularExpressionValidator>
                     <asp:TextBox ID="txtgst" runat="server" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
-                   
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
-ErrorMessage="RegularExpressionValidator" ControlToValidate="txtgst"
-ValidationExpression="[A-Z]{2}-\d{7}-\d{1}" 
-ForeColor="Red">Enter a valid GST Number</asp:RegularExpressionValidator>
                 </div>
                 <div class="form-group" style="text-align:right">
                      <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click"/>
                 </div>
+            
             </div>
             <div class="col-lg-6">  
+  
             </div>
         </div>
     </div>
