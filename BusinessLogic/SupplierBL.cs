@@ -27,5 +27,11 @@ namespace BusinessLogic
             SupplierDA sda = new SupplierDA();
             return sda.getAllSupplier();
         }
+
+        public SupplierBO GetSupplierbyID(String id)
+        {
+            SupplierDA sda = new SupplierDA();
+            return sda.getSupplierbyID(id);
+        }
     }
 }
