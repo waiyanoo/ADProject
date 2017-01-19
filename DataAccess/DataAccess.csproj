@@ -54,6 +54,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DeliverOrderDA.cs" />
     <Compile Include="Department.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -104,9 +105,6 @@
     </Compile>
     <Compile Include="SupplierDA.cs" />
     <Compile Include="SupplierItem.cs">
-      <DependentUpon>logicUniversity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">

@@ -22,6 +22,15 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.DropDownList ddponumber;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// txtdonumber control.
         /// </summary>
         /// <remarks>
@@ -31,22 +40,13 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtdonumber;
         
         /// <summary>
-        /// txtdeliverydate control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdeliverydate;
-        
-        /// <summary>
-        /// txtremark control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtremark;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// btnsubmit control.
