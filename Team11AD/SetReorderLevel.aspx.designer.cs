@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team11AD.View {
+namespace Team11AD {
     
     
-    public partial class RequestRequisition {
+    public partial class SetReorderLevel {
         
         /// <summary>
-        /// dditemcategory control.
+        /// ddcategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemcategory;
+        protected global::System.Web.UI.WebControls.DropDownList ddcategory;
         
         /// <summary>
-        /// dditemdescritption control.
+        /// dditem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemdescritption;
+        protected global::System.Web.UI.WebControls.DropDownList dditem;
         
         /// <summary>
-        /// txtitemqty control.
+        /// txtunit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtitemqty;
+        protected global::System.Web.UI.WebControls.TextBox txtunit;
         
         /// <summary>
-        /// btnadd control.
+        /// txtreorderlevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnadd;
+        protected global::System.Web.UI.WebControls.TextBox txtreorderlevel;
         
         /// <summary>
-        /// gvitemlist control.
+        /// txtreorderqty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvitemlist;
+        protected global::System.Web.UI.WebControls.TextBox txtreorderqty;
         
         /// <summary>
-        /// btnsend control.
+        /// btnset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsend;
+        protected global::System.Web.UI.WebControls.Button btnset;
     }
 }

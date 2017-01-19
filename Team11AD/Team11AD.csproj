@@ -108,6 +108,7 @@
     </Content>
     <Content Include="DUser.Master" />
     <Content Include="PurchaseOrder.aspx" />
+    <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
     <Content Include="SClerk.Master" />
     <None Include="Web.Debug.config">
@@ -118,6 +119,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SetReorderLevel.aspx" />
     <Content Include="style\css\bootstrap-rtl.css" />
     <Content Include="style\css\bootstrap-rtl.min.css" />
     <Content Include="style\css\bootstrap.css" />
@@ -176,6 +178,13 @@
     <Compile Include="PurchaseOrder.aspx.designer.cs">
       <DependentUpon>PurchaseOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RequestAdjustment.aspx.cs">
+      <DependentUpon>RequestAdjustment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestAdjustment.aspx.designer.cs">
+      <DependentUpon>RequestAdjustment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RequisitionDetails.aspx.cs">
       <DependentUpon>RequisitionDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +198,13 @@
     </Compile>
     <Compile Include="SClerk.Master.designer.cs">
       <DependentUpon>SClerk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SetReorderLevel.aspx.cs">
+      <DependentUpon>SetReorderLevel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetReorderLevel.aspx.designer.cs">
+      <DependentUpon>SetReorderLevel.aspx</DependentUpon>
     </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>

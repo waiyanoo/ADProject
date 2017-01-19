@@ -15,5 +15,17 @@ namespace BusinessLogic
             SupplierDA sda = new SupplierDA();
             sda.AddSupplier(sbo);
         }
+
+        public void DeleteSupplier(String id)
+        {
+            SupplierDA sda = new SupplierDA();
+            sda.deleteSupplier(id);
+        }
+
+        public List<Supplier> GetAllSupplier()
+        {
+            SupplierDA sda = new SupplierDA();
+            return sda.getAllSupplier();
+        }
     }
 }

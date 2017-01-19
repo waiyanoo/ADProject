@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team11AD.View {
+namespace Team11AD {
     
     
-    public partial class RequestRequisition {
+    public partial class RequestAdjustment {
         
         /// <summary>
-        /// dditemcategory control.
+        /// ddponumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemcategory;
+        protected global::System.Web.UI.WebControls.DropDownList ddponumber;
         
         /// <summary>
-        /// dditemdescritption control.
+        /// dditemdescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemdescritption;
+        protected global::System.Web.UI.WebControls.DropDownList dditemdescription;
         
         /// <summary>
-        /// txtitemqty control.
+        /// txtdeliverydate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtitemqty;
+        protected global::System.Web.UI.WebControls.TextBox txtdeliverydate;
         
         /// <summary>
-        /// btnadd control.
+        /// txtremark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnadd;
+        protected global::System.Web.UI.WebControls.TextBox txtremark;
         
         /// <summary>
-        /// gvitemlist control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvitemlist;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// btnsend control.
+        /// gvItemList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsend;
+        protected global::System.Web.UI.WebControls.GridView gvItemList;
     }
 }

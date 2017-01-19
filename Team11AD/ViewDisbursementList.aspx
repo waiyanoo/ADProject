@@ -6,4 +6,16 @@
     View Disbursement List
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <div class="panel-body">
+	    <div class="row">
+            <div class="col-lg-10">
+
+            </div>
+            <div class="col-lg-2">
+                
+
+
+            </div>
+        </div>
+    </div>
 </asp:Content>
