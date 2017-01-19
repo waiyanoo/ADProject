@@ -6,4 +6,22 @@
     View Supplier
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+     <div class="panel-body">
+	    <div class="row">
+            <asp:GridView ID="gvsupplier" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowDeleting="gvsupplier_RowDeleting" OnRowEditing="gvsupplier_RowEditing">
+                 <Columns>
+                   <asp:BoundField DataField="SupplierID" HeaderText="Supplier ID" />
+                    <asp:BoundField DataField="SupplierName" HeaderText="Name" />
+                    <asp:BoundField DataField="ContactName" HeaderText="Contact" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" />
+                    <asp:BoundField DataField="Fax" HeaderText="Fax" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" />
+                    <asp:BoundField DataField="GSTNo" HeaderText="GSTNo" />
+                    <asp:CommandField ShowEditButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
+                    <asp:CommandField ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
+                </Columns>
+            </asp:GridView>
+            
+        </div>
+     </div>
 </asp:Content>

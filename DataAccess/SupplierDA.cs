@@ -15,6 +15,7 @@ namespace DataAccess
         {
             
             Supplier supplier = new Supplier();
+
             supplier.SupplierID = sbo.SupplierID;
             supplier.SupplierName = sbo.SupplierName;
             supplier.ContactName = sbo.ContactName;
@@ -25,6 +26,21 @@ namespace DataAccess
             context.Suppliers.Add(supplier);
             context.SaveChanges();
             
+        }
+
+        public void deleteSupplier(String id)
+        {
+            var supplier = context.Suppliers.FirstOrDefault(s => s.SupplierID == id);
+            if (supplier!= null)
+            {
+                context.Suppliers.Remove(supplier);
+                context.SaveChanges();
+            }
+        }
+
+        public List<Supplier> getAllSupplier()
+        {
+            return context.Suppliers.ToList<Supplier>();
         }
     }
 }

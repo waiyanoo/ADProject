@@ -57,6 +57,7 @@
     <Compile Include="Department.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DepartmentDA.cs" />
     <Compile Include="Item.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -108,6 +109,7 @@
     <Compile Include="User.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewItemCatalogueDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
