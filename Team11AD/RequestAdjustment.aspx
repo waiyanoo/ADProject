@@ -24,6 +24,16 @@
                 <div class="form-group">
                     <label>Adjustment Quantity:</label>
                     <asp:TextBox ID="txtqty" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                        ControlToValidate="txtqty"
+                        ErrorMessage="You need to enter quantity."
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server"
+                        ErrorMessage="RangeValidator" ControlToValidate="txtqty"
+                        ForeColor="Red" Type="Integer"
+                        MaximumValue="1000" MinimumValue="1">Invalid Entry. Only enter numbers
+                    </asp:RangeValidator>
                     
                 </div>
                 <div class="form-group">
