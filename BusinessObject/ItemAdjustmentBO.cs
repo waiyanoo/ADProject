@@ -13,7 +13,7 @@ namespace BusinessObject
         private int adjustQty;
         private string reason;
 
-        internal AdjustmentBO VoucherNo 
+        public AdjustmentBO VoucherNo 
         {
             get
             {
@@ -26,7 +26,7 @@ namespace BusinessObject
             }
         }
 
-        internal ItemBO ItemID
+        public ItemBO ItemID
         {
             get
             {
@@ -72,5 +72,10 @@ namespace BusinessObject
             this.AdjustQty = adjustQty;
             this.Reason = reason;
         }
+
+        public ItemAdjustmentBO()
+        { }
+
+        
     }
 }

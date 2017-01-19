@@ -7,13 +7,14 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
       <div class="panel-body">
-	    <div class="row"> 
+	    <div class="row">  
             <div class="col-lg-1">
             </div>
             <div class="col-lg-5">
                 <div class="form-group">
                     <label>Name :</label>
                     <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtid" runat="server" Visible="False"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label>Contact Name :</label>

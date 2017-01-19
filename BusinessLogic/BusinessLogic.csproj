@@ -40,8 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdjustmentBL.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Codmpile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />

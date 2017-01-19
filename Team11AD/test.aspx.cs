@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataAccess;
+using BusinessLogic;
+using BusinessObject;
 
 
 
@@ -16,7 +19,7 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                //GridView1.DataSource = GetItem();
+                GridView1.DataSource = GetItem();
           
                 GridView1.DataBind();
             }
@@ -29,11 +32,11 @@ namespace Team11AD
             
         }
 
-       // List<Item> GetItem()
-       // {
-       //     LogicUniversityEntities model = new LogicUniversityEntities();
-      //      return model.Items.ToList<Item>();
-       // }
+       List<Item> GetItem()
+        {
+            LogicUniversityEntities model = new LogicUniversityEntities();
+            return model.Items.ToList<Item>();
+        }
 
         
     }

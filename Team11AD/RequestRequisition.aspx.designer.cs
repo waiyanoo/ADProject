@@ -13,33 +13,6 @@ namespace Team11AD.View {
     public partial class RequestRequisition {
         
         /// <summary>
-        /// txtrequisitionnumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtrequisitionnumber;
-        
-        /// <summary>
-        /// txtdepartmentname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdepartmentname;
-        
-        /// <summary>
-        /// txtemployeename control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemployeename;
-        
-        /// <summary>
         /// dditemcategory control.
         /// </summary>
         /// <remarks>
@@ -74,6 +47,15 @@ namespace Team11AD.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnadd;
+        
+        /// <summary>
+        /// gvitemlist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvitemlist;
         
         /// <summary>
         /// btnsend control.
