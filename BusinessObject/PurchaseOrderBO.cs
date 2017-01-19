@@ -87,5 +87,6 @@ namespace BusinessObject
             this.Attn = attn;
             this.SupplierID = supplierID;
         }
+        public PurchaseOrderBO() { }
     }
 }

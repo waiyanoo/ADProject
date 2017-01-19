@@ -22,8 +22,8 @@ namespace DataAccess
         public string PONo { get; set; }
         public Nullable<System.DateTime> PODate { get; set; }
         public string SupplierID { get; set; }
-        public string DeliverTo { get; set; }
-        public string Attn { get; set; }
+        public Nullable<System.DateTime> DeliveryDate { get; set; }
+        public string DONo { get; set; }
     
         public virtual ICollection<PurchaseItem> PurchaseItems { get; set; }
         public virtual Supplier Supplier { get; set; }

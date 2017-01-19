@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False">
                         <Columns>
-                            <asp:BoundField DataField="ItemID" HeaderText="SItem ID" />
+                            <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                             <asp:BoundField DataField="Description" HeaderText="Description" />
                             <asp:BoundField DataField="ReorderLevel" HeaderText="Reorder Level" />
                             <asp:BoundField DataField="ReorderQty" HeaderText="Reorder Quantity" />
