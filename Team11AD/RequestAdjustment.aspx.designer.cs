@@ -13,13 +13,22 @@ namespace Team11AD {
     public partial class RequestAdjustment {
         
         /// <summary>
-        /// ddponumber control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddponumber;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        
+        /// <summary>
+        /// ddcategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddcategory;
         
         /// <summary>
         /// dditemdescription control.
@@ -31,31 +40,31 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.DropDownList dditemdescription;
         
         /// <summary>
-        /// txtdeliverydate control.
+        /// txtqty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdeliverydate;
+        protected global::System.Web.UI.WebControls.TextBox txtqty;
         
         /// <summary>
-        /// txtremark control.
+        /// txtreason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtremark;
+        protected global::System.Web.UI.WebControls.TextBox txtreason;
         
         /// <summary>
-        /// Button1 control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
         /// gvItemList control.
