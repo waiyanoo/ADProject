@@ -36,5 +36,10 @@ namespace DataAccess
                 context.SaveChanges();
             }
         }
+
+        public List<Supplier> getAllSupplier()
+        {
+            return context.Suppliers.ToList<Supplier>();
+        }
     }
 }

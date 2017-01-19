@@ -13,19 +13,15 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SupplierBL sbl = new SupplierBL();
             if (!IsPostBack)
             {
-                gvsupplier.DataSource = GetItem();
+                gvsupplier.DataSource = sbl.GetAllSupplier();
                 gvsupplier.DataBind();
             }
             
         }
 
-        public List<Supplier> GetItem()
-        {
-            LogicUniversityEntities context = new LogicUniversityEntities();
-            return context.Suppliers.ToList<Supplier>();
-        }
 
         protected void gvsupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -37,7 +33,7 @@ namespace Team11AD
             GridViewRow row = (GridViewRow)gvsupplier.Rows[e.RowIndex];
             SupplierBL sbl = new SupplierBL();
             sbl.DeleteSupplier(row.Cells[0].Text);
-            gvsupplier.DataSource = GetItem();
+            gvsupplier.DataSource = sbl.GetAllSupplier();
             gvsupplier.DataBind();
 
         }
