@@ -15,6 +15,7 @@ namespace DataAccess
         {
             
             Supplier supplier = new Supplier();
+
             supplier.SupplierID = sbo.SupplierID;
             supplier.SupplierName = sbo.SupplierName;
             supplier.ContactName = sbo.ContactName;
