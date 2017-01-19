@@ -6,7 +6,6 @@
     Request Adjustment
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
     <div class="panel-body">
 	    <div class="row"> 
             <div class="col-lg-4">
@@ -22,9 +21,7 @@
                     <asp:DropDownList ID="dditemdescription" runat="server" CssClass="form-control" DataTextField ="Description" DataValueField ="Description" AutoPostBack="False"></asp:DropDownList>
                 </div>
                 <div class="form-group">
-                    <label>Adjustment Quantity:</label>
-                    <asp:TextBox ID="txtqty" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                    <label>Adjustment Quantity:</label><asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                         ControlToValidate="txtqty"
                         ErrorMessage="You need to enter quantity."
                         ForeColor="Red">
@@ -34,15 +31,15 @@
                         ForeColor="Red" Type="Integer"
                         MaximumValue="1000" MinimumValue="1">Invalid Entry. Only enter numbers
                     </asp:RangeValidator>
+                    <asp:TextBox ID="txtqty" runat="server" CssClass="form-control"></asp:TextBox>
                     
                 </div>
                 <div class="form-group">
                     <label>Reason :</label>
                     <asp:TextBox ID="txtreason" runat="server" CssClass="form-control"  TextMode="MultiLine"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <asp:Button ID="btnAdd" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnAdd_Click" />
-                    
+                <div class="form-group" style="text-align:right">
+                    <asp:Button ID="btnAdd" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnAdd_Click" />     
                 </div>
                 
 
