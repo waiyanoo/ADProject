@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessLogic;
 using BusinessObject;
+using DataAccess;
 
 namespace Team11AD
 {
@@ -19,7 +20,7 @@ namespace Team11AD
                 SupplierBO sbo = new SupplierBO();
                 SupplierBL sbl = new SupplierBL();
                 sbo = sbl.GetSupplierbyID(Request.QueryString["id"]);
-                txtid.Text = sbo.SupplierID;
+                txtpk.Text = sbo.SupplierID;
                 txtname.Text = sbo.SupplierName;
                 txtcontactname.Text = sbo.ContactName;
                 txtphone.Text = sbo.Phone;
@@ -34,6 +35,23 @@ namespace Team11AD
             }
                
             
-        }   
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+            SupplierBO s = new SupplierBO();
+            SupplierBL sbl = new SupplierBL();
+
+            s.SupplierID = txtpk.Text;
+            
+            s.SupplierName= txtname.Text;
+            s.ContactName= txtcontactname.Text;
+            s.Address=txtaddress.Text;
+            s.Fax= txtfax.Text;
+            s.Phone = txtphone.Text;
+            s.GSTNo1 = txtgst.Text;
+            sbl.UpdateSupplier(s);
+        }
     }
 }

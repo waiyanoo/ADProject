@@ -15,6 +15,7 @@
                     <label>Name :</label>
                     <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
                     <asp:TextBox ID="txtid" runat="server" Visible="False"></asp:TextBox>
+                    <asp:TextBox ID="txtpk" runat="server" Visible="false"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label>Contact Name :</label>
@@ -37,7 +38,7 @@
                     <asp:TextBox ID="txtgst" runat="server" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
                 </div>
                 <div class="form-group" style="text-align:right">
-                     <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary"/>
+                     <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="btnUpdate_Click"/>
                 </div>
             </div>
             <div class="col-lg-6">  
