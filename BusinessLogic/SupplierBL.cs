@@ -16,10 +16,11 @@ namespace BusinessLogic
             sda.AddSupplier(sbo);
         }
 
-        public void UpdateSupplier(SupplierBO sbo)
+        public bool UpdateSupplier(SupplierBO sbo)
         {
             SupplierDA sda = new SupplierDA();
             sda.UpdateSupplier(sbo);
+            return true;
         }
 
         public void DeleteSupplier(String id)

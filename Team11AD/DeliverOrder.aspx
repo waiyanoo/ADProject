@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False">
+                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <Columns>
                             <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                             <asp:BoundField DataField="Qty" HeaderText="Quantity" />

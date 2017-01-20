@@ -111,6 +111,8 @@
     <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
     <Content Include="SClerk.Master" />
+    <Content Include="DepartmentHead.Master" />
+    <Content Include="SSupervisor.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,6 +121,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SetCollectionPoint.aspx" />
     <Content Include="SetReorderLevel.aspx" />
     <Content Include="style\css\bootstrap-rtl.css" />
     <Content Include="style\css\bootstrap-rtl.min.css" />
@@ -130,6 +133,7 @@
     <Content Include="style\js\jquery.js" />
     <Content Include="test.aspx" />
     <Content Include="RequestRequisition.aspx" />
+    <Content Include="Trend Analysis.aspx" />
     <Content Include="UpdateDepartment.aspx" />
     <Content Include="UpdateRequisition.aspx" />
     <Content Include="UpdateSupplier.aspx" />
@@ -163,6 +167,13 @@
     </Compile>
     <Compile Include="DeliverOrder.aspx.designer.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHead.Master.cs">
+      <DependentUpon>DepartmentHead.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentHead.Master.designer.cs">
+      <DependentUpon>DepartmentHead.Master</DependentUpon>
     </Compile>
     <Compile Include="DUser.Master.cs">
       <DependentUpon>DUser.Master</DependentUpon>
@@ -200,12 +211,26 @@
     <Compile Include="SClerk.Master.designer.cs">
       <DependentUpon>SClerk.Master</DependentUpon>
     </Compile>
+    <Compile Include="SetCollectionPoint.aspx.cs">
+      <DependentUpon>SetCollectionPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetCollectionPoint.aspx.designer.cs">
+      <DependentUpon>SetCollectionPoint.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SetReorderLevel.aspx.cs">
       <DependentUpon>SetReorderLevel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SetReorderLevel.aspx.designer.cs">
       <DependentUpon>SetReorderLevel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSupervisor.Master.cs">
+      <DependentUpon>SSupervisor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSupervisor.Master.designer.cs">
+      <DependentUpon>SSupervisor.Master</DependentUpon>
     </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
@@ -220,6 +245,13 @@
     </Compile>
     <Compile Include="RequestRequisition.aspx.designer.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trend Analysis.aspx.cs">
+      <DependentUpon>Trend Analysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trend Analysis.aspx.designer.cs">
+      <DependentUpon>Trend Analysis.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateDepartment.aspx.cs">
       <DependentUpon>UpdateDepartment.aspx</DependentUpon>

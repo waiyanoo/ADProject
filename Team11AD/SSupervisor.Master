@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DUser.Master.cs" Inherits="Team11AD.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SSupervisor.master.cs" Inherits="Team11AD.SSupervisor" %>
 
 <!DOCTYPE html>
 
@@ -12,8 +12,6 @@
     <!-- MetisMenu CSS -->
     <link href="../style/css/sb-admin.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="../style/custom/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -46,17 +44,18 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="RequestRequisition.aspx"><i class="fa fa-fw fa-dashboard"></i> Request Requisition</a>
+                        <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-dashboard"></i> View Low-Level Stock</a>
                     </li>
                     <li>
-                        <a href="ViewRequisition.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Requisition</a>
+                        <a href="ViewItemCatalogue.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Item Catalogue</a>
+                    </li>
+                    <li> 
+                        <a href="StockReport.aspx"><i class="fa fa-fw fa-table"></i>Stock Report</a>
                     </li>
                     <li>
-                        <a href="UpdateRequisition.aspx"><i class="fa fa-fw fa-table"></i> Update Requsition</a>
+                        <a href="report.aspx"><i class="fa fa-fw fa-table"></i>Trend Analysis</a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-edit"></i> Log Out</a>
-                    </li>
+                    
                     
                 </ul>
             </div>
@@ -72,7 +71,7 @@
                     <div class="col-lg-12">
                         <h2 class="page-header">
                             <asp:ContentPlaceHolder ID="bodytitle" runat="server">
-                                Stationery Requisition System
+        
                             </asp:ContentPlaceHolder>
                         </h2>
                         
@@ -110,3 +109,4 @@
 
 </body>
 </html>
+

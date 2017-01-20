@@ -1,8 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DUser.Master.cs" Inherits="Team11AD.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DepartmentHead.master.cs" Inherits="Team11AD.DepartmentHead" %>
 
 <!DOCTYPE html>
 
-<html>
 <head runat="server">
     <title> <asp:ContentPlaceHolder ID="title" runat="server">
     </asp:ContentPlaceHolder></title>
@@ -55,6 +54,9 @@
                         <a href="UpdateRequisition.aspx"><i class="fa fa-fw fa-table"></i> Update Requsition</a>
                     </li>
                     <li>
+                        <a href="SetCollectionPoint.aspx"><i class="fa fa-fw fa-table"></i> Set Collection Point</a>
+                    </li>
+                    <li>
                         <a href="#"><i class="fa fa-fw fa-edit"></i> Log Out</a>
                     </li>
                     
@@ -72,7 +74,7 @@
                     <div class="col-lg-12">
                         <h2 class="page-header">
                             <asp:ContentPlaceHolder ID="bodytitle" runat="server">
-                                Stationery Requisition System
+        Stationery Requisition System
                             </asp:ContentPlaceHolder>
                         </h2>
                         
