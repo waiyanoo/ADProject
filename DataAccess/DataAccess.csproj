@@ -90,6 +90,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="RequestAdjustmentDA.cs" />
+    <Compile Include="RequestRequisitionDA.cs" />
     <Compile Include="Requisition.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
