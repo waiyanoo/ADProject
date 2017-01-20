@@ -7,7 +7,7 @@
       <Diagram DiagramId="2291cc1ca96342f9b06a9ce3cd280055" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="LogicUniversityModel.Adjustment" Width="1.5" PointX="12.125" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Category" Width="1.5" PointX="4.625" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="LogicUniversityModel.Department" Width="1.5" PointX="0.875" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogicUniversityModel.Department" Width="1.75" PointX="0.875" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Item" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.ItemAdjustment" Width="1.5" PointX="10.125" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.PurchaseItem" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
@@ -31,6 +31,10 @@
         <AssociationConnector Association="LogicUniversityModel.FK_RequisitionItem_Requisition" ManuallyRouted="false" />
         <AssociationConnector Association="LogicUniversityModel.FK_User_Role" ManuallyRouted="false" />
         <AssociationConnector Association="LogicUniversityModel.FK_SupplierItem_Supplier" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LogicUniversityModel.CollectionPoint" Width="1.5" PointX="5.75" PointY="10.125" />
+        <EntityTypeShape EntityType="LogicUniversityModel.sysdiagram" Width="1.5" PointX="8.375" PointY="8.75" />
+        <AssociationConnector Association="LogicUniversityModel.FK_CollectionPoint_User" />
+        <AssociationConnector Association="LogicUniversityModel.FK_Department_CollectionPoint" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

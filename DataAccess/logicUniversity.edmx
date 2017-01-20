@@ -13,12 +13,20 @@
           <Property Name="UserID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Date" Type="date" />
           <Property Name="ConfirmedBy" Type="varchar" MaxLength="150" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="CategoryName" />
           </Key>
           <Property Name="CategoryName" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CollectionPoint">
+          <Key>
+            <PropertyRef Name="CollectionPointName" />
+          </Key>
+          <Property Name="CollectionPointName" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -30,7 +38,7 @@
           <Property Name="Phone" Type="int" />
           <Property Name="Fax" Type="int" />
           <Property Name="HeadName" Type="varchar" MaxLength="150" />
-          <Property Name="CollectionPoint" Type="varchar" MaxLength="500" />
+          <Property Name="CollectionPointName" Type="varchar" MaxLength="500" />
           <Property Name="CollectionTime" Type="varchar" MaxLength="50" />
           <Property Name="Representative" Type="varchar" MaxLength="150" />
         </EntityType>
@@ -57,6 +65,7 @@
           <Property Name="ItemID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="AdjustedQty" Type="int" />
           <Property Name="Reason" Type="varchar" MaxLength="500" />
+          <Property Name="AdjsutmentStatus" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PurchaseItem">
           <Key>
@@ -126,6 +135,16 @@
           <Property Name="ItemID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="float" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -139,7 +158,33 @@
           <Property Name="DepartmentID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Whatsapp" Type="int" />
           <Property Name="Photo" Type="image" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
         </EntityType>
+        <Association Name="FK_CollectionPoint_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="CollectionPoint" Type="Self.CollectionPoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="CollectionPoint">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_CollectionPoint">
+          <End Role="CollectionPoint" Type="Self.CollectionPoint" Multiplicity="0..1" />
+          <End Role="Department" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointName" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CollectionPointName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Item_CategoryName">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="Item" Type="Self.Item" Multiplicity="*" />
@@ -301,6 +346,7 @@
         <EntityContainer Name="LogicUniversityModelStoreContainer">
           <EntitySet Name="Adjustment" EntityType="Self.Adjustment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollectionPoint" EntityType="Self.CollectionPoint" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ItemAdjustment" EntityType="Self.ItemAdjustment" Schema="dbo" store:Type="Tables" />
@@ -311,7 +357,16 @@
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SupplierItem" EntityType="Self.SupplierItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CollectionPoint_User" Association="Self.FK_CollectionPoint_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="CollectionPoint" EntitySet="CollectionPoint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_CollectionPoint" Association="Self.FK_Department_CollectionPoint">
+            <End Role="CollectionPoint" EntitySet="CollectionPoint" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
           <AssociationSet Name="FK_Item_CategoryName" Association="Self.FK_Item_CategoryName">
             <End Role="Category" EntitySet="Category" />
             <End Role="Item" EntitySet="Item" />
@@ -378,6 +433,7 @@
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="ConfirmedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ItemAdjustments" Relationship="Self.FK_ItemAdjustment_Adjustment" FromRole="Adjustment" ToRole="ItemAdjustment" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -396,10 +452,11 @@
           <Property Name="Phone" Type="Int32" />
           <Property Name="Fax" Type="Int32" />
           <Property Name="HeadName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="CollectionPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="CollectionTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Representative" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_Department" FromRole="Department" ToRole="User" />
+          <Property Name="CollectionPointName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CollectionPoint1" Relationship="LogicUniversityModel.FK_Department_CollectionPoint" FromRole="Department" ToRole="CollectionPoint" />
         </EntityType>
         <EntityType Name="Item">
           <Key>
@@ -431,6 +488,7 @@
           <Property Name="Reason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Adjustment" Relationship="Self.FK_ItemAdjustment_Adjustment" FromRole="ItemAdjustment" ToRole="Adjustment" />
           <NavigationProperty Name="Item" Relationship="Self.FK_ItemAdjustment_Item" FromRole="ItemAdjustment" ToRole="Item" />
+          <Property Name="AdjsutmentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PurchaseItem">
           <Key>
@@ -529,6 +587,9 @@
           <NavigationProperty Name="Department" Relationship="Self.FK_User_Department" FromRole="User" ToRole="Department" />
           <NavigationProperty Name="Requisitions" Relationship="Self.FK_Requisition_User" FromRole="User" ToRole="Requisition" />
           <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="CollectionPoints" Relationship="LogicUniversityModel.FK_CollectionPoint_User" FromRole="User" ToRole="CollectionPoint" />
         </EntityType>
         <Association Name="FK_ItemAdjustment_Adjustment">
           <End Role="Adjustment" Type="Self.Adjustment" Multiplicity="1" />
@@ -752,7 +813,60 @@
             <End Role="Supplier" EntitySet="Suppliers" />
             <End Role="SupplierItem" EntitySet="SupplierItems" />
           </AssociationSet>
+          <EntitySet Name="CollectionPoints" EntityType="LogicUniversityModel.CollectionPoint" />
+          <EntitySet Name="sysdiagrams" EntityType="LogicUniversityModel.sysdiagram" />
+          <AssociationSet Name="FK_CollectionPoint_User" Association="LogicUniversityModel.FK_CollectionPoint_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="CollectionPoint" EntitySet="CollectionPoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_CollectionPoint" Association="LogicUniversityModel.FK_Department_CollectionPoint">
+            <End Role="CollectionPoint" EntitySet="CollectionPoints" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="CollectionPoint">
+          <Key>
+            <PropertyRef Name="CollectionPointName" />
+          </Key>
+          <Property Name="CollectionPointName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="LogicUniversityModel.FK_CollectionPoint_User" FromRole="CollectionPoint" ToRole="User" />
+          <NavigationProperty Name="Departments" Relationship="LogicUniversityModel.FK_Department_CollectionPoint" FromRole="CollectionPoint" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_CollectionPoint_User">
+          <End Type="LogicUniversityModel.User" Role="User" Multiplicity="1" />
+          <End Type="LogicUniversityModel.CollectionPoint" Role="CollectionPoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="CollectionPoint">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_CollectionPoint">
+          <End Type="LogicUniversityModel.CollectionPoint" Role="CollectionPoint" Multiplicity="0..1" />
+          <End Type="LogicUniversityModel.Department" Role="Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointName" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CollectionPointName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -762,6 +876,7 @@
           <EntitySetMapping Name="Adjustments">
             <EntityTypeMapping TypeName="LogicUniversityModel.Adjustment">
               <MappingFragment StoreEntitySet="Adjustment">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -779,13 +894,13 @@
           <EntitySetMapping Name="Departments">
             <EntityTypeMapping TypeName="LogicUniversityModel.Department">
               <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="CollectionPointName" ColumnName="CollectionPointName" />
                 <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
                 <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
                 <ScalarProperty Name="ContactName" ColumnName="ContactName" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Fax" ColumnName="Fax" />
                 <ScalarProperty Name="HeadName" ColumnName="HeadName" />
-                <ScalarProperty Name="CollectionPoint" ColumnName="CollectionPoint" />
                 <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
                 <ScalarProperty Name="Representative" ColumnName="Representative" />
               </MappingFragment>
@@ -809,6 +924,7 @@
           <EntitySetMapping Name="ItemAdjustments">
             <EntityTypeMapping TypeName="LogicUniversityModel.ItemAdjustment">
               <MappingFragment StoreEntitySet="ItemAdjustment">
+                <ScalarProperty Name="AdjsutmentStatus" ColumnName="AdjsutmentStatus" />
                 <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
                 <ScalarProperty Name="ItemID" ColumnName="ItemID" />
                 <ScalarProperty Name="AdjustedQty" ColumnName="AdjustedQty" />
@@ -891,6 +1007,8 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="LogicUniversityModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -900,6 +1018,25 @@
                 <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
                 <ScalarProperty Name="Whatsapp" ColumnName="Whatsapp" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollectionPoints">
+            <EntityTypeMapping TypeName="LogicUniversityModel.CollectionPoint">
+              <MappingFragment StoreEntitySet="CollectionPoint">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CollectionPointName" ColumnName="CollectionPointName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="LogicUniversityModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

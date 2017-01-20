@@ -101,6 +101,8 @@
   <ItemGroup>
     <Content Include="Add Department.aspx" />
     <Content Include="AddSupplier.aspx" />
+    <Content Include="ApproveAdjustmentRequest.aspx" />
+    <Content Include="ApproveAdjustmentRequisitionM.aspx" />
     <Content Include="DeliverOrder.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -160,6 +162,20 @@
     </Compile>
     <Compile Include="AddSupplier.aspx.designer.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveAdjustmentRequest.aspx.cs">
+      <DependentUpon>ApproveAdjustmentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveAdjustmentRequest.aspx.designer.cs">
+      <DependentUpon>ApproveAdjustmentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveAdjustmentRequisitionM.aspx.cs">
+      <DependentUpon>ApproveAdjustmentRequisitionM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveAdjustmentRequisitionM.aspx.designer.cs">
+      <DependentUpon>ApproveAdjustmentRequisitionM.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeliverOrder.aspx.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>

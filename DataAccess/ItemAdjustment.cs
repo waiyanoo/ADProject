@@ -18,6 +18,7 @@ namespace DataAccess
         public string ItemID { get; set; }
         public Nullable<int> AdjustedQty { get; set; }
         public string Reason { get; set; }
+        public string AdjsutmentStatus { get; set; }
     
         public virtual Adjustment Adjustment { get; set; }
         public virtual Item Item { get; set; }

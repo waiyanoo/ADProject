@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApproveAdjustmentBL.cs" />
     <Compile Include="DeliverOrderBL.cs" />
     <Codmpile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DepartmentBL.cs" />
     <Compile Include="RequestAdjustmentBL.cs" />
+    <Compile Include="RequestRequisitiionBL.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />

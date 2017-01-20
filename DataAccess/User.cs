@@ -17,6 +17,7 @@ namespace DataAccess
         public User()
         {
             this.Requisitions = new HashSet<Requisition>();
+            this.CollectionPoints = new HashSet<CollectionPoint>();
         }
     
         public string UserID { get; set; }
@@ -28,9 +29,12 @@ namespace DataAccess
         public string DepartmentID { get; set; }
         public Nullable<int> Whatsapp { get; set; }
         public byte[] Photo { get; set; }
+        public Nullable<System.DateTime> StartDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
     
         public virtual Department Department { get; set; }
         public virtual ICollection<Requisition> Requisitions { get; set; }
         public virtual Role Role { get; set; }
+        public virtual ICollection<CollectionPoint> CollectionPoints { get; set; }
     }
 }

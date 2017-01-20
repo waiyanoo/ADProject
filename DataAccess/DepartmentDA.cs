@@ -23,7 +23,7 @@ namespace DataAccess
             department.Phone =Convert.ToInt32(dbo.Phone); 
             department.Fax = Convert.ToInt32(dbo.Fax);
             department.HeadName = dbo.HeadName;
-            department.CollectionPoint = dbo.CollectionPoint;
+            department.CollectionPointName = dbo.CollectionPoint;
             department.CollectionTime = dbo.CollectionTime;
             department.Representative = dbo.Representative;
 
@@ -42,7 +42,7 @@ namespace DataAccess
             depart.DepartmentName = dbo.DepartmentName;
             depart.ContactName = dbo.ContactName;
             depart.HeadName = dbo.HeadName;
-            depart.CollectionPoint = dbo.CollectionPoint;
+            depart.CollectionPointName = dbo.CollectionPoint;
             depart.CollectionTime = dbo.CollectionTime;
             depart.Phone =Convert.ToInt32( dbo.Phone);
             depart.Fax = Convert.ToInt32(dbo.Fax);
@@ -70,7 +70,7 @@ namespace DataAccess
              dbo.Fax = Convert.ToString(department.Fax);
              dbo.Phone = Convert.ToString(department.Phone);
              dbo.HeadName = department.HeadName;
-             dbo.CollectionPoint = department.CollectionPoint;
+             dbo.CollectionPoint = department.CollectionPointName;
              dbo.CollectionTime = department.CollectionTime;
              dbo.Representative = department.Representative;
              return dbo;

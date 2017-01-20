@@ -25,10 +25,11 @@ namespace DataAccess
         public Nullable<int> Phone { get; set; }
         public Nullable<int> Fax { get; set; }
         public string HeadName { get; set; }
-        public string CollectionPoint { get; set; }
         public string CollectionTime { get; set; }
         public string Representative { get; set; }
+        public string CollectionPointName { get; set; }
     
         public virtual ICollection<User> Users { get; set; }
+        public virtual CollectionPoint CollectionPoint1 { get; set; }
     }
 }

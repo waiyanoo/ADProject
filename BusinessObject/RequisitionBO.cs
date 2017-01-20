@@ -26,7 +26,7 @@ namespace BusinessObject
             }
         }
 
-        internal UserBO UserID
+        public UserBO UserID
         {
             get
             {
@@ -71,6 +71,10 @@ namespace BusinessObject
             this.UserID = userID;
             this.Date = date;
             this.Status = status;
+        }
+        public RequisitionBO()
+        {
+
         }
     }
 }
