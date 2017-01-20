@@ -54,10 +54,12 @@
     <Compile Include="Category.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DeliverOrderDA.cs" />
     <Compile Include="Department.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="DepartmentDA.cs" />
+    <Compile Include="GeneratePrimaryKey.cs" />
     <Compile Include="Item.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -87,6 +89,8 @@
     <Compile Include="PurchaseOrder.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="RequestAdjustmentDA.cs" />
+    <Compile Include="RequestRequisitionDA.cs" />
     <Compile Include="Requisition.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -96,14 +100,12 @@
     <Compile Include="Role.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="SetReorderLevelDA.cs" />
     <Compile Include="Supplier.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierDA.cs" />
     <Compile Include="SupplierItem.cs">
-      <DependentUpon>logicUniversity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">

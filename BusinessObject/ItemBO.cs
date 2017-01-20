@@ -122,7 +122,7 @@ namespace BusinessObject
             }
         }
 
-        internal CategoryBO CategoryName
+        public CategoryBO CategoryName
         {
             get
             {

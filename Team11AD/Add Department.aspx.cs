@@ -32,9 +32,8 @@ namespace Team11AD
           
             DepartmentBL dbl = new DepartmentBL();
             dbl.AddDepartment(department);
-
-           
-
+            
+            Response.Redirect("ViewDepartment.aspx");
 
         }
     }

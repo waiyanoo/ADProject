@@ -9,10 +9,20 @@ namespace BusinessObject
     public class PurchaseOrderBO
     {
         private string poNo;
-        private DateTime date;
-        private string deliverTo;
-        private string attn;
+        private DateTime pOdate;
+        private String dONo;
+        private DateTime deliveryDate;
         private SupplierBO supplierID;
+
+        public PurchaseOrderBO(string poNo, DateTime pOdate, string dONo, DateTime deliveryDate, SupplierBO supplierID)
+        {
+            this.poNo = poNo;
+            this.pOdate = pOdate;
+            this.dONo = dONo;
+            this.deliveryDate = deliveryDate;
+            this.supplierID = supplierID;
+        }
+        public PurchaseOrderBO() { }
 
         public string PoNo
         {
@@ -27,46 +37,46 @@ namespace BusinessObject
             }
         }
 
-        public DateTime Date
+        public DateTime POdate
         {
             get
             {
-                return date;
+                return pOdate;
             }
 
             set
             {
-                date = value;
+                pOdate = value;
             }
         }
 
-        public string DeliverTo
+        public string DONo
         {
             get
             {
-                return deliverTo;
+                return dONo;
             }
 
             set
             {
-                deliverTo = value;
+                dONo = value;
             }
         }
 
-        public string Attn
+        public DateTime DeliveryDate
         {
             get
             {
-                return attn;
+                return deliveryDate;
             }
 
             set
             {
-                attn = value;
+                deliveryDate = value;
             }
         }
 
-        internal SupplierBO SupplierID
+        public SupplierBO SupplierID
         {
             get
             {
@@ -77,15 +87,6 @@ namespace BusinessObject
             {
                 supplierID = value;
             }
-        }
-
-        public PurchaseOrderBO(string poNo, DateTime date, string deliverTo, string attn, SupplierBO supplierID)
-        {
-            this.PoNo = poNo;
-            this.Date = date;
-            this.DeliverTo = deliverTo;
-            this.Attn = attn;
-            this.SupplierID = supplierID;
         }
     }
 }

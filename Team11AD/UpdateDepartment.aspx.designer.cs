@@ -13,6 +13,15 @@ namespace Team11AD {
     public partial class UpdateDepartment {
         
         /// <summary>
+        /// txtdid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtdid;
+        
+        /// <summary>
         /// txtname control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
-        /// txtcontactname control.
+        /// txtcname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcontactname;
+        protected global::System.Web.UI.WebControls.TextBox txtcname;
         
         /// <summary>
         /// txtphone control.
@@ -49,13 +58,40 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtfax;
         
         /// <summary>
-        /// txtaddress control.
+        /// txthname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtaddress;
+        protected global::System.Web.UI.WebControls.TextBox txthname;
+        
+        /// <summary>
+        /// txtcpoint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcpoint;
+        
+        /// <summary>
+        /// txtctime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtctime;
+        
+        /// <summary>
+        /// txtrep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtrep;
         
         /// <summary>
         /// btnUpdate control.

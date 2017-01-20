@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewItemCatalogue.aspx.cs" Inherits="Team11AD.ViewItemCatalogue" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewAllStock.aspx.cs" Inherits="Team11AD.ViewAllStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    SStationary Store Inventory System
+    Stationary Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
-    View Item Catalogue
+    View All Stock
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <div class="panel-body">
+     <div class="panel-body">
 	    <div class="row">
             <div class="col-lg-3" style="text-align:right">
                 <label>Search Item Description :</label>
@@ -25,8 +25,9 @@
                 <div class="form-group">
                     <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False">
                         <Columns>
-                            <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
+                            <asp:BoundField DataField="ItemID" HeaderText="SItem ID" />
                             <asp:BoundField DataField="Description" HeaderText="Description" />
+                            <asp:BoundField DataField="CurrentQty" HeaderText="Current Quantity" />
                             <asp:BoundField DataField="ReorderLevel" HeaderText="Reorder Level" />
                             <asp:BoundField DataField="ReorderQty" HeaderText="Reorder Quantity" />
                             <asp:BoundField DataField="UnitOfMeasure" HeaderText="Unit Of Measure" />
@@ -34,9 +35,7 @@
                         </Columns>
                     </asp:GridView>
                 </div>
-                
             </div>
-            
         </div>
     </div>
 </asp:Content>
