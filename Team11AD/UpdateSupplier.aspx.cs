@@ -45,13 +45,6 @@ namespace Team11AD
 
             s.SupplierID = txtpk.Text;
             
-            s.SupplierName= txtname.Text;
-            s.ContactName= txtcontactname.Text;
-            s.Address=txtaddress.Text;
-            s.Fax= txtfax.Text;
-            s.Phone = txtphone.Text;
-            s.GSTNo1 = txtgst.Text;
-            sbl.UpdateSupplier(s);
-        }
+        }   
     }
 }
