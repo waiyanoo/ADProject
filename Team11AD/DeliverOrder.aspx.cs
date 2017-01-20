@@ -39,9 +39,8 @@ namespace Team11AD
             string ponumber = ddponumber.SelectedValue;
             string deliverno = txtdonumber.Text.Trim();
             DateTime deliverydate = DateTime.Now;
+
             dobl.SaveDeliverOrder(ponumber, deliverno, deliverydate);
-                
-            
         }
     }
 }
