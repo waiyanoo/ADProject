@@ -34,27 +34,32 @@ namespace DataAccess
            
         }
 
+      
+        public bool updatedepartment(DepartmentBO dbo)
+        {
+            var depart = context.Departments.FirstOrDefault(d => d.DepartmentID == dbo.DepartmentID);
+            depart.DepartmentID = dbo.DepartmentID;
+            depart.DepartmentName = dbo.DepartmentName;
+            depart.ContactName = dbo.ContactName;
+            depart.HeadName = dbo.HeadName;
+            depart.CollectionPoint = dbo.CollectionPoint;
+            depart.CollectionTime = dbo.CollectionTime;
+            depart.Phone =Convert.ToInt32( dbo.Phone);
+            depart.Fax = Convert.ToInt32(dbo.Fax);
+            depart.Representative = dbo.Representative;
+            context.SaveChanges();
+            return true;
+        }
+
         public List<Department> getAllDepartment()
         {
             return context.Departments.ToList<Department>();
         }
 
-        public void deleteDepartment(String id)
-
+        public DepartmentBO getDepartmentByID(String id)
         {
+
             
-            var department = context.Departments.FirstOrDefault(d => d.DepartmentID == id);
-            if (department != null)
-            {
-                context.Departments.Remove(department);
-                context.SaveChanges();
-                
-            }
-
-        }
-
-        public DepartmentBO getDepartment(String id)
-        {
             Department department = new Department();
             department = context.Departments.First(i => i.DepartmentID == id);
 
@@ -69,6 +74,7 @@ namespace DataAccess
              dbo.CollectionTime = department.CollectionTime;
              dbo.Representative = department.Representative;
              return dbo;
+
             
         }
     

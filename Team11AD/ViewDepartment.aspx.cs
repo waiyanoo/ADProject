@@ -32,29 +32,7 @@ namespace Team11AD
 
         }
 
-        protected void gvdepartment_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-
-            GridViewRow row = (GridViewRow)gvdepartment.Rows[e.RowIndex];
-            DepartmentBL dbl = new DepartmentBL();
-            dbl.DeleteDepartment(row.Cells[0].Text);
-            gvdepartment.DataSource = dbl.GetAllDepartment();
-            gvdepartment.DataBind();
-            e.Cancel = true;
-
-        }
-
-        protected void gvdepartment_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-
-            
-            String departmentId = (String)gvdepartment.DataKeys[e.RowIndex].Value;
-            TextBox txtdid = (TextBox)gvdepartment.Rows[e.RowIndex].FindControl("txtdid");
-
-
-        }
-
-
+       
         protected void gvdepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
         <div class="row">
-           <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" OnRowDeleting="gvdepartment_RowDeleting" >
+           <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" >
                <Columns>
                     <asp:BoundField DataField="DepartmentID" HeaderText="Department ID" />
                     <asp:BoundField DataField="DepartmentName" HeaderText="Department Name" />
@@ -21,7 +21,7 @@
                    <asp:BoundField DataField="Representative" HeaderText="Representative" />
 
                     <asp:CommandField ShowEditButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
-                    <asp:CommandField ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
+                   
                </Columns>
             </asp:GridView>  
          

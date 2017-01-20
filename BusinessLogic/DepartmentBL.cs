@@ -23,16 +23,18 @@ namespace BusinessLogic
             return dda.getAllDepartment();
         }
 
-        public void DeleteDepartment(String id)
-        {
-            DepartmentDA dda = new DepartmentDA();
-            dda.deleteDepartment(id);
-        }
+       
 
-        public DepartmentBO GetDepartment(String id)
+        public DepartmentBO GetDepartmentById(String id)
         {
             DepartmentDA dda = new DepartmentDA();
-            return dda.getDepartment(id);
+            return dda.getDepartmentByID(id);
+        }
+        public bool updateDepartment(DepartmentBO d)
+        {
+            DepartmentDA dda = new DepartmentDA();
+            dda.updatedepartment(d);
+            return true;
         }
     }
 }

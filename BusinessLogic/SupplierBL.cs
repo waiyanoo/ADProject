@@ -33,5 +33,9 @@ namespace BusinessLogic
             SupplierDA sda = new SupplierDA();
             return sda.getSupplierbyID(id);
         }
+
+       
+
+       
     }
 }
