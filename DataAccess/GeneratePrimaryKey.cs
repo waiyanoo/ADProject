@@ -19,10 +19,8 @@ namespace DataAccess
         public string getKeyforRequisition()
         {
             string id = context.RequisitionItems.Max(i => i.RequisitionID);
-            string first = id.Substring(0, 1);
-            int num = Convert.ToInt32(id.Substring(1, id.Length - 1)) + 1;
-            string key = first + num;
-            return key;
+            int key = Convert.ToInt32(id) + 1;
+            return key.ToString();
         }
     }
 }

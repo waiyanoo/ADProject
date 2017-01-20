@@ -12,19 +12,17 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Adjustment
+    public partial class CollectionPoint
     {
-        public Adjustment()
+        public CollectionPoint()
         {
-            this.ItemAdjustments = new HashSet<ItemAdjustment>();
+            this.Departments = new HashSet<Department>();
         }
     
-        public string VoucherNo { get; set; }
+        public string CollectionPointName { get; set; }
         public string UserID { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public string ConfirmedBy { get; set; }
-        public string Status { get; set; }
     
-        public virtual ICollection<ItemAdjustment> ItemAdjustments { get; set; }
+        public virtual User User { get; set; }
+        public virtual ICollection<Department> Departments { get; set; }
     }
 }

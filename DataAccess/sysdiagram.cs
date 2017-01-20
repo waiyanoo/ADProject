@@ -12,19 +12,12 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Adjustment
+    public partial class sysdiagram
     {
-        public Adjustment()
-        {
-            this.ItemAdjustments = new HashSet<ItemAdjustment>();
-        }
-    
-        public string VoucherNo { get; set; }
-        public string UserID { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public string ConfirmedBy { get; set; }
-        public string Status { get; set; }
-    
-        public virtual ICollection<ItemAdjustment> ItemAdjustments { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
