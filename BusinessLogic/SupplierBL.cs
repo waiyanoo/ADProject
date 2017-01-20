@@ -16,6 +16,13 @@ namespace BusinessLogic
             sda.AddSupplier(sbo);
         }
 
+        public bool UpdateSupplier(SupplierBO sbo)
+        {
+            SupplierDA sda = new SupplierDA();
+            sda.UpdateSupplier(sbo);
+            return true;
+        }
+
         public void DeleteSupplier(String id)
         {
             SupplierDA sda = new SupplierDA();
@@ -33,5 +40,9 @@ namespace BusinessLogic
             SupplierDA sda = new SupplierDA();
             return sda.getSupplierbyID(id);
         }
+
+       
+
+       
     }
 }

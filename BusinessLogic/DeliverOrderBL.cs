@@ -20,7 +20,7 @@ namespace BusinessLogic
             return doda.FindPurchaseItem(ponumber);
         }
 
-        public void SaveDeliverOrder(string ponumber, string deliverno, string deliverydate)
+        public void SaveDeliverOrder(string ponumber, string deliverno, DateTime deliverydate)
         {
             doda.SaveDeliverOrder(ponumber, deliverno, deliverydate);
         }

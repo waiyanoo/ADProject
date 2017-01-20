@@ -20,10 +20,11 @@ namespace DataAccess
             return context.PurchaseItems.Where(x=> x.PONo == ponumber).ToList();
         }
 
-        public void SaveDeliverOrder (string ponumber, string deliverno, string deliverydate)
+        public void SaveDeliverOrder (string ponumber, string deliverno, DateTime deliverydate)
         {
             PurchaseOrder po = context.PurchaseOrders.Where(x => x.PONo == ponumber).First();
-            //po.DeliveryDate = deliverno;
+            po.DeliveryDate = deliverydate;
+            po.DONo = deliverno;
             
             context.SaveChanges();
         }

@@ -109,7 +109,7 @@ namespace BusinessObject
             }
         }
 
-        internal DepartmentBO DepartmentID
+        public DepartmentBO DepartmentID
         {
             get
             {
@@ -146,11 +146,6 @@ namespace BusinessObject
             this.Image = image;
             this.DepartmentID = departmentID;
             this.RoleName = roleName;
-        }
-
-        public UserBO()
-        {
-
         }
     }
 }
