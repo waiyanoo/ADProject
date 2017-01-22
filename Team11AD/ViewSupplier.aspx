@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewSupplier.aspx.cs" Inherits="Team11AD.ViewSupplier" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -6,16 +7,16 @@
     View Supplier
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-     <div class="panel-body">
-	    <div class="row">
+    <div class="panel-body">
+        <div class="row">
 
             <div class="col-lg-12">
                 <div class="form-group">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AddSupplier.aspx" CssClass="btn btn-primary" runat="server">Add New</asp:HyperLink>
                 </div>
                 <asp:GridView ID="gvsupplier" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowDeleting="gvsupplier_RowDeleting" OnRowEditing="gvsupplier_RowEditing">
-                     <Columns>
-                       <asp:BoundField DataField="SupplierID" HeaderText="Supplier ID" />
+                    <Columns>
+                        <asp:BoundField DataField="SupplierID" HeaderText="Supplier ID" />
                         <asp:BoundField DataField="SupplierName" HeaderText="Name" />
                         <asp:BoundField DataField="ContactName" HeaderText="Contact" />
                         <asp:BoundField DataField="Phone" HeaderText="Phone" />
@@ -27,8 +28,8 @@
                     </Columns>
                 </asp:GridView>
             </div>
-            
-            
+
+
         </div>
-     </div>
+    </div>
 </asp:Content>

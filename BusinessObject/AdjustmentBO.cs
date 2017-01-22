@@ -12,6 +12,7 @@ namespace BusinessObject
         private UserBO userID;
         private DateTime date;
         private string confirmBy;
+        private string status;
 
         public string VoucherNo
         {
@@ -65,12 +66,26 @@ namespace BusinessObject
             }
         }
 
-        public AdjustmentBO(string voucherNo, UserBO userID, DateTime date, string confirmBy)
+        public string Status
+        {
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                status = value;
+            }
+        }
+
+        public AdjustmentBO(string voucherNo, UserBO userID, DateTime date, string confirmBy, string status)
         {
             this.VoucherNo = voucherNo;
             this.UserID = userID;
             this.Date = date;
             this.ConfirmBy = confirmBy;
+            this.Status = status;
         }
         public AdjustmentBO()
         {
