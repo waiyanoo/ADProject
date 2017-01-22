@@ -177,9 +177,5 @@ namespace BusinessObject
             this.Startdate = startdate;
             this.Enddate = enddate;
         }
-        public UserBO()
-        {
-
-        }
     }
 }

@@ -72,9 +72,5 @@ namespace BusinessObject
             this.Date = date;
             this.Status = status;
         }
-        public RequisitionBO()
-        {
-
-        }
     }
 }
