@@ -104,6 +104,7 @@
     <Content Include="ApproveAdjustmentRequest.aspx" />
     <Content Include="ApproveAdjustmentRequisitionM.aspx" />
     <Content Include="DeliverOrder.aspx" />
+    <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="DUser.Master.designer.cs">
       <DependentUpon>DUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrder.aspx.cs">
