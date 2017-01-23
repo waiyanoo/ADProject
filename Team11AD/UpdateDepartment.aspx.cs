@@ -22,6 +22,8 @@ namespace Team11AD
                     DepartmentBO dbo = new DepartmentBO();
                     DepartmentBL dbl = new DepartmentBL();
                     dbo = dbl.GetDepartmentById(Request.QueryString["id"]);
+                    CollectionPointBO cpbo = new CollectionPointBO();
+                    cpbo = dbo.CollectionPointName;
                     txtdid.Text = dbo.DepartmentID;
                     txtcname.Text = dbo.ContactName;
                     txtname.Text = dbo.DepartmentName;
@@ -29,7 +31,7 @@ namespace Team11AD
                     txtphone.Text = dbo.Phone;
                     txtfax.Text = dbo.Fax;
                     txtctime.Text = dbo.CollectionTime;
-                    txtcpoint.Text = dbo.CollectionPoint;
+                    txtcpoint.Text = cpbo.CollectionPointName;
                     txtrep.Text = dbo.Representative;
 
 
@@ -48,8 +50,8 @@ namespace Team11AD
 
             DepartmentBO dbo1 = DBL.GetDepartmentById(txtdid.Text);
             DepartmentBL bl = new DepartmentBL();
-           // string s = txthname.Text.ToString();
-
+            // string s = txthname.Text.ToString();
+            CollectionPointBO cpbo = new CollectionPointBO();
             dbo1.DepartmentID = txtdid.Text.ToString();
             dbo1.ContactName = txtcname.Text;
             dbo1.DepartmentName = txtname.Text;
@@ -57,7 +59,7 @@ namespace Team11AD
             dbo1.Phone= txtphone.Text;
             dbo1.Fax = txtfax.Text;
             dbo1.CollectionTime= txtctime.Text;
-            dbo1.CollectionPoint = txtcpoint.Text;
+            cpbo.CollectionPointName = txtcpoint.Text;
             dbo1.Representative= txtrep.Text;
            
             bool result=bl.updateDepartment(dbo1);

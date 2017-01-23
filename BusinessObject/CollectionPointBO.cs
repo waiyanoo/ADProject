@@ -10,5 +10,41 @@ namespace BusinessObject
     {
         private string collectionPointName;
         private UserBO userID;
+
+        public CollectionPointBO()
+        {
+
+        }
+        public CollectionPointBO(string collectionPointName, UserBO userID)
+        {
+            this.collectionPointName = collectionPointName;
+            this.userID = userID;
+        }
+
+        public string CollectionPointName
+        {
+            get
+            {
+                return collectionPointName;
+            }
+
+            set
+            {
+                collectionPointName = value;
+            }
+        }
+
+        public UserBO UserID
+        {
+            get
+            {
+                return userID;
+            }
+
+            set
+            {
+                userID = value;
+            }
+        }
     }
 }

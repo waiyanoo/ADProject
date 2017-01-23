@@ -33,7 +33,10 @@ namespace BusinessObject
             this.collectionTime = collectionTime;
             this.representative = representative;
         }
+        public DepartmentBO()
+        {
 
+        }
         public string DepartmentID
         {
             get
