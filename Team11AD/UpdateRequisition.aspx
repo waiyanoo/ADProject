@@ -60,7 +60,7 @@
                             <asp:BoundField DataField="ItemID.Description" HeaderText="Description"  />
                             <asp:TemplateField HeaderText="Qty" HeaderStyle-Width="50px" >
                                 <ItemTemplate>
-                                    <asp:TextBox ID="txtQty" runat="server" Text='<%# Bind("RequiredQty") %>' CssClass="text-right" Width="90px"></asp:TextBox>
+                                    <asp:TextBox ID="txtQty" runat="server" Text='<%# Bind("RequiredQty") %>' CssClass="text-right" Width="90px" AutoCompleteType="Disabled" ></asp:TextBox>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:CommandField ShowDeleteButton="true" ButtonType="Button" ControlStyle-CssClass="btn btn-primary" HeaderStyle-Width="100px" ItemStyle-HorizontalAlign="Center" />
