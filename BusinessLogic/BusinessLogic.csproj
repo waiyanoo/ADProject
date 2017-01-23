@@ -50,6 +50,7 @@
     <Compile Include="SupplierBL.cs" />
     <Compile Include="UpdateRequisitionBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />
+    <Compile Include="ViewRequisitionListBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
