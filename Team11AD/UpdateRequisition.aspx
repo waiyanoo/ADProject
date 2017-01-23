@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label>Item Quantity :</label> <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtitemqty" ForeColor="red" Type="Integer" MinimumValue="0" MaximumValue="1000" ErrorMessage="Please enter integer between 0 & 1000"></asp:RangeValidator>
-                    <asp:TextBox ID="txtitemqty" runat="server" CssClass="form-control" />
+                    <asp:TextBox ID="txtitemqty" runat="server" CssClass="form-control" AutoCompleteType="Disabled" />
                 </div>
                 <div class="form-group" style="text-align: right">
                     <asp:Button ID="btnadd" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnadd_Click" />
