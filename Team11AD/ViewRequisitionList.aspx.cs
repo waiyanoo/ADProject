@@ -8,7 +8,7 @@ using BusinessLogic;
 
 namespace Team11AD
 {
-    public partial class ViewRequisition : System.Web.UI.Page
+    public partial class ViewRequisitionList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

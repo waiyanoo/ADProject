@@ -26,7 +26,7 @@ namespace BusinessObject
             }
         }
 
-        internal UserBO UserID
+        public UserBO UserID
         {
             get
             {
