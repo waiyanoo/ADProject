@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BusinessLogic;
+using BusinessObject;
 
 namespace Team11AD
 {
@@ -12,7 +14,16 @@ namespace Team11AD
         ViewRequisitionBL vrbl = new ViewRequisitionBL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                loadGridView();
+            }
+        }
 
+        protected void gvrequisition_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            String requisitionId = gvrequisition.Rows[e.NewEditIndex].Cells[0].Text;
+            Response.Redirect("UpdateRequisition.aspx?requisitionId=" + requisitionId);
         }
 
         protected void gvrequisition_RowDeleting(object sender, GridViewDeleteEventArgs e)
