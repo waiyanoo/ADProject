@@ -54,6 +54,7 @@
     <Compile Include="SupplierBO.cs" />
     <Compile Include="SupplierItemBO.cs" />
     <Compile Include="UserBO.cs" />
+    <Compile Include="ViewRequsitionListBO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
