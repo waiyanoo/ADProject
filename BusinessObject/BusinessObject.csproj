@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdjustmentBO.cs" />
+    <Compile Include="ApproveAdjustmentBO.cs" />
     <Compile Include="CategoryBO.cs" />
+    <Compile Include="CollectionPointBO.cs" />
     <Compile Include="DepartmentBO.cs" />
     <Compile Include="ItemAdjustmentBO.cs" />
     <Compile Include="ItemBO.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="SupplierBO.cs" />
     <Compile Include="SupplierItemBO.cs" />
     <Compile Include="UserBO.cs" />
+    <Compile Include="ViewRequsitionListBO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

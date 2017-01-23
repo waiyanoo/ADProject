@@ -19,12 +19,25 @@ namespace Team11AD
                 ddrequestno.DataSource = abl.GetVoucher();
                 ddrequestno.DataTextField = "VoucherNo";
                 ddrequestno.DataValueField = "VoucherNo";
+                
                 ddrequestno.DataBind();
+                ddrequestno.Items.Insert(0, new ListItem("Select Voucher Number", String.Empty));
+                ddrequestno.SelectedIndex = 0;
             }
         }
         protected void ddrequestno_SelectedIndexChanged(object sender, EventArgs e)
         {
+            gvlist.DataSource = abl.GetItembelow(ddrequestno.SelectedValue.ToString());
+            gvlist.DataBind();
+        }
 
+        protected void gvlist_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            string status = "Approved";
+            string id = gvlist.Rows[e.NewEditIndex].Cells[0].Text;
+            abl.ApproveItem(ddrequestno.SelectedValue.ToString(), id, status);
+            gvlist.DataSource = abl.GetItembelow(ddrequestno.SelectedValue.ToString());
+            gvlist.DataBind();
         }
     }
 }

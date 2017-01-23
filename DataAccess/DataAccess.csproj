@@ -120,7 +120,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewItemCatalogueDA.cs" />
-    <Compile Include="ViewRequisitionDA.cs" />
+    <Compile Include="ViewRequisitionListDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">

@@ -10,7 +10,7 @@
 namespace Team11AD {
     
     
-    public partial class ViewRequisition {
+    public partial class ViewRequisitionList {
         
         /// <summary>
         /// gvrequisition control.

@@ -24,6 +24,8 @@ namespace Team11AD.View
                 ddcategory.DataTextField = "CategoryName";
                 ddcategory.DataValueField = "CategoryName";
                 ddcategory.DataBind();
+                ddcategory.Items.Insert(0, new ListItem( "Select Category", String.Empty));
+                ddcategory.SelectedIndex = 0;
 
                 if (Session["RequestItem"] == null)
                 {
@@ -44,6 +46,8 @@ namespace Team11AD.View
             dditemdescription.DataTextField = "Description";
             dditemdescription.DataValueField = "ItemID";
             dditemdescription.DataBind();
+            dditemdescription.Items.Insert(0, new ListItem( "Select Item Description", String.Empty));
+            dditemdescription.SelectedIndex = 0;
             clearText();
         }
 

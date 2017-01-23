@@ -14,11 +14,14 @@ namespace BusinessObject
         private string phone;
         private string fax;
         private string headName;
-        private string collectionPoint;
+        private CollectionPointBO collectionPointName;
         private string collectionTime;
         private string representative;
 
-        public DepartmentBO(string departmentID, string departmentName, string contactName, string phone, string fax, string headName, string collectionPoint, string collectionTime, string representative)
+       
+        
+
+        public DepartmentBO(string departmentID, string departmentName, string contactName, string phone, string fax, string headName, CollectionPointBO collectionPointName, string collectionTime, string representative)
         {
             this.departmentID = departmentID;
             this.departmentName = departmentName;
@@ -26,16 +29,14 @@ namespace BusinessObject
             this.phone = phone;
             this.fax = fax;
             this.headName = headName;
-            this.collectionPoint = collectionPoint;
+            this.CollectionPointName = collectionPointName;
             this.collectionTime = collectionTime;
             this.representative = representative;
         }
-
         public DepartmentBO()
         {
 
         }
-
         public string DepartmentID
         {
             get
@@ -114,18 +115,7 @@ namespace BusinessObject
             }
         }
 
-        public string CollectionPoint
-        {
-            get
-            {
-                return collectionPoint;
-            }
-
-            set
-            {
-                collectionPoint = value;
-            }
-        }
+        
 
         public string CollectionTime
         {
@@ -150,6 +140,19 @@ namespace BusinessObject
             set
             {
                 representative = value;
+            }
+        }
+
+        public CollectionPointBO CollectionPointName
+        {
+            get
+            {
+                return collectionPointName;
+            }
+
+            set
+            {
+                collectionPointName = value;
             }
         }
     }

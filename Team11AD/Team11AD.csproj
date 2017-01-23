@@ -144,7 +144,8 @@
     <Content Include="ViewDisbursementList.aspx" />
     <Content Include="ViewItemCatalogue.aspx" />
     <Content Include="ViewLowLevelStock.aspx" />
-    <Content Include="ViewRequisition.aspx" />
+    <Content Include="ViewRequisitionDetail.aspx" />
+    <Content Include="ViewRequisitionList.aspx" />
     <Content Include="ViewSupplier.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -325,12 +326,19 @@
     <Compile Include="ViewLowLevelStock.aspx.designer.cs">
       <DependentUpon>ViewLowLevelStock.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewRequisition.aspx.cs">
-      <DependentUpon>ViewRequisition.aspx</DependentUpon>
+    <Compile Include="ViewRequisitionDetail.aspx.cs">
+      <DependentUpon>ViewRequisitionDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewRequisition.aspx.designer.cs">
-      <DependentUpon>ViewRequisition.aspx</DependentUpon>
+    <Compile Include="ViewRequisitionDetail.aspx.designer.cs">
+      <DependentUpon>ViewRequisitionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRequisitionList.aspx.cs">
+      <DependentUpon>ViewRequisitionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRequisitionList.aspx.designer.cs">
+      <DependentUpon>ViewRequisitionList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSupplier.aspx.cs">
       <DependentUpon>ViewSupplier.aspx</DependentUpon>

@@ -13,7 +13,7 @@ namespace BusinessObject
         private int qty;
         private float purchasePrice;
 
-        internal PurchaseItemBO PoNo
+        public PurchaseItemBO PoNo
         {
             get
             {
@@ -26,7 +26,7 @@ namespace BusinessObject
             }
         }
 
-        internal ItemBO ItemID
+        public ItemBO ItemID
         {
             get
             {

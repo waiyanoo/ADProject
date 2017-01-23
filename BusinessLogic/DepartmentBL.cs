@@ -16,7 +16,7 @@ namespace BusinessLogic
             dda.AddDepartment(dbo);
         }
 
-        public List<Department> GetAllDepartment()
+        public List<DepartmentBO> GetAllDepartment()
         {
 
             DepartmentDA dda = new DepartmentDA();
