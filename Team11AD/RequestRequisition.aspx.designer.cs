@@ -13,31 +13,40 @@ namespace Team11AD.View {
     public partial class RequestRequisition {
         
         /// <summary>
-        /// dditemcategory control.
+        /// ddcategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemcategory;
+        protected global::System.Web.UI.WebControls.DropDownList ddcategory;
         
         /// <summary>
-        /// dditemdescritption control.
+        /// dditemdescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemdescritption;
+        protected global::System.Web.UI.WebControls.DropDownList dditemdescription;
         
         /// <summary>
-        /// txtitemqty control.
+        /// RangeValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtitemqty;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        
+        /// <summary>
+        /// txtqty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtqty;
         
         /// <summary>
         /// btnadd control.

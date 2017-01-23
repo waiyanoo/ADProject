@@ -19,22 +19,21 @@ namespace Team11AD
         protected void btnSave_Click(object sender, EventArgs e)
         {
             DepartmentBO department = new DepartmentBO();
-
+            CollectionPointBO cpbo = new CollectionPointBO();
             department.DepartmentID = txtid.Text.Trim();
             department.DepartmentName = txtdname.Text.Trim();
             department.ContactName = txtcname.Text.Trim();
             department.Fax = txtfax.Text.Trim();
             department.Phone = txtphone.Text.Trim();
             department.HeadName = txthname.Text.Trim();
-            department.CollectionPoint = txtcpoint.Text.Trim();
+            cpbo.CollectionPointName = txtcpoint.Text.Trim();
             department.CollectionTime = txtctime.Text.Trim();
             department.Representative = txtrep.Text.Trim();
           
             DepartmentBL dbl = new DepartmentBL();
             dbl.AddDepartment(department);
-
-           
-
+            
+            Response.Redirect("ViewDepartment.aspx");
 
         }
     }

@@ -51,7 +51,11 @@
     <Compile Include="Adjustment.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="ApproveAdjustmentDA.cs" />
     <Compile Include="Category.cs">
+      <DependentUpon>logicUniversity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionPoint.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="DeliverOrderDA.cs" />
@@ -90,6 +94,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="RequestAdjustmentDA.cs" />
+    <Compile Include="RequestRequisitionDA.cs" />
     <Compile Include="Requisition.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -107,10 +112,14 @@
     <Compile Include="SupplierItem.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>logicUniversity.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewItemCatalogueDA.cs" />
+    <Compile Include="ViewRequisitionDA.cs" />
     <Compile Include="ViewRequisitionListDA.cs" />
   </ItemGroup>
   <ItemGroup>

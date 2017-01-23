@@ -12,7 +12,7 @@ namespace BusinessObject
         private ItemBO itemID;
         private float price;
 
-        internal SupplierBO SupplierID
+        public SupplierBO SupplierID
         {
             get
             {
@@ -25,7 +25,7 @@ namespace BusinessObject
             }
         }
 
-        internal ItemBO ItemID
+        public ItemBO ItemID
         {
             get
             {

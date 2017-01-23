@@ -15,7 +15,7 @@ namespace BusinessObject
         private int allocatedQty;
         private string fulfilledStatus;
 
-        internal RequisitionBO RequisitionID
+        public RequisitionBO RequisitionID
         {
             get
             {
@@ -28,7 +28,7 @@ namespace BusinessObject
             }
         }
 
-        internal ItemBO ItemID
+        public ItemBO ItemID
         {
             get
             {
@@ -101,6 +101,10 @@ namespace BusinessObject
             this.FulfilledQty = fulfilledQty;
             this.AllocatedQty = allocatedQty;
             this.FulfilledStatus = fulfilledStatus;
+        }
+       public RequisitionItemBO()
+        {
+
         }
     }
 }

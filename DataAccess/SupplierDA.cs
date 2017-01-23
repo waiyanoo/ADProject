@@ -28,6 +28,21 @@ namespace DataAccess
             
         }
 
+        public bool UpdateSupplier(SupplierBO sbo)
+        {
+            Supplier supplier = new Supplier();
+            var spl = context.Suppliers.FirstOrDefault(s => s.SupplierID == sbo.SupplierID);
+            spl.SupplierID = sbo.SupplierID;
+            spl.SupplierName = sbo.SupplierName;
+            spl.ContactName = sbo.ContactName;
+            spl.Phone = Convert.ToInt32(sbo.Phone);
+            spl.Fax = Convert.ToInt32(sbo.Fax);
+            spl.Address = sbo.Address;
+            context.SaveChanges();
+            return true;
+
+        }
+
         public void deleteSupplier(String id)
         {
             var supplier = context.Suppliers.FirstOrDefault(s => s.SupplierID == id);

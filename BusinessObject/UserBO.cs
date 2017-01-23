@@ -17,6 +17,8 @@ namespace BusinessObject
         private string image;
         private DepartmentBO departmentID;
         private RoleBO roleName;
+        private DateTime startdate;
+        private DateTime enddate;
 
         public string UserID
         {
@@ -122,7 +124,7 @@ namespace BusinessObject
             }
         }
 
-        internal RoleBO RoleName
+        public RoleBO RoleName
         {
             get
             {
@@ -135,7 +137,33 @@ namespace BusinessObject
             }
         }
 
-        public UserBO(string userID, string password, string name, string email, string phone, string whatsapp, string image, DepartmentBO departmentID, RoleBO roleName)
+        public DateTime Startdate
+        {
+            get
+            {
+                return startdate;
+            }
+
+            set
+            {
+                startdate = value;
+            }
+        }
+
+        public DateTime Enddate
+        {
+            get
+            {
+                return enddate;
+            }
+
+            set
+            {
+                enddate = value;
+            }
+        }
+
+        public UserBO(string userID, string password, string name, string email, string phone, string whatsapp, string image, DepartmentBO departmentID, RoleBO roleName, DateTime startdate, DateTime enddate)
         {
             this.UserID = userID;
             this.Password = password;
@@ -146,6 +174,8 @@ namespace BusinessObject
             this.Image = image;
             this.DepartmentID = departmentID;
             this.RoleName = roleName;
+            this.Startdate = startdate;
+            this.Enddate = enddate;
         }
         public UserBO()
         {

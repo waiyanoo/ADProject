@@ -12,6 +12,7 @@ namespace BusinessObject
         private ItemBO itemID;
         private int adjustQty;
         private string reason;
+        private string adjustedStatus;
 
         public AdjustmentBO VoucherNo 
         {
@@ -65,12 +66,26 @@ namespace BusinessObject
             }
         }
 
-        public ItemAdjustmentBO(AdjustmentBO voucherNo, ItemBO itemID, int adjustQty, string reason)
+        public string AdjustedStatus
+        {
+            get
+            {
+                return adjustedStatus;
+            }
+
+            set
+            {
+                adjustedStatus = value;
+            }
+        }
+
+        public ItemAdjustmentBO(AdjustmentBO voucherNo, ItemBO itemID, int adjustQty, string reason, string adjustedStatus)
         {
             this.VoucherNo = voucherNo;
             this.ItemID = itemID;
             this.AdjustQty = adjustQty;
             this.Reason = reason;
+            this.AdjustedStatus = adjustedStatus;
         }
 
         public ItemAdjustmentBO()

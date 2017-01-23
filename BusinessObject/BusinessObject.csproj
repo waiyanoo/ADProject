@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdjustmentBO.cs" />
+    <Compile Include="ApproveAdjustmentBO.cs" />
     <Compile Include="CategoryBO.cs" />
+    <Compile Include="CollectionPointBO.cs" />
     <Compile Include="DepartmentBO.cs" />
     <Compile Include="ItemAdjustmentBO.cs" />
     <Compile Include="ItemBO.cs" />
