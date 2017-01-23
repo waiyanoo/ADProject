@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2291cc1ca96342f9b06a9ce3cd280055" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="2291cc1ca96342f9b06a9ce3cd280055" Name="Diagram1" ZoomLevel="95">
         <EntityTypeShape EntityType="LogicUniversityModel.Adjustment" Width="1.5" PointX="12.125" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Category" Width="1.5" PointX="4.625" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Department" Width="1.75" PointX="0.875" PointY="6.25" IsExpanded="true" />
@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="LogicUniversityModel.PurchaseItem" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.PurchaseOrder" Width="1.5" PointX="2.625" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Requisition" Width="1.5" PointX="6.375" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LogicUniversityModel.RequisitionItem" Width="1.5" PointX="8.125" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogicUniversityModel.RequisitionItem" Width="1.5" PointX="9.125" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Role" Width="1.5" PointX="5.625" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.Supplier" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LogicUniversityModel.SupplierItem" Width="1.5" PointX="1.75" PointY="3.75" IsExpanded="true" />

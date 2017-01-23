@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    public class RequisitionBO
+    public class RequisitionBO 
     {
         private string requisitionID;
         private UserBO userID;
