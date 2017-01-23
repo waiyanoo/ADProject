@@ -147,5 +147,9 @@ namespace BusinessObject
             this.DepartmentID = departmentID;
             this.RoleName = roleName;
         }
+        public UserBO()
+        {
+
+        }
     }
 }

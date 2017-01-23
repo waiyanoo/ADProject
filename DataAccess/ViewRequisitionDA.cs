@@ -9,43 +9,52 @@ namespace DataAccess
 {
     public class ViewRequisitionDA
     {
-        LogicUniversityEntities context = new LogicUniversityEntities();
-
+        //Retrieves list of Requisitions from database.
         public List<RequisitionBO> getRequisitionList()
         {
             List<RequisitionBO> rList = new List<RequisitionBO>();
 
-            //List<RequisitionItem> riList = context.RequisitionItems.Where(x => (x.RequiredQty - x.FulfilledQty) > 0).ToList();
-            List<Requisition> reqList = context.Requisitions.Where(x => x.RequisitionItems.Any(y => ((y.RequiredQty - y.FulfilledQty) > 0))).ToList();
-
-            foreach (Requisition req in reqList)
+            List<Requisition> reqList = new List<Requisition>();
+            using (LogicUniversityEntities context = new LogicUniversityEntities())
             {
-                RequisitionBO rBO = new RequisitionBO();
-                rBO.RequisitionID = req.RequisitionID;
+                //Filters out outstanding RequisitionItem objects by checking if RequiredQty > FulfilledQty. 
+                //Only the Requisitions containing these RequisitionItems are active and should be retrieved from database
+                //Get the Requisitions objects which have these RequisitionItems in their RequisitionItems collection
+                reqList = context.Requisitions.Where(x => x.RequisitionItems.Any(y => ((y.RequiredQty - y.FulfilledQty) > 0))).ToList();
+                
+                //loads a list of business objects to pass on to business layer
+                foreach (Requisition req in reqList)
+                {
+                    RequisitionBO rBO = new RequisitionBO();
+                    rBO.RequisitionID = req.RequisitionID;
 
-                UserBO uBO = new UserBO();
-                uBO.UserID = req.User.UserID;
-                uBO.Name = req.User.Name;
-                rBO.UserID = uBO;
+                    UserBO uBO = new UserBO();
+                    uBO.UserID = req.User.UserID;
+                    uBO.Name = req.User.Name;
+                    rBO.UserID = uBO; //this is an object attribute
 
-                rBO.Date = (req.Date == null) ? new DateTime(1970,01,01) : (DateTime)req.Date;
-                rBO.Status = req.Status;
+                    rBO.Date = (req.Date == null) ? new DateTime(1970, 01, 01) : (DateTime)req.Date; //date can be null in database
+                    rBO.Status = req.Status;
 
-                rList.Add(rBO);
+                    rList.Add(rBO);
+                }
             }
-            
             return rList;
         }
 
+        //Deletes one Requisition with that particular RequisitionID, returns 'true' if successful
         public Boolean deleteRequisition(String requisitionId)
         {
             Boolean deleteResult = false;
-            Requisition requisition = context.Requisitions.Where(x => x.RequisitionID == requisitionId).FirstOrDefault();
-            if (requisition != null)
+            using (LogicUniversityEntities context = new LogicUniversityEntities())
             {
-                context.Requisitions.Remove(requisition);
-                context.SaveChanges();
-                deleteResult = true;
+                Requisition requisition = context.Requisitions.Where(x => x.RequisitionID == requisitionId).FirstOrDefault();
+                if (requisition != null)
+                {
+                    context.Requisitions.Remove(requisition);
+                    context.SaveChanges();
+                    deleteResult = true;
+                }
             }
             return deleteResult;
         }
