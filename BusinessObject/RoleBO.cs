@@ -14,6 +14,10 @@ namespace BusinessObject
         {
             this.RoleName = roleName;
         }
+        public RoleBO()
+        {
+
+        }
 
         public string RoleName
         {

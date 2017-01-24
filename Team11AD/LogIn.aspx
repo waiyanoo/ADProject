@@ -4,69 +4,47 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-     <link href="../style/css/bootstrap.min.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Stationary Inventory Management System</title>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="../style/css/sb-admin.css" rel="stylesheet"/>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Stationary Store Inventory System</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li>
-                    <a href="#" data-toggle="dropdown">Contact Us</a>
-                </li>
-				 <li>
-                    <a href="#" data-toggle="dropdown">About</a>
-                </li>
-            </ul> 
-        </nav>
-        </div> 
-         <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-
-            </div>
-            <div class="col-lg-4">
-                <h2 class="form-signin-heading">Please sign in</h2>
-                <label for="inputEmail" class="sr-only">Email address</label>
-                <asp:TextBox ID="txtusername" runat="server" CssClass="form-control"></asp:TextBox>
-        
-                <label for="inputPassword" class="sr-only">Password</label>
-                <asp:TextBox ID="txtpassword" TextMode="Password" runat="server" CssClass="form-control"></asp:TextBox>
-        
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            </div>
-            <div class="col-lg-4">
-
-            </div>
+<form id="form1" runat="server">
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>     
+                <div style="padding-top:30px" class="panel-body" >       
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <asp:TextBox ID="txtusername" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>                                    
+                    </div>
+                                
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <asp:TextBox ID="txtpassword" TextMode="Password" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                        
+                    </div>
+                          <asp:Label ID="lblmessage" runat="server" Text="" ForeColor="#CC3300"></asp:Label>      
+                    <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+                        <div class="col-sm-12 controls" style="text-align:center">
+                            <asp:Button ID="Button1" runat="server" Text="Login" CssClass="btn btn-success" OnClick="Button1_Click" />
+                            
+                        </div>
+                    </div>
+                </div>                     
+            </div>  
         </div>
-
+        
     </div>
-   
-        
-            
-        
+</form>
 
-    <!-- /container -->
-    </form>
-    <!-- jQuery -->
-    <script src="../style/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../style/js/bootstrap.min.js"></script>
 </body>
 </html>

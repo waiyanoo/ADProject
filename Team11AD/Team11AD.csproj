@@ -130,6 +130,7 @@
     <Content Include="style\css\bootstrap-rtl.min.css" />
     <Content Include="style\css\bootstrap.css" />
     <Content Include="style\css\bootstrap.min.css" />
+    <Content Include="style\css\custom.css" />
     <Content Include="style\css\sb-admin.css" />
     <Content Include="style\js\bootstrap.js" />
     <Content Include="style\js\bootstrap.min.js" />
