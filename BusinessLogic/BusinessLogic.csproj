@@ -52,6 +52,7 @@
     <Compile Include="UpdateRequisitionBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />
     <Compile Include="ViewRequisitionBL.cs" />
+    <Compile Include="ViewRequisitionDetailBL.cs" />
     <Compile Include="ViewRequisitionListBL.cs" />
   </ItemGroup>
   <ItemGroup>

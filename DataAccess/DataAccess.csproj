@@ -122,6 +122,7 @@
     </Compile>
     <Compile Include="ViewItemCatalogueDA.cs" />
     <Compile Include="ViewRequisitionDA.cs" />
+    <Compile Include="ViewRequisitionDetailDA.cs" />
     <Compile Include="ViewRequisitionListDA.cs" />
   </ItemGroup>
   <ItemGroup>
