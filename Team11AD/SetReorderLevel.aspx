@@ -24,11 +24,11 @@
                 </div>
                 <div class="form-group"> 
                     <label>Reorder Level :</label> <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtreorderlevel" ForeColor="red" Type="Integer" MinimumValue="0" MaximumValue="1000" ErrorMessage="Please enter integer between 0 & 1000"></asp:RangeValidator>
-                    <asp:TextBox ID="txtreorderlevel" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtreorderlevel" runat="server" CssClass="form-control" AutoCompleteType="Disabled"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label>Reorder Qty :</label> <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtreorderqty" ForeColor="red" Type="Integer" MinimumValue="0" MaximumValue="1000" ErrorMessage="Please enter integer between 0 & 1000"></asp:RangeValidator>
-                    <asp:TextBox ID="txtreorderqty" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtreorderqty" runat="server" CssClass="form-control" AutoCompleteType="Disabled"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <asp:Button ID="btnset" runat="server" Text="Set" CssClass="btn btn-primary" OnClick="btnset_Click" />

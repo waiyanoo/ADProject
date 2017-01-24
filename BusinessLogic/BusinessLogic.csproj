@@ -48,7 +48,9 @@
     <Compile Include="RequestRequisitiionBL.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
     <Compile Include="SupplierBL.cs" />
+    <Compile Include="UpdateRequisitionBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />
+    <Compile Include="ViewRequisitionBL.cs" />
     <Compile Include="ViewRequisitionDetailBL.cs" />
     <Compile Include="ViewRequisitionListBL.cs" />
   </ItemGroup>

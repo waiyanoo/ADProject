@@ -115,10 +115,12 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="UpdateRequisitionDA.cs" />
     <Compile Include="User.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewItemCatalogueDA.cs" />
+    <Compile Include="ViewRequisitionDA.cs" />
     <Compile Include="ViewRequisitionDetailDA.cs" />
     <Compile Include="ViewRequisitionListDA.cs" />
   </ItemGroup>
