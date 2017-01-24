@@ -99,11 +99,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Add Department.aspx" />
+    <Content Include="AddDepartment.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="ApproveAdjustmentRequest.aspx" />
     <Content Include="ApproveAdjustmentRequisitionM.aspx" />
     <Content Include="DeliverOrder.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -135,14 +136,14 @@
     <Content Include="style\js\bootstrap.js" />
     <Content Include="style\js\bootstrap.min.js" />
     <Content Include="style\js\jquery.js" />
-    <Content Include="test.aspx" />
     <Content Include="RequestRequisition.aspx" />
-    <Content Include="Trend Analysis.aspx" />
+    <Content Include="TrendAnalysis.aspx" />
     <Content Include="UpdateDepartment.aspx" />
     <Content Include="UpdateRequisition.aspx" />
     <Content Include="UpdateSupplier.aspx" />
     <Content Include="ViewAllStock.aspx" />
     <Content Include="ViewDepartment.aspx" />
+    <Content Include="ViewDisbursementDetail.aspx" />
     <Content Include="ViewDisbursementList.aspx" />
     <Content Include="ViewItemCatalogue.aspx" />
     <Content Include="ViewLowLevelStock.aspx" />
@@ -153,12 +154,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add Department.aspx.cs">
-      <DependentUpon>Add Department.aspx</DependentUpon>
+    <Compile Include="AddDepartment.aspx.cs">
+      <DependentUpon>AddDepartment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Add Department.aspx.designer.cs">
-      <DependentUpon>Add Department.aspx</DependentUpon>
+    <Compile Include="AddDepartment.aspx.designer.cs">
+      <DependentUpon>AddDepartment.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSupplier.aspx.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
@@ -201,6 +202,9 @@
     </Compile>
     <Compile Include="DUser.Master.designer.cs">
       <DependentUpon>DUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
@@ -259,13 +263,6 @@
     <Compile Include="SSupervisor.Master.designer.cs">
       <DependentUpon>SSupervisor.Master</DependentUpon>
     </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="RequestRequisition.aspx.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,12 +270,12 @@
     <Compile Include="RequestRequisition.aspx.designer.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Trend Analysis.aspx.cs">
-      <DependentUpon>Trend Analysis.aspx</DependentUpon>
+    <Compile Include="TrendAnalysis.aspx.cs">
+      <DependentUpon>TrendAnalysis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Trend Analysis.aspx.designer.cs">
-      <DependentUpon>Trend Analysis.aspx</DependentUpon>
+    <Compile Include="TrendAnalysis.aspx.designer.cs">
+      <DependentUpon>TrendAnalysis.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateDepartment.aspx.cs">
       <DependentUpon>UpdateDepartment.aspx</DependentUpon>
@@ -314,6 +311,13 @@
     </Compile>
     <Compile Include="ViewDepartment.aspx.designer.cs">
       <DependentUpon>ViewDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDisbursementDetail.aspx.cs">
+      <DependentUpon>ViewDisbursementDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDisbursementDetail.aspx.designer.cs">
+      <DependentUpon>ViewDisbursementDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewDisbursementList.aspx.cs">
       <DependentUpon>ViewDisbursementList.aspx</DependentUpon>

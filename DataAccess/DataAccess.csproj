@@ -105,6 +105,7 @@
     <Compile Include="Role.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="SetCollectionPointDA.cs" />
     <Compile Include="SetReorderLevelDA.cs" />
     <Compile Include="Supplier.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>

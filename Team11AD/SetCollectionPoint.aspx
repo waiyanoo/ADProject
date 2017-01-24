@@ -22,11 +22,13 @@
                     <label>Collection Time :</label>
                     <asp:DropDownList ID="ddcTime" runat="server" CssClass="form-control" DataTextField = "CollectionTime" 
                         DataValueField = "CollectionTime" AutoPostBack="True" >
+                        <asp:ListItem>9:30 AM</asp:ListItem>
+                        <asp:ListItem>11:00 AM</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 
                 <div class="form-group" style="text-align:right">
-                     <asp:Button ID="btnSet" runat="server" Text="Set" CssClass="btn btn-primary" />
+                     <asp:Button ID="btnSet" runat="server" Text="Set" CssClass="btn btn-primary" OnClick="btnSet_Click" />
                 </div>
             </div>
             <div class="col-lg-6">  

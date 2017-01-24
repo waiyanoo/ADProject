@@ -23,7 +23,6 @@
                         <asp:BoundField DataField="Address" HeaderText="Address" />
                         <asp:BoundField DataField="GSTNo" HeaderText="GSTNo" />
                         <asp:CommandField ShowEditButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
-                        <asp:CommandField ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
                     </Columns>
                 </asp:GridView>
             </div>

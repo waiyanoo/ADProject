@@ -47,6 +47,7 @@
     <Compile Include="LogInBL.cs" />
     <Compile Include="RequestAdjustmentBL.cs" />
     <Compile Include="RequestRequisitiionBL.cs" />
+    <Compile Include="SetCollectionPointBL.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="UpdateRequisitionBL.cs" />

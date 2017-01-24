@@ -25,6 +25,30 @@ namespace Team11AD
             ubo = lbl.checkUser(username, password);
             if (ubo != null)
             {
+                Session["user"] = ubo;
+                RoleBO dbo = new RoleBO();
+                dbo = ubo.RoleName;
+                switch (ubo.RoleName.ToString())
+                {
+                    case "Store Clerk":
+                        Response.Redirect("ViewDisbursementList.aspx");
+                        break;
+                    case "Store Supervisor":
+                        Response.Redirect("ViewDisbursementList.aspx");
+                        break;
+                    case "Store Manager":
+                        Response.Redirect("ViewDisbursementList.aspx");
+                        break;
+                    case "Department Staff":
+                        Response.Redirect("ViewDisbursementList.aspx");
+                        break;
+                    case "Department Head":
+                        Response.Redirect("ViewDisbursementList.aspx");
+                        break;
+                    
+
+
+                }
                 
             }
             else

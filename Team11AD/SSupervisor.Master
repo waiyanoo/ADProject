@@ -43,17 +43,11 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-dashboard"></i> View Low-Level Stock</a>
+                    <li>
+                        <a href="TrendAnalysis.aspx"><i class="fa fa-fw fa-table"></i>Trend Analysis</a>
                     </li>
                     <li>
-                        <a href="ViewItemCatalogue.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> View Item Catalogue</a>
-                    </li>
-                    <li> 
-                        <a href="StockReport.aspx"><i class="fa fa-fw fa-table"></i>Stock Report</a>
-                    </li>
-                    <li>
-                        <a href="report.aspx"><i class="fa fa-fw fa-table"></i>Trend Analysis</a>
+                        <a href="LogIn.aspx"><i class="fa fa-fw fa-table"></i>Log Out</a>
                     </li>
                     
                     
