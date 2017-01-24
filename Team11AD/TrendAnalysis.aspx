@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SSupervisor.Master" AutoEventWireup="true" CodeBehind="TrendAnalysis.aspx.cs" Inherits="Team11AD.Trend_Analysis" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Stationary Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     Trend Analysis

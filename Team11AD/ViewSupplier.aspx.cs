@@ -30,7 +30,7 @@ namespace Team11AD
 
         protected void gvsupplier_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            String id= gvsupplier.Rows[e.NewEditIndex].Cells[0].Text;
+            String id= gvsupplier.Rows[e.NewEditIndex].Cells[1].Text;
             Response.Redirect("UpdateSupplier.aspx?id="+ id);
         }
 

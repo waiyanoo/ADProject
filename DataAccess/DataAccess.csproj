@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="LogInDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuchaseOrderDA.cs" />
     <Compile Include="PurchaseItem.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
@@ -122,6 +123,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewItemCatalogueDA.cs" />
+    <Compile Include="ViewLowLevelStockDA.cs" />
     <Compile Include="ViewRequisitionDA.cs" />
     <Compile Include="ViewRequisitionDetailDA.cs" />
     <Compile Include="ViewRequisitionListDA.cs" />

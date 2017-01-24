@@ -14,9 +14,7 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
-                gvitemcatalog.DataSource = vic.FindAllItem();
-                gvitemcatalog.DataBind();
+                loadGridView();
             }
         }
 
@@ -25,6 +23,19 @@ namespace Team11AD
             string itemdesc = txtsearch.Text.Trim();
             ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
             gvitemcatalog.DataSource = vic.FindItem(itemdesc);
+            gvitemcatalog.DataBind();
+        }
+
+        protected void gvitemcatalog_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvitemcatalog.PageIndex = e.NewPageIndex;
+            loadGridView();
+        }
+
+        public void loadGridView()
+        {
+            ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
+            gvitemcatalog.DataSource = vic.FindAllItem();
             gvitemcatalog.DataBind();
         }
     }

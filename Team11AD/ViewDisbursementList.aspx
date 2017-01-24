@@ -9,8 +9,13 @@
     <div class="panel-body">
 	    <div class="row">
             <div class="col-lg-12">
-                <asp:GridView ID="gvrequisition" runat="server" CssClass="table table-striped" AutoGenerateColumns="false"  OnRowEditing ="gvrequisition_RowEditing">
+                <asp:GridView ID="gvrequisition" runat="server" CssClass="table table-striped" AutoGenerateColumns="false"  OnRowEditing ="gvrequisition_RowEditing" GridLines="None">
                      <Columns>
+                        <asp:TemplateField HeaderText="#">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            </asp:TemplateField>
                         <asp:BoundField DataField="RequsitionId" HeaderText="Requisition ID"/>
                         <asp:BoundField DataField="Date" HeaderText="Submitted Date"/>
                         <asp:BoundField DataField="Name" HeaderText="Submitted Employee"/>

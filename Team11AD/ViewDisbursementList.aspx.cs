@@ -22,7 +22,7 @@ namespace Team11AD
 
         protected void gvrequisition_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            string requisitionid = gvrequisition.Rows[e.NewEditIndex].Cells[0].Text.ToString();
+            string requisitionid = gvrequisition.Rows[e.NewEditIndex].Cells[1].Text.ToString();
             Response.Redirect("ViewDisbursementDetail.aspx?requisitionid=" + requisitionid);
         }
     }

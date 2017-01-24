@@ -23,8 +23,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False">
+                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" PageSize="20" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging" GridLines="None">
                         <Columns>
+                            <asp:TemplateField HeaderText="#">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:BoundField DataField="ItemID" HeaderText="SItem ID" />
                             <asp:BoundField DataField="Description" HeaderText="Description" />
                             <asp:BoundField DataField="CurrentQty" HeaderText="Current Quantity" />

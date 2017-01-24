@@ -13,10 +13,15 @@
                 <div class="form-group">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AddSupplier.aspx" CssClass="btn btn-primary" runat="server">Add New</asp:HyperLink>
                 </div>
-                <asp:GridView ID="gvsupplier" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowDeleting="gvsupplier_RowDeleting" OnRowEditing="gvsupplier_RowEditing">
+                <asp:GridView ID="gvsupplier" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowEditing="gvsupplier_RowEditing" GridLines="None">
                      <Columns>
+                         <asp:TemplateField HeaderText="#">
+                        <ItemTemplate>
+                            <%# Container.DataItemIndex + 1 %>
+                        </ItemTemplate>
+                        </asp:TemplateField>
                        <asp:BoundField DataField="SupplierID" HeaderText="Supplier ID" />
-                        <asp:BoundField DataField="SupplierName" HeaderText="Name" />
+                        <asp:BoundField DataField="SupplierName" HeaderText="Name"  />
                         <asp:BoundField DataField="ContactName" HeaderText="Contact" />
                         <asp:BoundField DataField="Phone" HeaderText="Phone" />
                         <asp:BoundField DataField="Fax" HeaderText="Fax" />

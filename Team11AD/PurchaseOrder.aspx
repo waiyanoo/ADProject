@@ -6,7 +6,7 @@
     Purchase Order
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <div class="panel-body">
+   <div class="panel-body">
 	    <div class="row">
             
         <div class="col-lg-4">
@@ -18,10 +18,6 @@
                     <label>Supplier :</label>
                     <asp:TextBox ID="txtsupplier" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <label>Deliver Date :</label>
-                    <asp:TextBox ID="txtdeliverydate" runat="server" CssClass="form-control">Date Need to find out</asp:TextBox>
-                </div>
                 
             </div>
             <div class="col-lg-1"></div>
@@ -32,26 +28,23 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <table style="width: 100%;" class="table table-bordered">
-                            <tr>
-                                <td>Need </td>
-                                <td>to</td>
-                                <td>Replace</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
+                    <asp:GridView ID="ordergridview" OnSelectedIndexChanged ="Page_Load" autogeneratecolumns ="False" runat="server">
+                        <Columns>
+                            <asp:BoundField DataField="Sequence" HeaderText="#" />
+                            <asp:BoundField DataField="Itemno" HeaderText="Item No" />
+                            <asp:BoundField DataField="Description" HeaderText="Description" />
+                            <asp:BoundField DataField="Recommended_reorder_qty" HeaderText="Recommended Reorder Qty" />
+                            <asp:TemplateField  HeaderText="Order Qty">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="textbox1" OnTextChanged ="Page_Load" runat="server" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="Price" HeaderText="Price" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
                 <div class="form-group" style="text-align:right">
-                     <asp:Button ID="btnorder" runat="server" Text="Order" CssClass="btn btn-primary"/>
+                     <asp:Button ID="btnorder" runat="server" Text="Order" CssClass="btn btn-primary" OnClick="btnorder_Click"/>
                 </div>
                 
             </div>
@@ -60,5 +53,5 @@
 
         </div>
     </div>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 </asp:Content>
-

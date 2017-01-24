@@ -49,6 +49,7 @@
     <Compile Include="ItemBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseItemBO.cs" />
+    <Compile Include="PurchaseItemDetailBO.cs" />
     <Compile Include="PurchaseOrderBO.cs" />
     <Compile Include="RequisitionBO.cs" />
     <Compile Include="RequisitionItemBO.cs" />

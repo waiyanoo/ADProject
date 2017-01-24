@@ -22,5 +22,12 @@ namespace DataAccess
             int key = Convert.ToInt32(id) + 1;
             return key.ToString();
         }
+
+        public string getKeyforPurchaseOrder()
+        {
+            string id = context.PurchaseOrders.Max(i => i.PONo);
+            int key = Convert.ToInt32(id) + 1;
+            return key.ToString();
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace Team11AD
         protected void gvdepartment_RowEditing(object sender, GridViewEditEventArgs e)
         {
             
-            String id = gvdepartment.Rows[e.NewEditIndex].Cells[0].Text;
+            String id = gvdepartment.Rows[e.NewEditIndex].Cells[1].Text;
             gvdepartment.EditIndex = e.NewEditIndex;
             Response.Redirect("UpdateDepartment.aspx?id=" + id);
 

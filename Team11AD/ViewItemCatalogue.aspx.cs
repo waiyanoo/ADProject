@@ -16,11 +16,7 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
-                List<Item> itemlist = vic.FindAllItem();
-
-                gvitemcatalog.DataSource = itemlist;
-                gvitemcatalog.DataBind();
+                loadGridView();
             }
         }
 
@@ -29,6 +25,21 @@ namespace Team11AD
             string itemdesc = txtsearch.Text.Trim();
             ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
             List<Item> itemlist = vic.FindItem(itemdesc);
+
+            gvitemcatalog.DataSource = itemlist;
+            gvitemcatalog.DataBind();
+        }
+
+        protected void gvitemcatalog_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvitemcatalog.PageIndex = e.NewPageIndex;
+            loadGridView();
+        }
+
+        public void loadGridView()
+        {
+            ViewItemCatalogueBL vic = new ViewItemCatalogueBL();
+            List<Item> itemlist = vic.FindAllItem();
 
             gvitemcatalog.DataSource = itemlist;
             gvitemcatalog.DataBind();

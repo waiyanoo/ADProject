@@ -45,6 +45,7 @@
     <Codmpile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DepartmentBL.cs" />
     <Compile Include="LogInBL.cs" />
+    <Compile Include="PurchaseOrderBL.cs" />
     <Compile Include="RequestAdjustmentBL.cs" />
     <Compile Include="RequestRequisitiionBL.cs" />
     <Compile Include="SetCollectionPointBL.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="SupplierBL.cs" />
     <Compile Include="UpdateRequisitionBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />
+    <Compile Include="ViewLowLevelStockBL.cs" />
     <Compile Include="ViewRequisitionBL.cs" />
     <Compile Include="ViewRequisitionDetailBL.cs" />
     <Compile Include="ViewRequisitionListBL.cs" />

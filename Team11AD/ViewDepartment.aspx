@@ -12,14 +12,18 @@
                <div class="form-group">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AddDepartment.aspx" CssClass="btn btn-primary" runat="server">Add New</asp:HyperLink>
                 </div>
-               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" >
+               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" GridLines="None">
                    <Columns>
+                       <asp:TemplateField HeaderText="#">
+                        <ItemTemplate>
+                            <%# Container.DataItemIndex + 1 %>
+                        </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:BoundField DataField="DepartmentID" HeaderText="Department ID" />
                         <asp:BoundField DataField="DepartmentName" HeaderText="Department Name" />
                        <asp:BoundField DataField="ContactName" HeaderText="Contact Name" />
                        <asp:BoundField DataField="Phone" HeaderText="Phone" />
                        <asp:BoundField DataField="Fax" HeaderText="Fax" />
-                       <asp:BoundField DataField="HeadName" HeaderText="Head Name" />
                        <asp:BoundField DataField="CollectionPointName" HeaderText="Collection Point" />
                        <asp:BoundField DataField="CollectionTime" HeaderText="Collection Time" />
                        <asp:BoundField DataField="Representative" HeaderText="Representative" />

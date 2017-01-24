@@ -43,18 +43,14 @@
                     <asp:Button ID="btnAdd" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnAdd_Click" />     
                 </div>
                 
-
-                
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-4">
-               
-            </div>
+            <div class="col-lg-4"></div>
         </div>
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <asp:GridView ID="gvItemList" runat="server" CssClass="table table-striped"></asp:GridView>
+                    <asp:GridView ID="gvItemList" runat="server" CssClass="table table-striped" GridLines="None"></asp:GridView>
                 </div>
                 <div class="form-group" style="text-align:right">
                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />     

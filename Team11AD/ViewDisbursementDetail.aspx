@@ -8,26 +8,37 @@ Stationary Store Inventory System
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
 	    <div class="row">
-            <div class="col-lg-5">
-                <label>Requisition ID </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                <asp:Label ID="RIDlable" runat="server" Text="Label"></asp:Label>
-                <br />
-                <br />
-                <label>Employee Name </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="EmployeeNamelable" runat="server" Text="Label"></asp:Label>
-            </div>
-            <div class="col-lg-10">
+            <div class="col-lg-3">
                 <div class="form-group">
-                    
+                    <label>Requisition ID :</label>
+                </div>
+                
+                <div class="form-group">
+                    <label>Employee Name :</label>
+                </div>
+                
+               
+                
+            </div>
+            <div class="col-lg-3">
+               <div class="form-group">
+                    <asp:Label ID="RIDlable" runat="server" Text="Label"></asp:Label>
+                </div>
+                <div class="form-group">
+                    <asp:Label ID="EmployeeNamelable" runat="server" Text="Label"></asp:Label>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-1">
-            </div>
-            <div class="col-lg-8">
-                <asp:GridView ID="gvrequisitiondetails" runat="server" CssClass="table table-striped" AutoGenerateColumns="false">
+            
+            <div class="col-lg-10">
+                <asp:GridView ID="gvrequisitiondetails" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" GridLines="None">
                      <Columns>
+                          <asp:TemplateField HeaderText="#">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            </asp:TemplateField>
                         <asp:BoundField DataField="ItemId" HeaderText="Item ID"/>
                         <asp:BoundField DataField="ItemDescription" HeaderText="Item Description"/>
                         <asp:BoundField DataField="RequiredQty" HeaderText="Required Quantity"/>

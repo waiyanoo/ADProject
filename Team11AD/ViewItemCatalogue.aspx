@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewItemCatalogue.aspx.cs" Inherits="Team11AD.ViewItemCatalogue" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    SStationary Store Inventory System
+    Stationary Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     View Item Catalogue
@@ -23,8 +23,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False">
+                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" 
+                        GridLines="None" PageSize="20" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging">
                         <Columns>
+                             <asp:TemplateField HeaderText="#">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                             <asp:BoundField DataField="Description" HeaderText="Description" />
                             <asp:BoundField DataField="ReorderLevel" HeaderText="Reorder Level" />
