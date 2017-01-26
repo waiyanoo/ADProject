@@ -59,6 +59,7 @@
     <Compile Include="CollectionPoint.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DelegateAuthorityDA.cs" />
     <Compile Include="DeliverOrderDA.cs" />
     <Compile Include="Department.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
