@@ -23,8 +23,8 @@
                     <label>Employee Name :</label>
                     <asp:TextBox ID="txtemployeename" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                 </div>
-
             </div>
+
             <div class="col-lg-1"></div>
             <div class="col-lg-4">
                 <div class="form-group">

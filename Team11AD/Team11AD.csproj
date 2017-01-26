@@ -103,6 +103,7 @@
     <Content Include="AddSupplier.aspx" />
     <Content Include="ApproveAdjustmentRequest.aspx" />
     <Content Include="ApproveAdjustmentRequisitionM.aspx" />
+    <Content Include="DelegateAuthority.aspx" />
     <Content Include="DeliverOrder.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="ApproveAdjustmentRequisitionM.aspx.designer.cs">
       <DependentUpon>ApproveAdjustmentRequisitionM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DelegateAuthority.aspx.cs">
+      <DependentUpon>DelegateAuthority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DelegateAuthority.aspx.designer.cs">
+      <DependentUpon>DelegateAuthority.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeliverOrder.aspx.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>
