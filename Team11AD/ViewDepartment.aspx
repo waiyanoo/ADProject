@@ -24,7 +24,6 @@
                        <asp:BoundField DataField="ContactName" HeaderText="Contact Name" />
                        <asp:BoundField DataField="Phone" HeaderText="Phone" />
                        <asp:BoundField DataField="Fax" HeaderText="Fax" />
-                       <asp:BoundField DataField="CollectionPointName" HeaderText="Collection Point" />
                        <asp:BoundField DataField="CollectionTime" HeaderText="Collection Time" />
                        <asp:BoundField DataField="Representative" HeaderText="Representative" />
 

@@ -92,9 +92,20 @@ namespace DataAccess
                 data.AdjustedQty = data.AdjustedQty;
                 
                 context.SaveChanges();
+                updateItemQty(voucher);
             }
             
            
+        }
+        public void updateItemQty(string vonumber)
+        {
+            List<ItemAdjustment> listpi = context.ItemAdjustments.Where(x => x.VoucherNo == vonumber).ToList();
+            foreach (var pi in listpi)
+            {
+                var i = context.Items.FirstOrDefault(x => x.ItemID == pi.ItemID);
+                i.CurrentQty = i.CurrentQty + pi.AdjustedQty;
+                context.SaveChanges();
+            }
         }
     }
 }

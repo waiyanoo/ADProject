@@ -52,6 +52,7 @@
                     <li>
                         <a href="RequestRequisition.aspx"><i class="fa fa-fw fa-dashboard"></i> Request Requisition</a>
                     </li>
+
                     <li>
                         <a href="LogIn.aspx"><i class="fa fa-fw fa-edit"></i> Log Out</a>
                     </li>

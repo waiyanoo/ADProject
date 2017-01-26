@@ -71,21 +71,21 @@ ForeColor="Red">Enter a 7 digit phone number</asp:RegularExpressionValidator>
 
                 <div class="form-group">
                     <label>Collection Point :</label>
-                    <asp:TextBox ID="txtcpoint" runat="server" CssClass="form-control"></asp:TextBox>
-                     <asp:RequiredFieldValidator id="RequiredFieldValidator7" runat="server"
-                    ControlToValidate="txtcpoint"
-     ErrorMessage="Collection Point is a required field."
-   ForeColor="Red">
-                </asp:RequiredFieldValidator>
+                    <asp:DropDownList ID="ddcollection" runat="server" CssClass="form-control">
+                        <asp:ListItem>Administration Building</asp:ListItem>
+                        <asp:ListItem>Engineering School</asp:ListItem>
+                        <asp:ListItem>Management School</asp:ListItem>
+                        <asp:ListItem>Medical School</asp:ListItem>
+                        <asp:ListItem>Science School</asp:ListItem>
+                        <asp:ListItem>University Hospital</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label>Collection Time :</label>
-                    <asp:TextBox ID="txtctime" runat="server" CssClass="form-control"></asp:TextBox>
-                     <asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
-                    ControlToValidate="txtctime"
-     ErrorMessage="Collection Time is a required field."
-     ForeColor="Red">
-                </asp:RequiredFieldValidator>
+                    <asp:DropDownList ID="ddcollectiontime" runat="server" CssClass="form-control">
+                        <asp:ListItem>9:30 AM</asp:ListItem>
+                        <asp:ListItem>11:00 PM</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label>Representative :</label>

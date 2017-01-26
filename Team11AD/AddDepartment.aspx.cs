@@ -26,8 +26,8 @@ namespace Team11AD
             department.Fax = txtfax.Text.Trim();
             department.Phone = txtphone.Text.Trim();
             department.HeadName = txthname.Text.Trim();
-            cpbo.CollectionPointName = txtcpoint.Text.Trim();
-            department.CollectionTime = txtctime.Text.Trim();
+            cpbo.CollectionPointName = ddcollection.SelectedValue;
+            department.CollectionTime = ddcollectiontime.SelectedValue;
             department.Representative = txtrep.Text.Trim();
           
             DepartmentBL dbl = new DepartmentBL();

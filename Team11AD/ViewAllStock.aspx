@@ -38,9 +38,34 @@
                             <asp:BoundField DataField="UnitOfMeasure" HeaderText="Unit Of Measure" />
                             <asp:BoundField DataField="CategoryName" HeaderText="Category Name" />
                         </Columns>
+                        <PagerStyle HorizontalAlign = "Right" CssClass = "GridPager" />
                     </asp:GridView>
                 </div>
             </div>
         </div>
     </div>
+    <style type="text/css">
+    
+    .GridPager a, .GridPager span
+    {
+        display: block;
+        height: 20px;
+        width: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    .GridPager a
+    {
+        background-color: #ffffff;
+        color: #969696;
+        border: 1px solid #ddd;
+    }
+    .GridPager span
+    {
+        background-color: #A1DCF2;
+        color: #000;
+        border: 1px solid #3AC0F2;
+    }
+</style>
 </asp:Content>

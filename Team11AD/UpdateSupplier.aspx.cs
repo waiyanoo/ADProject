@@ -14,27 +14,31 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["id"] != null)
+            if (!IsPostBack)
             {
-                txtname.Text = Request.QueryString["id"];
-                SupplierBO sbo = new SupplierBO();
-                SupplierBL sbl = new SupplierBL();
-                sbo = sbl.GetSupplierbyID(Request.QueryString["id"]);
-                txtpk.Text = sbo.SupplierID;
-                txtname.Text = sbo.SupplierName;
-                txtcontactname.Text = sbo.ContactName;
-                txtphone.Text = sbo.Phone;
-                txtfax.Text = sbo.Fax;
-                txtaddress.Text = sbo.Address;
-                txtgst.Text = sbo.GSTNo1;
+
+            
+                if (Request.QueryString["id"] != null)
+                {
+                    txtname.Text = Request.QueryString["id"];
+                    SupplierBO sbo = new SupplierBO();
+                    SupplierBL sbl = new SupplierBL();
+                    sbo = sbl.GetSupplierbyID(Request.QueryString["id"]);
+                    txtpk.Text = sbo.SupplierID;
+                    txtname.Text = sbo.SupplierName;
+                    txtcontactname.Text = sbo.ContactName;
+                    txtphone.Text = sbo.Phone;
+                    txtfax.Text = sbo.Fax;
+                    txtaddress.Text = sbo.Address;
+                    txtgst.Text = sbo.GSTNo1;
+
+                }
+                else
+                {
+                    Response.Redirect("ViewSupplier.aspx");
+                }
 
             }
-            else
-            {
-                Response.Redirect("ViewSupplier.aspx");
-            }
-               
-            
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

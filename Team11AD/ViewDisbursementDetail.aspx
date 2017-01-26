@@ -44,5 +44,10 @@ Stationary Store Inventory System
                 </asp:GridView>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-10" style="text-align:right">
+                <asp:Button ID="btnback" runat="server" Text="Go To Details..." CssClass="btn btn-primary" OnClick="btnback_Click" />
+            </div>
+        </div>
     </div>
 </asp:Content>

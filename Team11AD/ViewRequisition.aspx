@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DUser.Master" AutoEventWireup="true" CodeBehind="ViewRequisition.aspx.cs" Inherits="Team11AD.ViewRequisition" %>
+﻿v<%@ Page Title="" Language="C#" MasterPageFile="~/DUser.Master" AutoEventWireup="true" CodeBehind="ViewRequisition.aspx.cs" Inherits="Team11AD.ViewRequisition" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System

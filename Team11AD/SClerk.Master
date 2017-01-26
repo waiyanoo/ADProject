@@ -56,7 +56,7 @@
                         <a href="ViewLowLevelStock.aspx"><i class="fa fa-fw fa-table"></i>View Low Level Stock</a>
                     </li>
                     <li>
-                        <a href="DeliverOrder.aspx"><i class="fa fa-fw fa-table"></i>Deliver Order</a>
+                        <a href="DeliverOrder.aspx"><i class="fa fa-fw fa-table"></i>Record Delivery Order</a>
                     </li>
                     <li>
                         <a href="SetReorderLevel.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Set Reorder Level</a>
