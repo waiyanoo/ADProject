@@ -13,7 +13,6 @@ namespace DataAccess
         public List<CategoryBO> getCategoryList()
         {
             List<CategoryBO> cList = new List<CategoryBO>();
-            cList.Add(new CategoryBO(null));
             using (LogicUniversityEntities context = new LogicUniversityEntities())
             {
                 List<Category> lst = context.Categories.ToList();
@@ -31,7 +30,6 @@ namespace DataAccess
         public List<ItemBO> getItemList(CategoryBO cBO)
         {
             List<ItemBO> iList = new List<ItemBO>();
-            iList.Add(new ItemBO());
             using (LogicUniversityEntities context = new LogicUniversityEntities())
             {
                 List<Item> lst = context.Items.Where(x => x.Category.CategoryName == cBO.CategoryName).ToList();

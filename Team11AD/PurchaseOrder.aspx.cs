@@ -22,15 +22,15 @@ namespace Team11AD
                 ordergridview.DataSource = PurchaseOrderBL.GeneratePurchaseOrder(itemslist);
                 ordergridview.DataBind();
                 txtorderdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                Label1.Text = "fdfd";
+                
 
                 foreach (GridViewRow gvr in ordergridview.Rows)
                 {
                     ((TextBox)gvr.FindControl("textbox1")).Text = gvr.Cells[3].Text.ToString();
                 }
             }
-            else
-                Label1.Text = "okmm";
+            
+               
         }
 
 
@@ -55,6 +55,8 @@ namespace Team11AD
                 purchaselist.Add(pi);
                 PurchaseOrderBL.savePurchaseItem(purchaselist);
             }
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Order Successful')", true);
+            Response.Redirect("ViewLowLevelStock.aspx");
         }
     }
 }

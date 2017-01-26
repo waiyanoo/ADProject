@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <asp:GridView ID="ordergridview" OnSelectedIndexChanged ="Page_Load" autogeneratecolumns ="False" runat="server">
+                    <asp:GridView ID="ordergridview" OnSelectedIndexChanged ="Page_Load" GridLines="None" CssClass="table table-striped" autogeneratecolumns ="False" runat="server">
                         <Columns>
                             <asp:BoundField DataField="Sequence" HeaderText="#" />
                             <asp:BoundField DataField="Itemno" HeaderText="Item No" />
@@ -53,5 +53,4 @@
 
         </div>
     </div>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 </asp:Content>
