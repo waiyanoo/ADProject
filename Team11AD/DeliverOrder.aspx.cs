@@ -19,6 +19,8 @@ namespace Team11AD
                 ddponumber.DataTextField = "PONo";
                 ddponumber.DataValueField = "PONo";
                 ddponumber.DataBind();
+                ddponumber.Items.Insert(0, new ListItem("Select PO Number", String.Empty));
+                ddponumber.SelectedIndex = 0;
             }
         }
 

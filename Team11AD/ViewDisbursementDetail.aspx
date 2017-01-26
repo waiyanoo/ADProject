@@ -3,7 +3,7 @@
 Stationary Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
-    View Requisition Details 
+    Disbursement Details 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
@@ -15,10 +15,7 @@ Stationary Store Inventory System
                 
                 <div class="form-group">
                     <label>Employee Name :</label>
-                </div>
-                
-               
-                
+                </div>  
             </div>
             <div class="col-lg-3">
                <div class="form-group">

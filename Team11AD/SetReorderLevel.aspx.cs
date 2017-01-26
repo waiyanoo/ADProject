@@ -21,6 +21,10 @@ namespace Team11AD
                 ddcategory.DataValueField = "CategoryName";
                 ddcategory.DataTextField = "CategoryName";
                 ddcategory.DataBind();
+                ddcategory.Items.Insert(0, new ListItem("Select Category", String.Empty));
+                ddcategory.SelectedIndex = 0;
+                txtreorderlevel.Text = "0";
+                txtreorderqty.Text = "0";
             }
         }
 
@@ -33,7 +37,8 @@ namespace Team11AD
             dditem.DataValueField = "ItemID";
             dditem.DataTextField = "Description";
             dditem.DataBind();
-
+            dditem.Items.Insert(0, new ListItem("Select Item Description", String.Empty));
+            dditem.SelectedIndex = 0;
             loadTextBoxes();
         }
 

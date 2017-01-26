@@ -30,7 +30,7 @@
                     <asp:RangeValidator ID="RangeValidator1" runat="server"
                         ErrorMessage="RangeValidator" ControlToValidate="txtqty"
                         ForeColor="Red" Type="Integer"
-                        MaximumValue="1000" MinimumValue="0">Invalid Entry. Only enter numbers
+                        MaximumValue="10000" MinimumValue="-10000">Invalid Entry. Only enter numbers
                     </asp:RangeValidator>
                     <asp:TextBox ID="txtqty" runat="server" CssClass="form-control"></asp:TextBox>
                     

@@ -80,6 +80,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -112,11 +113,26 @@
     </Content>
     <Content Include="DUser.Master" />
     <Content Include="PurchaseOrder.aspx" />
+    <Content Include="ReportInventoryStatus.aspx" />
+    <Content Include="ReportOrderByCategory.aspx" />
+    <Content Include="ReportOrderHistoryByDepartment.aspx" />
+    <Content Include="ReportReOrder.aspx" />
     <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
     <Content Include="SClerk.Master" />
     <Content Include="DepartmentHead.Master" />
     <Content Include="SSupervisor.Master" />
+    <Content Include="Report\ReportDs.xsc">
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\ReportDs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDs.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\ReportDs.xss">
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,6 +236,39 @@
     </Compile>
     <Compile Include="PurchaseOrder.aspx.designer.cs">
       <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportInventoryStatus.aspx.cs">
+      <DependentUpon>ReportInventoryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportInventoryStatus.aspx.designer.cs">
+      <DependentUpon>ReportInventoryStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOrderByCategory.aspx.cs">
+      <DependentUpon>ReportOrderByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportOrderByCategory.aspx.designer.cs">
+      <DependentUpon>ReportOrderByCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOrderHistoryByDepartment.aspx.cs">
+      <DependentUpon>ReportOrderHistoryByDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportOrderHistoryByDepartment.aspx.designer.cs">
+      <DependentUpon>ReportOrderHistoryByDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportReOrder.aspx.cs">
+      <DependentUpon>ReportReOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportReOrder.aspx.designer.cs">
+      <DependentUpon>ReportReOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDs.xsd</DependentUpon>
     </Compile>
     <Compile Include="RequestAdjustment.aspx.cs">
       <DependentUpon>RequestAdjustment.aspx</DependentUpon>
@@ -388,6 +437,12 @@
       <Project>{6e4596d6-5b97-41ec-99bf-b0d2a6837b1f}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RInvetoryStatus.rdlc" />
+    <EmbeddedResource Include="ROrder.rdlc" />
+    <EmbeddedResource Include="ROrderByCat.rdlc" />
+    <EmbeddedResource Include="ROrderByDept.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

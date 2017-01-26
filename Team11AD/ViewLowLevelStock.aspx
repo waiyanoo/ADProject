@@ -34,7 +34,7 @@
                         
                     </asp:GridView>
                <div class="form-group">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" CssClass="btn btn-primary"/>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Make Order" CssClass="btn btn-primary"/>
                     
                 </div>
             </div>
