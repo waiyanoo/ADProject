@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <label>Name :</label>
                     <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:TextBox ID="txtid" runat="server" Visible="False"></asp:TextBox>
+                    
                     <asp:TextBox ID="txtpk" runat="server" Visible="false"></asp:TextBox>
                 </div>
                 <div class="form-group">

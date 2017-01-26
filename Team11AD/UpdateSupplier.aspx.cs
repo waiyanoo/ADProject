@@ -42,9 +42,16 @@ namespace Team11AD
             
             SupplierBO s = new SupplierBO();
             SupplierBL sbl = new SupplierBL();
-
             s.SupplierID = txtpk.Text;
+            s.SupplierName = txtname.Text;
+            s.ContactName = txtcontactname.Text;
+            s.Phone = txtphone.Text;
+            s.Fax = txtfax.Text;
+            s.Address = txtaddress.Text;
+            s.GSTNo1 = txtgst.Text;
+            sbl.UpdateSupplier(s);
             
+            Response.Redirect("ViewSupplier.aspx");
         }   
     }
 }
