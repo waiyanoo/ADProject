@@ -120,6 +120,7 @@ namespace Team11AD
                 {
                     TextBox txtQty = (TextBox)row.Cells[3].FindControl("txtQty");
                     riBO.RequiredQty = Int32.Parse(txtQty.Text); //user may enter wrong data
+                    Response.Redirect("ViewRequisition.aspx");
                 }
                 catch(Exception)
                 {

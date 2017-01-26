@@ -19,9 +19,8 @@
                     <asp:DropDownList ID="dditemdescription" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
                 <div class="form-group">
-                    <label>Item Quantity :<asp:RangeValidator  ID="RangeValidator1" runat="server" ErrorMessage="RangeValidator" MaximumValue="10000" MinimumValue="0" ControlToValidate="txtqty">Quantity Must Bettwen 1 and 10000!</asp:RangeValidator>
-                    </label>
-                    &nbsp;<asp:TextBox ID="txtqty" runat="server" CssClass="form-control"/>
+                    <label>Item Quantity :</label><asp:RangeValidator   ID="RangeValidator1" runat="server" ErrorMessage="Item Qty must be numeric." MaximumValue="10000" MinimumValue="1" ControlToValidate="txtqty"></asp:RangeValidator>
+                    <asp:TextBox ID="txtqty" runat="server" CssClass="form-control"/>
                 </div>
                 <div class="form-group" style="text-align:right">
                     <asp:Button ID="btnadd" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnadd_Click"/>
@@ -34,7 +33,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="form-group">
-                    <asp:GridView ID="gvitemlist" runat="server" CssClass="table table-striped"></asp:GridView>
+                    <asp:GridView ID="gvitemlist" runat="server" CssClass="table table-striped" GridLines="None"></asp:GridView>
                 </div>
                 <div class="form-group" style="text-align:right">
                      <asp:Button ID="btnsend" runat="server" Text="Send Request" CssClass="btn btn-primary" OnClick="btnsend_Click"/>

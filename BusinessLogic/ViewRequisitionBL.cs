@@ -15,9 +15,9 @@ namespace BusinessLogic
 
         //Because Requisition.RequisitionID is type String, in database, Requisition is ordered by 1st digit of requisitionID column
         //The retrieved List<RequisitionBO> has to be sorted correctly by requisitionID, before passing to UI
-        public List<RequisitionBO> getRequisitionList()
+        public List<RequisitionBO> getRequisitionList(string id)
         {
-            List<RequisitionBO> rList = vrda.getRequisitionList();
+            List<RequisitionBO> rList = vrda.getRequisitionList(id);
             rList.Sort(this);
             return rList;
         }

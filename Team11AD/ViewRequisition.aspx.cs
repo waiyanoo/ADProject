@@ -62,7 +62,9 @@ namespace Team11AD
         //populates gridview with data & initiates Edit/Cancel button settings
         protected void loadGridView()
         {
-            List<RequisitionBO> rList = vrbl.getRequisitionList();
+            UserBO session = new UserBO();
+            session = (UserBO)Session["user"];
+            List<RequisitionBO> rList = vrbl.getRequisitionList(session.UserID);
             gvrequisition.DataSource = rList;
             gvrequisition.DataBind();
             

@@ -48,7 +48,7 @@
             <div class="col-lg-9">
                 <div class="form-group">
                     <asp:GridView ID="gvrequisitionitem" runat="server" Width="100%" CssClass="table table-striped" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" EmptyDataText="This Requisition has no Items yet" 
-                        AllowPaging="true" PageSize="10" OnRowDeleting="gvrequisitionitem_RowDeleting"  
+                        AllowPaging="true" PageSize="10" OnRowDeleting="gvrequisitionitem_RowDeleting" GridLines="None" 
                         OnPageIndexChanging="gvrequisitionitem_PageChanging" PagerSettings-Mode="NumericFirstLast" PagerStyle-Font-Size="Large" PagerSettings-Position="Bottom">
                         <Columns>
                             <asp:TemplateField HeaderText="#" HeaderStyle-Width="60px">

@@ -15,8 +15,12 @@ namespace Team11AD.View
     {
         DataTable dt;
         RequestAdjustmentBL rabl = new RequestAdjustmentBL();
+        
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             if (!IsPostBack)
             {
 
@@ -65,11 +69,13 @@ namespace Team11AD.View
 
         protected void btnsend_Click(object sender, EventArgs e)
         {
+            UserBO session = new UserBO();
+            session = (UserBO)Session["user"];
             GeneratePrimaryKey gpk = new GeneratePrimaryKey();
             String requesitionid = gpk.getKeyforRequisition();
             RequisitionBO rbo = new RequisitionBO();
             UserBO ubo = new UserBO();
-            ubo.UserID = "D002";
+            ubo.UserID = session.UserID;
             rbo.UserID = ubo;
             rbo.RequisitionID = requesitionid;
             rbo.Date = DateTime.Now;
@@ -92,8 +98,7 @@ namespace Team11AD.View
                 string script = "alert(\"Request Successful!\");";
                 ScriptManager.RegisterStartupScript(this, GetType(),
                                       "ServerControlScript", script, true);
-                clearText();
-                clearTable();
+                Response.Redirect("ViewRequisition.aspx");
             }
         }
 
