@@ -28,7 +28,7 @@ namespace Team11AD
                 Session["user"] = ubo;
                 RoleBO dbo = new RoleBO();
                 dbo = ubo.RoleName;
-                switch (ubo.RoleName.ToString())
+                switch (dbo.RoleName.ToString())
                 {
                     case "Store Clerk":
                         Response.Redirect("ViewDisbursementList.aspx");
@@ -40,10 +40,10 @@ namespace Team11AD
                         Response.Redirect("ApproveAdjustmentRequisitionM.aspx");
                         break;
                     case "Department Staff":
-                        Response.Redirect("ViewRequisitionList.aspx");
+                        Response.Redirect("ViewRequisition.aspx");
                         break;
                     case "Department Head":
-                        Response.Redirect("ViewRequisition.aspx");
+                        Response.Redirect("ViewRequisitionList.aspx");
                         break;
                     
 

@@ -45,13 +45,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="ViewRequisition.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Incoming Requisition</a>
-                    </li>
-                    <li class="active">
-                        <a href="SetCollectionPoint.aspx"><i class="fa fa-fw fa-dashboard"></i>Set Collection Point</a>
+                        <a href="ViewRequisitionList.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Incoming Requisition</a>
                     </li>
                     <li>
-                        <a href="LogIn.aspx"><i class="fa fa-fw fa-edit"></i> Log Out</a>
+                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>Delegate Employee</a>
+                    </li>
+                    <li>
+                        <a href="LogIn.aspx"><i class="fa fa-fw fa-edit"></i>Log Out</a>
                     </li>
                     
                 </ul>

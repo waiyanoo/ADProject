@@ -10,10 +10,16 @@ namespace BusinessLogic
 {
     public class ViewRequisitionListBL
     {
-        public List<ViewRequsitionListBO> FindAllRequisition()
+        public List<ViewRequsitionListBO> FindAllRequisition(UserBO ubo)
         {
             ViewRequisitionListDA vrda = new ViewRequisitionListDA();
-            return vrda.FindAllRequisition();
+            return vrda.FindAllRequisition(ubo);
+        }
+
+        public List<ViewRequsitionListBO> FindDisbursement()
+        {
+            ViewRequisitionListDA vrda = new ViewRequisitionListDA();
+            return vrda.FindDisbursementlist();
         }
     }
 }

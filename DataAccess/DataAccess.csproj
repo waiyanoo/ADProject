@@ -52,6 +52,7 @@
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="ApproveAdjustmentDA.cs" />
+    <Compile Include="ApprovedRequisitionDA.cs" />
     <Compile Include="Category.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>

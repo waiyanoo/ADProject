@@ -22,15 +22,6 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
-        /// txtid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtid;
-        
-        /// <summary>
         /// txtpk control.
         /// </summary>
         /// <remarks>

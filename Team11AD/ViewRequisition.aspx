@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <asp:GridView ID="gvrequisition" runat="server" Width="100%" CssClass="table table-striped" AutoGenerateColumns="false" ShowHeaderWhenEmpty="true" EmptyDataText="No Requisitions Unfulfilled"
                         AllowPaging="true" PageSize="10" OnRowDeleting="gvrequisition_RowDeleting" OnRowEditing="gvrequisition_RowEditing" OnRowCommand="gvrequisition_RowCommand"
-                        OnPageIndexChanging="gvrequisition_PageChanging" PagerSettings-Mode="NumericFirstLast" PagerStyle-Font-Size="Large" PagerSettings-Position="Bottom">
+                        OnPageIndexChanging="gvrequisition_PageChanging" GridLines="None" PagerSettings-Mode="NumericFirstLast" PagerStyle-Font-Size="Large" PagerSettings-Position="Bottom">
                         <Columns>
                             <asp:TemplateField HeaderText="#" HeaderStyle-Width="70px">
                                 <ItemTemplate>

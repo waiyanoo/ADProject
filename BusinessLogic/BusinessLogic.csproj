@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApproveAdjustmentBL.cs" />
+    <Compile Include="ApprovedRequisitionBL.cs" />
     <Compile Include="DelegateAuthorityBL.cs" />
     <Compile Include="DeliverOrderBL.cs" />
     <Codmpile Include="Properties\AssemblyInfo.cs" />

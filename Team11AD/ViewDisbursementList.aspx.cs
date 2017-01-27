@@ -15,7 +15,7 @@ namespace Team11AD
             if (!IsPostBack)
             {
                 ViewRequisitionListBL vrbl = new ViewRequisitionListBL();
-                gvrequisition.DataSource = vrbl.FindAllRequisition();
+                gvrequisition.DataSource = vrbl.FindDisbursement();
                 gvrequisition.DataBind();
             }
         }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessLogic;
+using BusinessObject;
 
 namespace Team11AD
 {
@@ -27,6 +28,16 @@ namespace Team11AD
             {
                 Response.Redirect("ViewRequisitionList.aspx");
             }
+        }
+
+        protected void btnApprove_Click(object sender, EventArgs e)
+        {
+            string rId = Request.QueryString["requisitionid"];
+            RequisitionBO rbo = new RequisitionBO();
+            rbo.RequisitionID = rId;
+            rbo.Status = "Approved";
+            ApprovedRequisitionBL rabl = new ApprovedRequisitionBL();
+            rabl.ApproveRequisition(rbo);
         }
     }
 }

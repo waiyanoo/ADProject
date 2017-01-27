@@ -30,7 +30,7 @@
                                 <%# Container.DataItemIndex + 1 %>
                             </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:BoundField DataField="ItemID" HeaderText="SItem ID" />
+                            <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                             <asp:BoundField DataField="Description" HeaderText="Description" />
                             <asp:BoundField DataField="CurrentQty" HeaderText="Current Quantity" />
                             <asp:BoundField DataField="ReorderLevel" HeaderText="Reorder Level" />
