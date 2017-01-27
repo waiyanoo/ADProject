@@ -106,7 +106,7 @@ namespace Team11AD
                     ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Database not changed')", true);
                 }
             }
-            catch (NoFutureAuthorityException)
+            catch (NoFutureAuthorityException) //must have a futureAuthority to cancel delegation
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Department Head already holds Requisition Approval Authority')", true);
             }
@@ -138,11 +138,11 @@ namespace Team11AD
                     ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Database not changed')", true);
                 }
             }
-            catch (DeptHeadNotCurrentAuthorityException)
+            catch (DeptHeadNotCurrentAuthorityException) //currentAuthority must be department head to cancel delegation
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Current Person authorised to approve requisitions is not Department Head')", true);
             }
-            catch (FutureAuthorityAlreadyExistException)
+            catch (FutureAuthorityAlreadyExistException) //cannot assign more than 1 futureAuthority
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Already delegated employee. To delegate another employee, cancel current delegation first')", true);
             }
