@@ -94,6 +94,15 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.Button btncanceldelegation;
         
         /// <summary>
+        /// rfvalidatoremployee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvalidatoremployee;
+        
+        /// <summary>
         /// ddemployee control.
         /// </summary>
         /// <remarks>
@@ -101,6 +110,24 @@ namespace Team11AD {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddemployee;
+        
+        /// <summary>
+        /// rfvalidatorstartdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvalidatorstartdate;
+        
+        /// <summary>
+        /// cvalidatorstartdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvalidatorstartdate;
         
         /// <summary>
         /// txtstartdate control.
@@ -112,13 +139,22 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtstartdate;
         
         /// <summary>
-        /// calstartdate control.
+        /// rfvalidatorenddate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calstartdate;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvalidatorenddate;
+        
+        /// <summary>
+        /// cvalidatorenddate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvalidatorenddate;
         
         /// <summary>
         /// txtenddate control.
@@ -128,33 +164,6 @@ namespace Team11AD {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtenddate;
-        
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// CompareValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
-        
-        /// <summary>
-        /// calenddate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calenddate;
         
         /// <summary>
         /// btnsubmit control.

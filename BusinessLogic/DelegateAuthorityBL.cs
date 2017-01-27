@@ -54,7 +54,7 @@ namespace BusinessLogic
             return currentAuthority;
         }
 
-        //returns the employee (including Department Head) who is going to be the next authorised person to approve  
+        //returns the employee (Department Head possible) who is going to be the next authorised person to approve  
         //requisitions after the current authorised person
         public UserBO getFutureAuthority(DepartmentBO dBO)
         {
@@ -102,7 +102,7 @@ namespace BusinessLogic
             if (currentAuthority.UserID != deptHead.UserID) //scenario 1: currentAuthority = staff & futureAuthority = deptHead
             {
                 currentAuthority.Startdate = default(DateTime);
-                currentAuthority.Enddate = DateTime.Today.AddDays(-1);
+                currentAuthority.Enddate = default(DateTime);
                 deptHead.Startdate = DateTime.Today;
                 deptHead.Enddate = default(DateTime);
                 writeResult = dada.setStartEndDates(currentAuthority, deptHead);
@@ -124,7 +124,7 @@ namespace BusinessLogic
 
         //Delegates requisition approval authority for that department to an employee who becomes futureAuthority
         //pre-condition (1) for this method: the currentAuthority must be Department Head
-        //pre-condition (2) for this method: there must be currently no futureAuthority; DeptHead must cancel delegation before assigning new futureAuthority
+        //pre-condition (2) for this method: there must be currently no futureAuthority; DeptHead must cancel current delegation before assigning new futureAuthority
         public int delegateAuthority(DepartmentBO dBO, UserBO futureAuthority)
         {
             int writeResult = 0;

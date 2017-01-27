@@ -18,6 +18,7 @@ namespace Team11AD
             if (!IsPostBack)
             {
                 loadDataFields();
+                cvalidatorstartdate.ValueToCompare = DateTime.Today.ToShortDateString();
             }
         }
 
@@ -41,16 +42,16 @@ namespace Team11AD
 
             txtdept.Text = dBO.DepartmentName;
             txtdepthead.Text = deptHead.Name;
+
             txtcurrentauthority.Text = currentAuthority.Name;
             txtcurrentfromdate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Startdate);
-
             if (currentAuthority.Enddate != default(DateTime))
             {
                 txtcurrenttodate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Enddate);
             }
             else
             {
-                //txtcurrenttodate.Font.Size = 22;
+                //infinity
                 txtcurrenttodate.Text = "\u221e";
             }
 
@@ -65,6 +66,7 @@ namespace Team11AD
                 }
                 else
                 {
+                    //infinity
                     txtfuturetodate.Text = "\u221e";
                 }
             }
@@ -75,12 +77,19 @@ namespace Team11AD
                 txtfuturetodate.Text = "-";
             }
 
+            //dropdownlist for department employees excluding department head
             ddemployee.DataSource = uList;
             ddemployee.DataValueField = "UserID";
             ddemployee.DataTextField = "Name";
             ddemployee.DataBind();
+            ddemployee.ClearSelection();
+
+            txtstartdate.Text = string.Empty;
+            txtenddate.Text = string.Empty;
         }
 
+        //cancels the delegation authority of any employee other than the department head
+        //sets the currentAuthority to department head
         protected void btncanceldelegation_Click(object sender, EventArgs e)
         {
             string userID = getUserIDfromSession();
@@ -99,22 +108,12 @@ namespace Team11AD
             }
             catch (NoFutureAuthorityException)
             {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Currently no Employee delegated Requisition Approval Authority')", true);
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Department Head already holds Requisition Approval Authority')", true);
             }
             finally
             {
                 loadDataFields();
             }
-        }
-
-        protected void calstartdate_SelectionChanged(object sender, EventArgs e)
-        {
-            txtstartdate.Text = calstartdate.SelectedDate.ToShortDateString();
-        }
-
-        protected void calenddate_SelectionChanged(object sender, EventArgs e)
-        {
-            txtenddate.Text = calenddate.SelectedDate.ToShortDateString();
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
@@ -124,13 +123,14 @@ namespace Team11AD
 
             UserBO futureAuthority = new UserBO();
             futureAuthority.UserID = ddemployee.SelectedValue.ToString();
-            futureAuthority.Startdate = calstartdate.SelectedDate;
-            futureAuthority.Enddate = calenddate.SelectedDate;
+            futureAuthority.Startdate = DateTime.Parse(txtstartdate.Text);
+            futureAuthority.Enddate = DateTime.Parse(txtenddate.Text);
 
             try
             {
                 if (dabl.delegateAuthority(dBO, futureAuthority) > 0)
                 {
+                    //success in writing to database 
                     ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Success! Requisition Approval Authority delegated')", true);
                 }
                 else
