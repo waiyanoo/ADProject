@@ -47,37 +47,36 @@
                 </div>
 
                 <div class="form-group">
-                    <asp:Button ID="btncanceldelegation" runat="server" Text="Cancel Authority Delegation" CssClass="btn btn-primary" OnClick="btncanceldelegation_Click" />
+                    <asp:Button ID="btncanceldelegation" runat="server" Text="Cancel Authority Delegation" CssClass="btn btn-primary" OnClick="btncanceldelegation_Click" CausesValidation="false" />
                 </div>
 
                 <div class="form-group">
                     <label>Choose employee to delegate Requisition Approval Authority :</label>
+                    <asp:RequiredFieldValidator ID="rfvalidatoremployee" runat="server" ControlToValidate="ddemployee" ForeColor="Red" Display="Dynamic" ErrorMessage="Please choose Employee to delegate Requisition Approval Authority"></asp:RequiredFieldValidator>
                     <asp:DropDownList ID="ddemployee" runat="server" CssClass="form-control" AutoPostBack="True" AppendDataBoundItems="true">
                         <asp:ListItem Text="" Value="" />
                     </asp:DropDownList>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Authorised from date :</label>
-                    <asp:TextBox ID="txtstartdate" runat="server" CssClass="form-control" ></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvalidatorstartdate" runat="server" ControlToValidate="txtstartdate" ForeColor="red" Display="Dynamic" ErrorMessage="Please enter Start Date"></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cvalidatorstartdate" runat="server" ControlToValidate="txtstartdate" Type="Date" Operator="GreaterThanEqual" ForeColor="Red" Display="Dynamic" ErrorMessage="Please choose Start Date today or later"></asp:CompareValidator>
+                    <asp:TextBox ID="txtstartdate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <asp:Calendar ID="calstartdate" runat="server" OnSelectionChanged="calstartdate_SelectionChanged"></asp:Calendar>
-                </div>
-                
+
+
                 <div class="form-group">
                     <label>Authorised to date :</label>
-                    <asp:TextBox ID="txtenddate" runat="server" CssClass="form-control" ></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <asp:TextBox ID="TextBox1" TextMode="Date" runat="server"></asp:TextBox>
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBox1" ValueToCompare="<%# DateTime.Today %>" Operator="GreaterThanEqual" ErrorMessage="CompareValidator"></asp:CompareValidator>
-                    <asp:Calendar ID="calenddate" runat="server" OnSelectionChanged="calenddate_SelectionChanged"></asp:Calendar>
+                    <asp:RequiredFieldValidator ID="rfvalidatorenddate" runat="server" ControlToValidate="txtenddate" ForeColor="red" Display="Dynamic" ErrorMessage="Please enter End Date"></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cvalidatorenddate" runat="server" ControlToValidate="txtenddate" ControlToCompare="txtstartdate" Operator="GreaterThanEqual" ForeColor="red" Display="Dynamic" ErrorMessage="End Date must be on or later than Start Date"></asp:CompareValidator>
+                    <asp:TextBox ID="txtenddate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                 </div>
 
                 <div class="form-group">
                     <asp:Button ID="btnsubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnsubmit_Click" />
                 </div>
+            
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-4">
