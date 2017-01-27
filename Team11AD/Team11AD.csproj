@@ -134,6 +134,48 @@
     <Content Include="Report\ReportDs.xss">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <Content Include="style\font-awesome\css\font-awesome.css" />
+    <Content Include="style\font-awesome\css\font-awesome.min.css" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="style\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="style\font-awesome\less\bordered-pulled.less" />
+    <Content Include="style\font-awesome\less\core.less" />
+    <Content Include="style\font-awesome\less\fixed-width.less" />
+    <Content Include="style\font-awesome\less\font-awesome.less" />
+    <Content Include="style\font-awesome\less\icons.less" />
+    <Content Include="style\font-awesome\less\larger.less" />
+    <Content Include="style\font-awesome\less\list.less" />
+    <Content Include="style\font-awesome\less\mixins.less" />
+    <Content Include="style\font-awesome\less\path.less" />
+    <Content Include="style\font-awesome\less\rotated-flipped.less" />
+    <Content Include="style\font-awesome\less\spinning.less" />
+    <Content Include="style\font-awesome\less\stacked.less" />
+    <Content Include="style\font-awesome\less\variables.less" />
+    <Content Include="style\font-awesome\scss\font-awesome.scss" />
+    <Content Include="style\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="style\font-awesome\scss\_core.scss" />
+    <Content Include="style\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="style\font-awesome\scss\_icons.scss" />
+    <Content Include="style\font-awesome\scss\_larger.scss" />
+    <Content Include="style\font-awesome\scss\_list.scss" />
+    <Content Include="style\font-awesome\scss\_mixins.scss" />
+    <Content Include="style\font-awesome\scss\_path.scss" />
+    <Content Include="style\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="style\font-awesome\scss\_spinning.scss" />
+    <Content Include="style\font-awesome\scss\_stacked.scss" />
+    <Content Include="style\font-awesome\scss\_variables.scss" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="style\font-awesome\less\animated.less" />
+    <Content Include="style\font-awesome\less\screen-reader.less" />
+    <Content Include="style\font-awesome\scss\_animated.scss" />
+    <Content Include="style\font-awesome\scss\_screen-reader.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -150,6 +192,7 @@
     <Content Include="style\css\bootstrap.min.css" />
     <Content Include="style\css\custom.css" />
     <Content Include="style\css\sb-admin.css" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="style\js\bootstrap.js" />
     <Content Include="style\js\bootstrap.min.js" />
     <Content Include="style\js\jquery.js" />
@@ -451,6 +494,7 @@
     <EmbeddedResource Include="ROrder.rdlc" />
     <EmbeddedResource Include="ROrderByCat.rdlc" />
     <EmbeddedResource Include="ROrderByDept.rdlc" />
+    <EmbeddedResource Include="RTrendAnalysis.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

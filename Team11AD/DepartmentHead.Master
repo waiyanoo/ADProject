@@ -13,7 +13,7 @@
 
     <!-- Custom CSS -->
     <link href="../style/custom/css/style.css" rel="stylesheet">
-
+     <link href="../style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -35,24 +35,25 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li>
-                    <a href="#" data-toggle="dropdown">Contact Us</a>
+                    <a href="#" ><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
                 </li>
 				 <li>
-                    <a href="#" data-toggle="dropdown">About</a>
+                    <a href="#"><i class="fa fa-info" aria-hidden="true"></i> About Us</a>
+                </li>
+                <li>
+                      <a href="LogIn.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="ViewRequisitionList.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Incoming Requisition</a>
+                        <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>Delegate Employee</a>
+                        <a href="#">Delegate Employee</a>
                     </li>
-                    <li>
-                        <a href="LogIn.aspx"><i class="fa fa-fw fa-edit"></i>Log Out</a>
-                    </li>
+                    
                     
                 </ul>
             </div>
