@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DepartmentHead.Master" AutoEventWireup="true" CodeBehind="SetCollectionPoint.aspx.cs" Inherits="Team11AD.SetCollectionPoint" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="SetCollectionPoint.aspx.cs" Inherits="Team11AD.SetCollectionPoint" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>

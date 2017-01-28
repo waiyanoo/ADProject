@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ApproveAdjustmentRequisitionM.aspx.cs" Inherits="Team11AD.ApproveAdjustmentRequisitionM" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ApproveAdjustmentRequisitionM.aspx.cs" Inherits="Team11AD.ApproveAdjustmentRequisitionM" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -18,9 +18,9 @@
                 </div>
             </div>
 	    </div>
-         <div class="row">
+        <div class="row">
             <div class="col-lg-12">
-              <asp:GridView ID="gvlist" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowDeleting="gvlist_RowDeleting">
+                <asp:GridView ID="gvlist" runat="server" CssClass="table table-striped" GridLines="None" AutoGenerateColumns="false" OnRowDeleting="gvlist_RowDeleting">
                     <Columns>
                         <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                         <asp:BoundField DataField="Description" HeaderText="Description" />

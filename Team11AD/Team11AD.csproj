@@ -113,7 +113,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="DUser.Master" />
+    <Content Include="MasterPage.Master" />
     <Content Include="PurchaseOrder.aspx" />
     <Content Include="ReportInventoryStatus.aspx" />
     <Content Include="ReportOrderByCategory.aspx" />
@@ -121,9 +121,6 @@
     <Content Include="ReportReOrder.aspx" />
     <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
-    <Content Include="SClerk.Master" />
-    <Content Include="DepartmentHead.Master" />
-    <Content Include="SSupervisor.Master" />
     <Content Include="Report\ReportDs.xsc">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
@@ -257,19 +254,12 @@
     <Compile Include="DeliverOrder.aspx.designer.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DepartmentHead.Master.cs">
-      <DependentUpon>DepartmentHead.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DepartmentHead.Master.designer.cs">
-      <DependentUpon>DepartmentHead.Master</DependentUpon>
-    </Compile>
-    <Compile Include="DUser.Master.cs">
-      <DependentUpon>DUser.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DUser.Master.designer.cs">
-      <DependentUpon>DUser.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
@@ -343,13 +333,6 @@
     <Compile Include="RequisitionDetails.aspx.designer.cs">
       <DependentUpon>RequisitionDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SClerk.Master.cs">
-      <DependentUpon>SClerk.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SClerk.Master.designer.cs">
-      <DependentUpon>SClerk.Master</DependentUpon>
-    </Compile>
     <Compile Include="SetCollectionPoint.aspx.cs">
       <DependentUpon>SetCollectionPoint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -363,13 +346,6 @@
     </Compile>
     <Compile Include="SetReorderLevel.aspx.designer.cs">
       <DependentUpon>SetReorderLevel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SSupervisor.Master.cs">
-      <DependentUpon>SSupervisor.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SSupervisor.Master.designer.cs">
-      <DependentUpon>SSupervisor.Master</DependentUpon>
     </Compile>
     <Compile Include="RequestRequisition.aspx.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>

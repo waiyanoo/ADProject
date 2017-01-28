@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="RequestAdjustment.aspx.cs" Inherits="Team11AD.RequestAdjustment" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="RequestAdjustment.aspx.cs" Inherits="Team11AD.RequestAdjustment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <asp:GridView ID="gvItemList" runat="server" CssClass="table table-striped" GridLines="None" OnRowDeleting="gvItemList_RowDeleting">
                         <Columns>
-                            <asp:CommandField ShowDeleteButton="true" ButtonType="Link"/>
+                            <asp:CommandField ShowDeleteButton="true" DeleteText="Remove" ButtonType="Link"/>
                         </Columns>
                     </asp:GridView>
                 </div>
