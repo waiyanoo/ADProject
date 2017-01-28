@@ -58,14 +58,33 @@ namespace Team11AD.View
         protected void btnadd_Click(object sender, EventArgs e)
         {
             string qty = txtqty.Text;
-            dt = (DataTable)Session["RequestItem"];
-            dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty);
-            Session["RequestItem"] = dt;
-            gvitemlist.DataSource = dt;
-            gvitemlist.DataBind();
+            int n;
+            bool isNumeric = int.TryParse(qty, out n);
+            if (isNumeric && n > 0)
+            {
+                if (checkitem(dditemdescription.SelectedValue.ToString())) { 
+                    dt = (DataTable)Session["RequestItem"];
+                    dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty);
+                    Session["RequestItem"] = dt;
+                    gvitemlist.DataSource = dt;
+                    gvitemlist.DataBind();
 
-            clearText();
+                    clearText();
+                }
+                else
+                {
+                    updateitemqty(dditemdescription.SelectedValue.ToString(), txtqty.Text);
+                    gvitemlist.DataSource = dt;
+                    gvitemlist.DataBind();
+
+                    clearText();
+                }
+            }
+            else lblqty.Text = "Please Enter Numeric only";
+            
         }
+
+
 
         protected void btnsend_Click(object sender, EventArgs e)
         {
@@ -102,6 +121,32 @@ namespace Team11AD.View
             }
         }
 
+        public Boolean checkitem(string id)
+        {
+            dt = (DataTable)Session["RequestItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if(dt.Rows[i][0].ToString() == id)
+                {
+                    return false;
+                }
+            }
+                return true;
+        }
+
+        public void updateitemqty(string id, string qty)
+        {
+            dt = (DataTable)Session["RequestItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i][2] = Convert.ToInt32( dt.Rows[i][2].ToString()) + Convert.ToInt32(qty);
+                }
+            }
+            Session["RequestItem"] = dt;
+        }
+
         public void clearText()
         {
             txtqty.Text = "0";
@@ -118,6 +163,24 @@ namespace Team11AD.View
            
             gvitemlist.DataSource = (DataTable)Session["RequestItem"];
             gvitemlist.DataBind();
+        }
+
+        protected void gvitemlist_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            String id = gvitemlist.Rows[e.RowIndex].Cells[1].Text;
+            dt = (DataTable)Session["RequestItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i].Delete();
+                }
+            }
+            Session["RequestItem"] = dt;
+            gvitemlist.DataSource = (DataTable)Session["RequestItem"];
+            gvitemlist.DataBind();
+
         }
     }
 }

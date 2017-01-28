@@ -56,12 +56,33 @@ namespace Team11AD
         {
             string qty = txtqty.Text;
             string reason = txtreason.Text;
-            dt = (DataTable)Session["AdjustItem"];
-            dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty, reason);
-            Session["AdjustItem"] = dt;
-            gvItemList.DataSource = dt;
-            gvItemList.DataBind();
-            ClearText();
+            int n;
+            bool isNumeric = int.TryParse(qty, out n);
+            if (isNumeric)
+            {
+                if (checkitem(dditemdescription.SelectedValue.ToString()))
+                {
+                    dt = (DataTable)Session["AdjustItem"];
+                    dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty, reason);
+                    Session["AdjustItem"] = dt;
+                    gvItemList.DataSource = dt;
+                    gvItemList.DataBind();
+                    ClearText();
+                }
+                else
+                {
+                    updateitemqty(dditemdescription.SelectedValue.ToString(), txtqty.Text);
+                    gvItemList.DataSource = dt;
+                    gvItemList.DataBind();
+
+                    ClearText();
+                }
+            }
+            else lblqty.Text = "Please Enter Numeric only";
+
+            
+            
+           
 
         }
 
@@ -99,7 +120,9 @@ namespace Team11AD
         {
             txtqty.Text = "0";
             txtreason.Text = "";
-            
+            lblqty.Text = "";
+
+
         }
         protected void ClearTable()
         {
@@ -113,6 +136,50 @@ namespace Team11AD
             gvItemList.DataSource = (DataTable)Session["AdjustItem"];
             gvItemList.DataBind();
         }
+
+        protected void gvItemList_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            String id = gvItemList.Rows[e.RowIndex].Cells[1].Text;
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i].Delete();
+                }
+            }
+            Session["AdjustItem"] = dt;
+            gvItemList.DataSource = (DataTable)Session["AdjustItem"];
+            gvItemList.DataBind();
+        }
+        public Boolean checkitem(string id)
+        {
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public void updateitemqty(string id, string qty)
+        {
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i][2] = Convert.ToInt32(dt.Rows[i][2].ToString()) + Convert.ToInt32(qty);
+                }
+            }
+            Session["AdjustItem"] = dt;
+        }
     }
+
+
 }
 

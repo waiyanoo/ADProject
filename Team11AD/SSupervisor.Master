@@ -47,16 +47,16 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="TrendAnalysis.aspx">Trend Analysis</a>
+                        <a href="ApproveAdjustmentRequest.aspx"> Approve Adjustment Request</a>
                     </li>
-                    <li >
+                    <li>
+                        <a href="SetReorderLevel.aspx"> Set Reorder Level</a>
+                    </li>
 
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
-                             <li>
-                                <a href="TrendAnalysis.aspx"> Trend Analysis</a>
-                            </li>
+                            
                             <li>
                                 <a href="ReportInventoryStatus.aspx"> Inventory Status</a>
                             </li>

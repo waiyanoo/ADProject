@@ -68,9 +68,6 @@
                         <a href="DeliverOrder.aspx">Record Delivery Order</a>
                     </li>
                     <li>
-                        <a href="SetReorderLevel.aspx">Set Reorder Level</a>
-                    </li>
-                    <li>
                         <a href="RequestAdjustment.aspx">Request Adjustment</a>
                     </li>
                     <li>

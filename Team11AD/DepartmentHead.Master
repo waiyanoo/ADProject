@@ -51,7 +51,7 @@
                         <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
                     </li>
                     <li>
-                        <a href="#">Delegate Employee</a>
+                        <a href="DelegateAuthority.aspx">Delegate Employee</a>
                     </li>
                     
                     

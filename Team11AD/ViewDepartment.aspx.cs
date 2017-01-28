@@ -33,9 +33,6 @@ namespace Team11AD
         }
 
        
-        protected void gvdepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

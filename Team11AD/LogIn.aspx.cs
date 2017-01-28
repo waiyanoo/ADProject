@@ -13,7 +13,7 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["user"] = null;
         }
 
         protected void Button1_Click(object sender, EventArgs e)

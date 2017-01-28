@@ -93,10 +93,24 @@ namespace DataAccess
                 
                 context.SaveChanges();
                 updateItemQty(voucher);
+                updateVoucher(voucher);
             }
             
            
         }
+
+        public void updateVoucher(string voucher)
+        {
+            context = new LogicUniversityEntities();
+            var data = context.ItemAdjustments.Where(x => x.AdjsutmentStatus == "Pending" && x.VoucherNo == voucher).ToList();
+            if (data.Count==0)
+            {
+                var adj = context.Adjustments.FirstOrDefault(x => x.VoucherNo == voucher);
+                adj.Status = "Approved";
+                context.SaveChanges();
+            }
+        }
+
         public void updateItemQty(string vonumber)
         {
             List<ItemAdjustment> listpi = context.ItemAdjustments.Where(x => x.VoucherNo == vonumber).ToList();

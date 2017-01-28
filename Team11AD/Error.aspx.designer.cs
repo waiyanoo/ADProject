@@ -7,72 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team11AD.View {
+namespace Team11AD {
     
     
-    public partial class RequestRequisition {
+    public partial class Error {
         
         /// <summary>
-        /// ddcategory control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddcategory;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// dditemdescription control.
+        /// FriendlyErrorMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dditemdescription;
+        protected global::System.Web.UI.WebControls.Label FriendlyErrorMsg;
         
         /// <summary>
-        /// lblqty control.
+        /// DetailedErrorPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblqty;
+        protected global::System.Web.UI.WebControls.Panel DetailedErrorPanel;
         
         /// <summary>
-        /// txtqty control.
+        /// ErrorDetailedMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtqty;
+        protected global::System.Web.UI.WebControls.Label ErrorDetailedMsg;
         
         /// <summary>
-        /// btnadd control.
+        /// ErrorHandler control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnadd;
+        protected global::System.Web.UI.WebControls.Label ErrorHandler;
         
         /// <summary>
-        /// gvitemlist control.
+        /// InnerMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvitemlist;
+        protected global::System.Web.UI.WebControls.Label InnerMessage;
         
         /// <summary>
-        /// btnsend control.
+        /// InnerTrace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsend;
+        protected global::System.Web.UI.WebControls.Label InnerTrace;
     }
 }
