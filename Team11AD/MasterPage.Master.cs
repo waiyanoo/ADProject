@@ -18,6 +18,7 @@ namespace Team11AD
             pSClerk.Visible = false;
             pSManager.Visible = false;
             pSsupevisor.Visible = false;
+            pDHeadWA.Visible = false;
             if (Session["user"] == null)
             {
                 //Response.Redirect("LogIn.aspx");

@@ -21,7 +21,9 @@ namespace Team11AD
                 ddcPoint.DataValueField = "CollectionPointName";
                 ddcPoint.DataTextField = "CollectionPointName";
                 ddcPoint.DataBind();
-                string user = "D001";
+                UserBO ubo = new UserBO();
+                ubo = (UserBO)Session["user"];
+                string user = ubo.UserID;
                 DepartmentBO dbo = new DepartmentBO();
                 CollectionPointBO cbo = new CollectionPointBO();
                 

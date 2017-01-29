@@ -12,8 +12,8 @@
 	    <div class="row">  
             <div class="col-lg-11">
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <rsweb:ReportViewer ID="rvtrend" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
-                    <LocalReport ReportPath="RTrendAnalysis.rdlc">
+                <rsweb:ReportViewer ID="rvtrend" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" Width="800px" Height="700px" WaitMessageFont-Size="14pt">
+                    <LocalReport ReportPath="TrendAnalysis.rdlc">
                         <DataSources>
                             <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="TrendDS" />
                         </DataSources>

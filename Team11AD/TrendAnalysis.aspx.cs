@@ -26,8 +26,24 @@ namespace Team11AD
         "AND r.UserID = u.UserID " +
         "AND u.DepartmentID = d.DepartmentID " +
         "AND ri.ItemID = 'C001' " +
-        "AND d.DepartmentID IN ( 'BIOL' , 'COMM', 'BIZL', 'CPSC') " +
+        "AND d.DepartmentID IN ( 'BIOL' , 'COMM', 'BIZM', 'CPSC', 'ENGL', 'REGR', 'STORE') " +
         "GROUP BY d.DepartmentName";
+                query = "SELECT	d.DepartmentName, " + 
+" CASE WHEN  r.Date BETWEEN '2016-10-01' AND '2016-10-31' THEN 'October' ELSE " + 
+" CASE WHEN r.Date BETWEEN '2016-11-01' AND '2016-11-30' THEN 'November' ELSE " + 
+" CASE  WHEN r.Date BETWEEN '2016-12-01' AND '2016-12-31' THEN 'December' ELSE '' " + 
+" END END END AS[MMonth] " + 
+" , SUM(ri.RequiredQty)AS E " + 
+" FROM    RequisitionItem ri, Requisition r, [User] u, Department d " + 
+" WHERE   ri.RequisitionID = r.RequisitionID " + 
+" AND     r.UserID = u.UserID " + 
+" AND     u.DepartmentID = d.DepartmentID " + 
+" AND     ri.ItemID = 'C001' " + 
+" AND     d.DepartmentID IN('BIOL', 'COMM', 'BIZM', 'CPSC', 'ENGL', 'REGR', 'STORE') " + 
+" GROUP BY d.DepartmentName, CASE  WHEN  r.Date  BETWEEN '2016-10-01' AND '2016-10-31' THEN 'October' ELSE " + 
+" CASE WHEN r.Date BETWEEN '2016-11-01' AND '2016-11-30' THEN 'November' ELSE " + 
+" CASE  WHEN r.Date BETWEEN '2016-12-01' AND '2016-12-31' THEN 'December' ELSE '' " +
+" END END END ORDER BY DepartmentName, MMONTH";
                 SqlConnection conn = new SqlConnection("Persist Security Info=False;Integrated Security=true;Initial Catalog=LogicUniversity;Data Source=(local)");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();

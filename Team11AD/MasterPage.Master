@@ -58,12 +58,23 @@
                 </ul>
             </div>
             </asp:Panel>
+            <!-- Menu for Department User -->
             <asp:Panel ID="pDHedad" runat="server">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
                         <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
                     </li>
+                    <li>
+                        <a href="DelegateAuthority.aspx">Delegate Employee</a>
+                    </li>
+                </ul>
+            </div>
+            </asp:Panel>
+            <!-- Menu for Department User -->
+            <asp:Panel ID="pDHeadWA" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
                     <li>
                         <a href="DelegateAuthority.aspx">Delegate Employee</a>
                     </li>
@@ -83,19 +94,16 @@
                     </ul>
                 </div>
             </asp:Panel>
+            <!-- Menu for Store Manager -->
             <asp:Panel ID="pSManager" runat="server">
                  <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li>
-                            <a href="ApproveAdjustmentRequest.aspx"> Approve Adjustment Request</a>
+                            <a href="ApproveAdjustmentRequestM.aspx"> Approve Adjustment Request</a>
                         </li>
                         <li>
-                            <a href="SetReorderLevel.aspx"> Set Reorder Level</a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul class="collapse">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo2"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo2" class="collapse">
                             
                                 <li>
                                     <a href="ReportInventoryStatus.aspx"> Inventory Status</a>
@@ -109,6 +117,10 @@
                                 <li>
                                     <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
                                 </li>
+                                 <li>
+                                    <a href="TrendAnalysis.aspx"> Trend</a>
+                                </li>
+                                
                             </ul>
                         </li>
                    
@@ -116,6 +128,7 @@
                     </ul>
                 </div>
             </asp:Panel>
+            <!-- Menu for Store Supevisor -->
             <asp:Panel ID="pSsupevisor" runat="server">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
@@ -128,7 +141,7 @@
 
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul  class="collapse">
+                            <ul id="demo" class="collapse">
                             
                                 <li>
                                     <a href="ReportInventoryStatus.aspx"> Inventory Status</a>
@@ -141,6 +154,9 @@
                                 </li>
                                 <li>
                                     <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
+                                </li>
+                                <li>
+                                    <a href="TrendAnalysis.aspx"> Trend</a>
                                 </li>
                             </ul>
                         </li>
@@ -157,8 +173,8 @@
                             <a href="ViewDisbursementList.aspx">Disbursement List</a>
                         </li>
                         <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"> View <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul class="collapse">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo1"> View <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo1" class="collapse">
                                  <li>
                                     <a href="ViewItemCatalogue.aspx"> View Item Catalogue</a>
                                 </li>

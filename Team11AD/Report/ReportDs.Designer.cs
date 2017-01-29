@@ -1633,11 +1633,9 @@ namespace Team11AD.Report {
             
             private global::System.Data.DataColumn columnDepartmentName;
             
-            private global::System.Data.DataColumn columnFirstMonth;
+            private global::System.Data.DataColumn columnMMonth;
             
-            private global::System.Data.DataColumn columnSecondMonth;
-            
-            private global::System.Data.DataColumn columnThirdMonth;
+            private global::System.Data.DataColumn columnE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1682,25 +1680,17 @@ namespace Team11AD.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FirstMonthColumn {
+            public global::System.Data.DataColumn MMonthColumn {
                 get {
-                    return this.columnFirstMonth;
+                    return this.columnMMonth;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SecondMonthColumn {
+            public global::System.Data.DataColumn EColumn {
                 get {
-                    return this.columnSecondMonth;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ThirdMonthColumn {
-                get {
-                    return this.columnThirdMonth;
+                    return this.columnE;
                 }
             }
             
@@ -1741,13 +1731,12 @@ namespace Team11AD.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TrendDtRow AddTrendDtRow(string DepartmentName, int FirstMonth, int SecondMonth, int ThirdMonth) {
+            public TrendDtRow AddTrendDtRow(string DepartmentName, string MMonth, int E) {
                 TrendDtRow rowTrendDtRow = ((TrendDtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DepartmentName,
-                        FirstMonth,
-                        SecondMonth,
-                        ThirdMonth};
+                        MMonth,
+                        E};
                 rowTrendDtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTrendDtRow);
                 return rowTrendDtRow;
@@ -1771,9 +1760,8 @@ namespace Team11AD.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnDepartmentName = base.Columns["DepartmentName"];
-                this.columnFirstMonth = base.Columns["FirstMonth"];
-                this.columnSecondMonth = base.Columns["SecondMonth"];
-                this.columnThirdMonth = base.Columns["ThirdMonth"];
+                this.columnMMonth = base.Columns["MMonth"];
+                this.columnE = base.Columns["E"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1781,12 +1769,10 @@ namespace Team11AD.Report {
             private void InitClass() {
                 this.columnDepartmentName = new global::System.Data.DataColumn("DepartmentName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDepartmentName);
-                this.columnFirstMonth = new global::System.Data.DataColumn("FirstMonth", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstMonth);
-                this.columnSecondMonth = new global::System.Data.DataColumn("SecondMonth", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSecondMonth);
-                this.columnThirdMonth = new global::System.Data.DataColumn("ThirdMonth", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnThirdMonth);
+                this.columnMMonth = new global::System.Data.DataColumn("MMonth", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMMonth);
+                this.columnE = new global::System.Data.DataColumn("E", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnE);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2565,49 +2551,33 @@ namespace Team11AD.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FirstMonth {
+            public string MMonth {
                 get {
                     try {
-                        return ((int)(this[this.tableTrendDt.FirstMonthColumn]));
+                        return ((string)(this[this.tableTrendDt.MMonthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FirstMonth\' in table \'TrendDt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MMonth\' in table \'TrendDt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTrendDt.FirstMonthColumn] = value;
+                    this[this.tableTrendDt.MMonthColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SecondMonth {
+            public int E {
                 get {
                     try {
-                        return ((int)(this[this.tableTrendDt.SecondMonthColumn]));
+                        return ((int)(this[this.tableTrendDt.EColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SecondMonth\' in table \'TrendDt\' is DBNull.", e);
+                    catch (global::System.InvalidCastException e1) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'E\' in table \'TrendDt\' is DBNull.", e1);
                     }
                 }
                 set {
-                    this[this.tableTrendDt.SecondMonthColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ThirdMonth {
-                get {
-                    try {
-                        return ((int)(this[this.tableTrendDt.ThirdMonthColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ThirdMonth\' in table \'TrendDt\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTrendDt.ThirdMonthColumn] = value;
+                    this[this.tableTrendDt.EColumn] = value;
                 }
             }
             
@@ -2625,38 +2595,26 @@ namespace Team11AD.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFirstMonthNull() {
-                return this.IsNull(this.tableTrendDt.FirstMonthColumn);
+            public bool IsMMonthNull() {
+                return this.IsNull(this.tableTrendDt.MMonthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFirstMonthNull() {
-                this[this.tableTrendDt.FirstMonthColumn] = global::System.Convert.DBNull;
+            public void SetMMonthNull() {
+                this[this.tableTrendDt.MMonthColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSecondMonthNull() {
-                return this.IsNull(this.tableTrendDt.SecondMonthColumn);
+            public bool IsENull() {
+                return this.IsNull(this.tableTrendDt.EColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSecondMonthNull() {
-                this[this.tableTrendDt.SecondMonthColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsThirdMonthNull() {
-                return this.IsNull(this.tableTrendDt.ThirdMonthColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetThirdMonthNull() {
-                this[this.tableTrendDt.ThirdMonthColumn] = global::System.Convert.DBNull;
+            public void SetENull() {
+                this[this.tableTrendDt.EColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -478,7 +478,7 @@
     <EmbeddedResource Include="ROrder.rdlc" />
     <EmbeddedResource Include="ROrderByCat.rdlc" />
     <EmbeddedResource Include="ROrderByDept.rdlc" />
-    <EmbeddedResource Include="RTrendAnalysis.rdlc" />
+    <EmbeddedResource Include="TrendAnalysis.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

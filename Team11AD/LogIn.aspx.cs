@@ -34,7 +34,7 @@ namespace Team11AD
                         Response.Redirect("ViewDisbursementList.aspx");
                         break;
                     case "Store Supervisor":
-                        Response.Redirect("ApproveAdjustmentRequisition.aspx");
+                        Response.Redirect("ApproveAdjustmentRequest.aspx");
                         break;
                     case "Store Manager":
                         Response.Redirect("ApproveAdjustmentRequisitionM.aspx");

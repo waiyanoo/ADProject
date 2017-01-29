@@ -22,14 +22,8 @@ namespace DataAccess
                 ubo.UserID = data.UserID;
                 dbo.DepartmentID = data.DepartmentID;
                 ubo.DepartmentID = dbo;
-                if(!DBNull.Value.Equals(data.StartDate))
-                {
-                    
-                }
                 rbo.RoleName = data.RoleName;
                 ubo.RoleName = rbo;
-                
-
             }
             else
             {

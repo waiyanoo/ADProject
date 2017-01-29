@@ -12,7 +12,7 @@
                <div class="form-group">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AddDepartment.aspx" CssClass="btn btn-primary" runat="server">Add New</asp:HyperLink>
                 </div>
-               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" GridLines="None">
+               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnRowEditing="gvdepartment_RowEditing" GridLines="None">
                    <Columns>
                        <asp:TemplateField HeaderText="#">
                         <ItemTemplate>

@@ -24,9 +24,11 @@ namespace Team11AD
 
         protected string getUserIDfromSession()
         {
+            UserBO ubo = new UserBO();
+            ubo =  (UserBO)Session["user"];
             string userID;
-            //string userID = Session["userID"].ToString();
-            userID = "D001";
+            userID = ubo.UserID;
+            //userID = "D001";
             return userID;
         }
 
