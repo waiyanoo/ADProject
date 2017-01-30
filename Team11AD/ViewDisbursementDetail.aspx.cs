@@ -34,7 +34,7 @@ namespace Team11AD
 
         protected void btnback_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewDisbursement.aspx");
+            Response.Redirect("ViewDisbursementList.aspx");
         }
     }
 }

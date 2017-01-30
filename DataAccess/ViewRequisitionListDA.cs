@@ -49,6 +49,7 @@ namespace DataAccess
             
 
             var q2 = (from r in context.Requisitions
+                      orderby r.Date descending
                       select new
                       {
                           RID = r.RequisitionID,

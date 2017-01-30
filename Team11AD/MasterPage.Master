@@ -36,10 +36,10 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li>
-                    <a href="#" ><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
+                    <a href="ContactUs.aspx" ><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
                 </li>
 				 <li>
-                    <a href="#"><i class="fa fa-info" aria-hidden="true"></i> About Us</a>
+                    <a href="AboutUs.aspx"><i class="fa fa-info" aria-hidden="true"></i> About Us</a>
                 </li>
                 <li>
                       <a href="LogIn.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>

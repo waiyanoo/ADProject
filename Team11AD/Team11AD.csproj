@@ -100,14 +100,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AddDepartment.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="ApproveAdjustmentRequest.aspx" />
     <Content Include="ApproveAdjustmentRequisitionM.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="DelegateAuthority.aspx" />
     <Content Include="DeliverOrder.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Image\ei.jpg" />
+    <Content Include="Image\jian.jpg" />
+    <Content Include="Image\waiyan.jpg" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -214,6 +219,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddDepartment.aspx.cs">
       <DependentUpon>AddDepartment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +253,13 @@
     </Compile>
     <Compile Include="ApproveAdjustmentRequisitionM.aspx.designer.cs">
       <DependentUpon>ApproveAdjustmentRequisitionM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="DelegateAuthority.aspx.cs">
       <DependentUpon>DelegateAuthority.aspx</DependentUpon>
@@ -462,9 +481,7 @@
       <DependentUpon>ViewSupplier.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

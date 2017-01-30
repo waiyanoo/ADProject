@@ -19,34 +19,38 @@ namespace Team11AD
             pSManager.Visible = false;
             pSsupevisor.Visible = false;
             pDHeadWA.Visible = false;
-            if (Session["user"] == null)
+            if (Session["user"] != null)
             {
-                //Response.Redirect("LogIn.aspx");
+                UserBO ubo = new UserBO();
+                ubo = (UserBO)Session["user"];
+                RoleBO rbo = ubo.RoleName;
+                switch (rbo.RoleName)
+                {
+                    case "Store Clerk":
+                        pSClerk.Visible = true;
+                        break;
+                    case "Store Supervisor":
+                        pSsupevisor.Visible = true;
+                        break;
+                    case "Store Manager":
+                        pSManager.Visible = true;
+                        break;
+                    case "Department Staff":
+                        pDUser.Visible = true;
+                        break;
+                    case "Department Head":
+                        pDHedad.Visible = true;
+                        break;
+                    case "Department Representative":
+                        pDRep.Visible = true;
+                        break;
+                }
             }
-            UserBO ubo = new UserBO();
-            ubo = (UserBO)Session["user"];
-            RoleBO rbo = ubo.RoleName;
-            switch (rbo.RoleName)
+            else
             {
-                case "Store Clerk":
-                    pSClerk.Visible = true;
-                    break;
-                case "Store Supervisor":
-                    pSsupevisor.Visible = true;
-                    break;
-                case "Store Manager":
-                    pSManager.Visible = true;
-                    break;
-                case "Department Staff":
-                    pDUser.Visible = true;
-                    break;
-                case "Department Head":
-                    pDHedad.Visible = true;
-                    break;
-                case "Department Representative":
-                    pDRep.Visible = true;
-                    break;
+                Response.Redirect("LogIn.aspx");
             }
+            
         }
     }
 }
