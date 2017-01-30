@@ -35,7 +35,7 @@
 
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/waiyan.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
                 <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Fan Jinlong David</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
@@ -46,7 +46,7 @@
             
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/waiyan.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
                 <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Tai Ling Yen</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
@@ -54,7 +54,7 @@
 	        
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/ei.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
                 <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Xiong Jie</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
@@ -62,7 +62,7 @@
 
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/jian.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
                 <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Lin Siyin</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
@@ -70,7 +70,7 @@
 
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/waiyan.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
                 <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Karthikeyan Jawahar Jothi</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>

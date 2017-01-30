@@ -118,9 +118,6 @@
     <Compile Include="SupplierItem.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>logicUniversity.tt</DependentUpon>
-    </Compile>
     <Compile Include="UpdateRequisitionDA.cs" />
     <Compile Include="User.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
