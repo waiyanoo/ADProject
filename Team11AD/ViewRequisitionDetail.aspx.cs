@@ -38,6 +38,7 @@ namespace Team11AD
             rbo.Status = "Approved";
             ApprovedRequisitionBL rabl = new ApprovedRequisitionBL();
             rabl.ApproveRequisition(rbo);
+            Response.Redirect("ViewRequisitionList.aspx");
         }
     }
 }

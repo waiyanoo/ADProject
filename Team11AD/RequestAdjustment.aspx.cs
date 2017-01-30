@@ -88,32 +88,44 @@ namespace Team11AD
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            GeneratePrimaryKey gpk = new GeneratePrimaryKey();
-            String voucherno = gpk.getKeyforAdjustment();
-            AdjustmentBO abo = new AdjustmentBO();
-            UserBO ubo = new UserBO();
-            ubo.UserID = "U001";
-            abo.UserID = ubo;
-            abo.VoucherNo = voucherno;
-            abo.Date = DateTime.Today;
-            abo.ConfirmBy = "U002";
             dt = (DataTable)Session["AdjustItem"];
-            RequestAdjustmentBL rabll = new RequestAdjustmentBL();
-            rabll.SaveAdjustmentVocher(abo);
-            for(int i =0; i<dt.Rows.Count; i++)
+            if (dt.Rows.Count != 0)
             {
-                ItemAdjustmentBO iabo = new ItemAdjustmentBO();
-                ItemBO ibo = new ItemBO();
-                
-                ibo.ItemID = dt.Rows[i][0].ToString();
-                iabo.ItemID = ibo;
-                iabo.VoucherNo = abo;
-                iabo.AdjustQty = Convert.ToInt32( dt.Rows[i][2].ToString());
-                iabo.Reason= dt.Rows[i][3].ToString();
-                rabll.SaveItemAdjustment(iabo);
+                GeneratePrimaryKey gpk = new GeneratePrimaryKey();
+                String voucherno = gpk.getKeyforAdjustment();
+                AdjustmentBO abo = new AdjustmentBO();
+                UserBO session = new UserBO();
+                session = (UserBO)Session["user"];
+                UserBO ubo = new UserBO();
+                ubo.UserID = session.UserID;
+                abo.UserID = ubo;
+                abo.VoucherNo = voucherno;
+                abo.Date = DateTime.Today;
+                abo.ConfirmBy = "U002";
 
+                RequestAdjustmentBL rabll = new RequestAdjustmentBL();
+                rabll.SaveAdjustmentVocher(abo);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ItemAdjustmentBO iabo = new ItemAdjustmentBO();
+                    ItemBO ibo = new ItemBO();
+
+                    ibo.ItemID = dt.Rows[i][0].ToString();
+                    iabo.ItemID = ibo;
+                    iabo.VoucherNo = abo;
+                    iabo.AdjustQty = Convert.ToInt32(dt.Rows[i][2].ToString());
+                    iabo.Reason = dt.Rows[i][3].ToString();
+                    rabll.SaveItemAdjustment(iabo);
+
+                }
+                ClearTable();
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Request Successful!')", true);
             }
-            ClearTable();
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Please Add Item First!')", true);
+            }
+            
             
         }
         protected void ClearText()

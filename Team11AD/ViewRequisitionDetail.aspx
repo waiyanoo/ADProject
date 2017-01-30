@@ -40,13 +40,13 @@
                         <asp:BoundField DataField="ItemId" HeaderText="Item ID"/>
                         <asp:BoundField DataField="ItemDescription" HeaderText="Item Description"/>
                         <asp:BoundField DataField="RequiredQty" HeaderText="Required Quantity"/>
-                        <asp:BoundField DataField="FulfilledQty" HeaderText="Fulfilled Quantity"/>
+                        
                     </Columns>
                 </asp:GridView>
             </div>
         </div>
         <div class="col-lg-10" style="text-align:right">
-            <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-default" OnClick="btnApprove_Click"/>
+            <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-primary" OnClick="btnApprove_Click"/>
         </div>
     </div>
 </asp:Content>

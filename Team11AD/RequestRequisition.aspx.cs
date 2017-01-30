@@ -88,36 +88,45 @@ namespace Team11AD.View
 
         protected void btnsend_Click(object sender, EventArgs e)
         {
-            UserBO session = new UserBO();
-            session = (UserBO)Session["user"];
-            GeneratePrimaryKey gpk = new GeneratePrimaryKey();
-            String requesitionid = gpk.getKeyforRequisition();
-            RequisitionBO rbo = new RequisitionBO();
-            UserBO ubo = new UserBO();
-            ubo.UserID = session.UserID;
-            rbo.UserID = ubo;
-            rbo.RequisitionID = requesitionid;
-            rbo.Date = DateTime.Now;
-            rbo.Status = "Pending";
-            RequestRequisitiionBL rrbl = new RequestRequisitiionBL();
-            rrbl.SaveRequisition(rbo);
             dt = (DataTable)Session["RequestItem"];
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                RequisitionItemBO ribo = new RequisitionItemBO();
-                ItemBO ibo = new ItemBO();
-                ibo.ItemID = dt.Rows[i][0].ToString();
-                ribo.RequisitionID = rbo;
-                ribo.ItemID = ibo;
-                ribo.FulfilledQty = 0;
-                ribo.FulfilledStatus = "Pending";
-                ribo.AllocatedQty = 0;
-                ribo.RequiredQty = Convert.ToInt32(dt.Rows[i][2].ToString());
-                rrbl.SaveItemRequisition(ribo);
-                string script = "alert(\"Request Successful!\");";
-                ScriptManager.RegisterStartupScript(this, GetType(),
-                                      "ServerControlScript", script, true);
+            if (dt.Rows.Count != 0) {
+                UserBO session = new UserBO();
+                session = (UserBO)Session["user"];
+                GeneratePrimaryKey gpk = new GeneratePrimaryKey();
+                String requesitionid = gpk.getKeyforRequisition();
+                RequisitionBO rbo = new RequisitionBO();
+                UserBO ubo = new UserBO();
+                ubo.UserID = session.UserID;
+                rbo.UserID = ubo;
+                rbo.RequisitionID = requesitionid;
+                rbo.Date = DateTime.Now;
+                rbo.Status = "Pending";
+                RequestRequisitiionBL rrbl = new RequestRequisitiionBL();
+                rrbl.SaveRequisition(rbo);
+                
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    RequisitionItemBO ribo = new RequisitionItemBO();
+                    ItemBO ibo = new ItemBO();
+                    ibo.ItemID = dt.Rows[i][0].ToString();
+                    ribo.RequisitionID = rbo;
+                    ribo.ItemID = ibo;
+                    ribo.FulfilledQty = 0;
+                    ribo.FulfilledStatus = "Pending";
+                    ribo.AllocatedQty = 0;
+                    ribo.RequiredQty = Convert.ToInt32(dt.Rows[i][2].ToString());
+                    rrbl.SaveItemRequisition(ribo);
+                    
+                }
+                dt.Clear();
+                Session["RequestItem"] = dt;
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Request Successful!')", true);
                 Response.Redirect("ViewRequisition.aspx");
+
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Please Add Item First!')", true);
             }
         }
 

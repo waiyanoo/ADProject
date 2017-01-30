@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" PageSize="20" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging" GridLines="None">
+                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" PageSize="13" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging" GridLines="None">
                         <Columns>
                             <asp:TemplateField HeaderText="#">
                             <ItemTemplate>
