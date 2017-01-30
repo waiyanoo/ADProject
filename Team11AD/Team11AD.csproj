@@ -124,6 +124,7 @@
     <Content Include="Report\ReportDs.xsc">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\LogicUniversity.pubxml" />
     <None Include="Report\ReportDs.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -132,6 +133,7 @@
     <Content Include="Report\ReportDs.xss">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <Content Include="StockCard.aspx" />
     <Content Include="style\font-awesome\css\font-awesome.css" />
     <Content Include="style\font-awesome\css\font-awesome.min.css" />
     <Content Include="style\font-awesome\fonts\fontawesome-webfont.svg" />
@@ -353,6 +355,13 @@
     </Compile>
     <Compile Include="RequestRequisition.aspx.designer.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockCard.aspx.cs">
+      <DependentUpon>StockCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockCard.aspx.designer.cs">
+      <DependentUpon>StockCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrendAnalysis.aspx.cs">
       <DependentUpon>TrendAnalysis.aspx</DependentUpon>

@@ -52,6 +52,7 @@
     <Compile Include="RequestRequisitiionBL.cs" />
     <Compile Include="SetCollectionPointBL.cs" />
     <Compile Include="SetReorderLevelBL.cs" />
+    <Compile Include="StockCardBL.cs" />
     <Compile Include="SupplierBL.cs" />
     <Compile Include="UpdateRequisitionBL.cs" />
     <Compile Include="ViewItemCatalogueBL.cs" />

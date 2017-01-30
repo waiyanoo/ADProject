@@ -54,6 +54,7 @@
     <Compile Include="RequisitionBO.cs" />
     <Compile Include="RequisitionItemBO.cs" />
     <Compile Include="RoleBO.cs" />
+    <Compile Include="StockCardBO.cs" />
     <Compile Include="SupplierBO.cs" />
     <Compile Include="SupplierItemBO.cs" />
     <Compile Include="UserBO.cs" />

@@ -33,7 +33,7 @@
                         </Columns>
                         
                     </asp:GridView>
-               <div class="form-group">
+               <div class="form-group" style="text-align:right">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Make Order" CssClass="btn btn-primary"/>
                     
                 </div>

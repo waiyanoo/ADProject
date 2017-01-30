@@ -181,6 +181,9 @@
                                 <li>
                                     <a href="ViewAllStock.aspx"> View All Stock</a>
                                 </li>
+                                <li>
+                                    <a href="StockCard.aspx"> View Stock Card</a>
+                                </li>
                             </ul>
                         </li>
                    

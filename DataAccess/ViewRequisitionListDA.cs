@@ -34,7 +34,7 @@ namespace DataAccess
             {
                 ViewRequsitionListBO rbo = new ViewRequsitionListBO();
                 rbo.RequsitionId = data.RID;
-                rbo.Date = data.date.ToString();
+                rbo.Date = data.date.Value.ToShortDateString();
                 rbo.Name = data.name;
                 rbo.Status = data.status;
                 rlist.Add(rbo);
@@ -61,7 +61,7 @@ namespace DataAccess
             {
                 ViewRequsitionListBO rbo = new ViewRequsitionListBO();
                 rbo.RequsitionId = data.RID;
-                rbo.Date = data.date.ToString();
+                rbo.Date = data.date.Value.ToShortDateString();
                 rbo.Name = data.name;
                 rbo.Status = data.status;
                 rlist.Add(rbo);
