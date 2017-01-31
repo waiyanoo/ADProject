@@ -23,8 +23,9 @@ namespace Team11AD
 
                 if(userID != deptHead.UserID)
                 {
-                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('You do not have authority to delegate authority. Only Department Head may access this page.')", true);
-                    Response.Redirect("ViewRequisitionList.aspx");
+                   
+                    Response.Write("<script>alert('You do not have authority to delegate authority. Only Department Head may access this page.')</script>");
+                    Response.Write("<script>window.location.href='ViewRequisitionList.aspx';</script>");
                 }
 
                 loadDataFields(dBO);

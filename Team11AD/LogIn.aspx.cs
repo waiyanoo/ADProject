@@ -40,7 +40,11 @@ namespace Team11AD
                         Response.Redirect("ApproveAdjustmentRequisitionM.aspx");
                         break;
                     case "Department Staff":
-                        Response.Redirect("ViewRequisition.aspx");
+                        DelegateAuthorityBL dabl = new DelegateAuthorityBL();
+                        UserBO autho = new UserBO();
+                        autho = dabl.getCurrentAuthority(dabl.getDepartmentByUserID(ubo.UserID));
+                        if (autho.UserID == ubo.UserID) { Response.Redirect("ViewRequisitionList.aspx"); }
+                        else Response.Redirect("ViewRequisition.aspx");
                         break;
                     case "Department Head":
                         Response.Redirect("ViewRequisitionList.aspx");
