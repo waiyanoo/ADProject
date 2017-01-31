@@ -19,6 +19,14 @@ namespace Team11AD
             {
                 string userID = getUserIDfromSession();
                 DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
+                UserBO deptHead = dabl.getDeptHead(dBO);
+
+                if(userID != deptHead.UserID)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('You do not have authority to delegate authority. Only Department Head may access this page.')", true);
+                    Response.Redirect("ViewRequisitionList.aspx");
+                }
+
                 loadDataFields(dBO);
 
                 //dropdownlist for department employees excluding department head
@@ -39,7 +47,6 @@ namespace Team11AD
             ubo =  (UserBO)Session["user"];
             string userID;
             userID = ubo.UserID;
-            //userID = "D001";
             return userID;
         }
 
