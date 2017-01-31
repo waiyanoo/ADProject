@@ -21,10 +21,11 @@ namespace Team11AD
                 DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
                 UserBO deptHead = dabl.getDeptHead(dBO);
 
+                //only Department Head can delegate authority. Staff will be redirected to ViewRequisition UI
                 if(userID != deptHead.UserID)
                 {
                     ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('You do not have authority to delegate authority. Only Department Head may access this page.')", true);
-                    Response.Redirect("ViewRequisitionList.aspx");
+                    //Response.Redirect("ViewRequisitionList.aspx");
                 }
 
                 loadDataFields(dBO);
