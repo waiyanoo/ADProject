@@ -46,16 +46,19 @@ namespace DataAccess
         {
             //q1 select the department head's department name
             //the user id need to be changed into the current user id
-            
+
 
             var q2 = (from r in context.Requisitions
+                      join u in context.Users on r.UserID equals u.UserID
+                      join d in context.Departments on u.DepartmentID equals d.DepartmentID
+                      where r.Status == "Approved"
                       orderby r.Date descending
                       select new
                       {
                           RID = r.RequisitionID,
                           date = r.Date,
                           name = r.User.Name,
-                          status = r.Status
+                          status = d.DepartmentName
                       }).ToList();
             List<ViewRequsitionListBO> rlist = new List<ViewRequsitionListBO>();
             foreach (var data in q2)

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessObject;
+using BusinessLogic;
 
 namespace Team11AD
 {
@@ -36,7 +37,11 @@ namespace Team11AD
                         pSManager.Visible = true;
                         break;
                     case "Department Staff":
-                        pDUser.Visible = true;
+                        DelegateAuthorityBL dabl = new DelegateAuthorityBL();
+                        UserBO autho = new UserBO();
+                        autho = dabl.getCurrentAuthority(dabl.getDepartmentByUserID(ubo.UserID));
+                        if (autho.UserID == ubo.UserID) { pDHedad.Visible = true; }
+                        else pDUser.Visible = true;
                         break;
                     case "Department Head":
                         pDHedad.Visible = true;

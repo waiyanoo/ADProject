@@ -39,5 +39,6 @@ namespace DataAccess
         public DbSet<SupplierItem> SupplierItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<CollectionPoint> CollectionPoints { get; set; }
+        public DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

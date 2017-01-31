@@ -20,6 +20,7 @@ namespace DataAccess
         public Nullable<int> FulfilledQty { get; set; }
         public string FulfilledStatus { get; set; }
         public Nullable<int> AllocatedQty { get; set; }
+        public Nullable<int> DeliveredQty { get; set; }
     
         public virtual Item Item { get; set; }
         public virtual Requisition Requisition { get; set; }

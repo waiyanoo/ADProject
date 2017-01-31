@@ -19,7 +19,7 @@
                         <asp:BoundField DataField="RequsitionId" HeaderText="Requisition ID"/>
                         <asp:BoundField DataField="Date" HeaderText="Submitted Date"/>
                         <asp:BoundField DataField="Name" HeaderText="Submitted Employee"/>
-                        <asp:BoundField DataField="Status" HeaderText="Status"/>
+                        <asp:BoundField DataField="Status" HeaderText="Department"/>
                         <asp:CommandField ShowEditButton="true" EditText="Details" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
                     </Columns>
                 </asp:GridView>

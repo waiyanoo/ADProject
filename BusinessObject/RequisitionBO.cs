@@ -12,6 +12,8 @@ namespace BusinessObject
         private UserBO userID;
         private DateTime date;
         private string status;
+        private string AllocatedQty;
+        private string FulfilledQty;
 
         public string RequisitionID
         {
@@ -65,16 +67,46 @@ namespace BusinessObject
             }
         }
 
-        public RequisitionBO(string requisitionID, UserBO userID, DateTime date, string status)
+        public string AllocatedQty1
         {
-            this.RequisitionID = requisitionID;
-            this.UserID = userID;
-            this.Date = date;
-            this.Status = status;
+            get
+            {
+                return AllocatedQty;
+            }
+
+            set
+            {
+                AllocatedQty = value;
+            }
         }
+
+        public string FulfilledQty1
+        {
+            get
+            {
+                return FulfilledQty;
+            }
+
+            set
+            {
+                FulfilledQty = value;
+            }
+        }
+
+
         public RequisitionBO()
         {
 
+        }
+
+        public RequisitionBO(string requisitionID, UserBO userID, DateTime date, string status, string allocatedQty, string fulfilledQty)
+        {
+            this.requisitionID = requisitionID;
+            this.userID = userID;
+            this.date = date;
+            this.status = status;
+            AllocatedQty = allocatedQty;
+            FulfilledQty = fulfilledQty;
         }
     }
 }
