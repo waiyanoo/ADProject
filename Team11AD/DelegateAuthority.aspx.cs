@@ -21,6 +21,7 @@ namespace Team11AD
                 DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
                 UserBO deptHead = dabl.getDeptHead(dBO);
 
+                //only Department Head can delegate authority. Staff will be redirected to ViewRequisition UI
                 if(userID != deptHead.UserID)
                 {
                    
