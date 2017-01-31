@@ -17,7 +17,18 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
-                loadDataFields();
+                string userID = getUserIDfromSession();
+                DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
+                loadDataFields(dBO);
+
+                //dropdownlist for department employees excluding department head
+                List<UserBO> uList = dabl.getDeptEmployeeXHeadList(dBO);
+                ddemployee.DataSource = uList;
+                ddemployee.DataValueField = "UserID";
+                ddemployee.DataTextField = "Name";
+                ddemployee.DataBind();
+
+                //Authorised-From date for new delegate must be today or later
                 cvalidatorstartdate.ValueToCompare = DateTime.Today.ToShortDateString();
             }
         }
@@ -30,58 +41,52 @@ namespace Team11AD
             return userID;
         }
 
-        protected void loadDataFields()
+        protected void loadDataFields(DepartmentBO dBO)
         {
-            string userID = getUserIDfromSession();
-
-            DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
             UserBO deptHead = dabl.getDeptHead(dBO);
             UserBO currentAuthority = dabl.getCurrentAuthority(dBO);
             UserBO futureAuthority = dabl.getFutureAuthority(dBO);
-            List<UserBO> uList = dabl.getDeptEmployeeXHeadList(dBO);
+            
 
             txtdept.Text = dBO.DepartmentName;
             txtdepthead.Text = deptHead.Name;
 
             txtcurrentauthority.Text = currentAuthority.Name;
-            txtcurrentfromdate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Startdate);
-            if (currentAuthority.Enddate != default(DateTime))
+            if(currentAuthority.UserID == deptHead.UserID)
             {
-                txtcurrenttodate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Enddate);
-            }
-            else
-            {
-                //infinity
-                txtcurrenttodate.Text = "\u221e";
-            }
-
-            if (futureAuthority != null)
-            {
-                txtfutureauthority.Text = futureAuthority.Name;
-                txtfuturefromdate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Startdate);
-
-                if (futureAuthority.Enddate != default(DateTime))
+                //currentAuthority is deptHead & futureAuthority is nobody
+                if(futureAuthority == null)
                 {
-                    txtfuturetodate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Enddate);
+                    txtcurrentfromdate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Startdate);
+                    txtcurrenttodate.Text = "\u221e";
+
+                    txtfutureauthority.Text = "-";
+                    txtfuturefromdate.Text = "-";
+                    txtfuturetodate.Text = "-";
                 }
+                //currentAuthority is deptHead & futureAuthority is staff
                 else
                 {
-                    //infinity
-                    txtfuturetodate.Text = "\u221e";
+                    txtcurrentfromdate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Enddate);
+                    txtcurrenttodate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Startdate.AddDays(-1));
+
+                    txtfutureauthority.Text = futureAuthority.Name;
+                    txtfuturefromdate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Startdate);
+                    txtfuturetodate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Enddate);
                 }
             }
+            //currentAuthority is staff & futureAuthority is deptHead
             else
             {
-                txtfutureauthority.Text = "-";
-                txtfuturefromdate.Text = "-";
-                txtfuturetodate.Text = "-";
+                txtcurrentfromdate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Startdate);
+                txtcurrenttodate.Text = String.Format("{0: dd/MM/yyyy}", currentAuthority.Enddate);
+
+                txtfutureauthority.Text = futureAuthority.Name;
+                txtfuturefromdate.Text = String.Format("{0: dd/MM/yyyy}", futureAuthority.Startdate);
+                txtfuturetodate.Text = "\u221e";
             }
 
-            //dropdownlist for department employees excluding department head
-            ddemployee.DataSource = uList;
-            ddemployee.DataValueField = "UserID";
-            ddemployee.DataTextField = "Name";
-            ddemployee.DataBind();
+            
             ddemployee.ClearSelection();
 
             txtstartdate.Text = string.Empty;
@@ -112,11 +117,11 @@ namespace Team11AD
             }
             finally
             {
-                loadDataFields();
+                loadDataFields(dBO);
             }
         }
 
-        protected void btnsubmit_Click(object sender, EventArgs e)
+        protected void btndelegate_Click(object sender, EventArgs e)
         {
             string userID = getUserIDfromSession();
             DepartmentBO dBO = dabl.getDepartmentByUserID(userID);
@@ -140,7 +145,7 @@ namespace Team11AD
             }
             catch (DeptHeadNotCurrentAuthorityException) //currentAuthority must be department head to cancel delegation
             {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Current Person authorised to approve requisitions is not Department Head')", true);
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Error! Already delegated employee. To delegate another employee, cancel current delegation first')", true);
             }
             catch (FutureAuthorityAlreadyExistException) //cannot assign more than 1 futureAuthority
             {
@@ -148,7 +153,7 @@ namespace Team11AD
             }
             finally
             {
-                loadDataFields();
+                loadDataFields(dBO);
             }
 
         }

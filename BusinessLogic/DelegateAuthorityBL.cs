@@ -58,15 +58,25 @@ namespace BusinessLogic
         //requisitions after the current authorised person
         public UserBO getFutureAuthority(DepartmentBO dBO)
         {
+            UserBO futureAuthority = null;
             UserBO currentAuthority = getCurrentAuthority(dBO);
-            DateTime nextStartDate = currentAuthority.Enddate.AddDays(1);
-            
+            UserBO deptHead = dada.getDeptHead(dBO);
             List<UserBO> uList = dada.getDeptEmployeeList(dBO);
 
-            //if futureAuthority exists, he must have startDate = the day after the currentAuthority's endDate
-            //if currentAuthority = deptHead & his endDate set to default(DateTime) aka infinity, no futureAuthority will be found
-            UserBO futureAuthority = uList.Where(x => x.Startdate == nextStartDate).FirstOrDefault();
-
+            if(currentAuthority.UserID == deptHead.UserID) 
+            {
+                //currentAuthority = deptHead & futureAuthority = employee
+                if (DateTime.Compare(DateTime.Today, currentAuthority.Startdate) < 0) 
+                {
+                    //futureAuthority's enddate is 1 day before currentAuthority's (deptHead) startdate
+                    DateTime nextEndDate = currentAuthority.Startdate.AddDays(-1); 
+                    futureAuthority = uList.Where(x => x.Enddate == nextEndDate).FirstOrDefault();
+                }
+            }
+            else //currentAuthority = employee & futureAuthority = deptHead
+            {
+                futureAuthority = deptHead;
+            }
             return futureAuthority; //if no futureAuthority, return value will be null
         }
 
@@ -109,6 +119,7 @@ namespace BusinessLogic
             }
             else if(futureAuthority != null) //scenario 2: currentAuthority = deptHead & futureAuthority = staff
             {
+                deptHead.Startdate = deptHead.Enddate;
                 deptHead.Enddate = default(DateTime);
                 futureAuthority.Startdate = default(DateTime);
                 futureAuthority.Enddate = default(DateTime);
@@ -142,10 +153,10 @@ namespace BusinessLogic
                 throw new FutureAuthorityAlreadyExistException();
             }
 
-            //Sets the currentAuthority (deptHead) Enddate to 1 day before futureAuthority Startdate
+            //Sets the currentAuthority (deptHead) Enddate = Startdate
             //Sets the currentAuthority Startdate to 1 day after futureAuthority Enddate
             //Note: deptHead's Enddate is always before Startdate 
-            currentAuthority.Enddate = futureAuthority.Startdate.AddDays(-1);
+            currentAuthority.Enddate = currentAuthority.Startdate;
             currentAuthority.Startdate = futureAuthority.Enddate.AddDays(1);
             writeResult = dada.setStartEndDates(currentAuthority, futureAuthority);
 

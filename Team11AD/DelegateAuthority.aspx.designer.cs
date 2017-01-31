@@ -166,12 +166,12 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txtenddate;
         
         /// <summary>
-        /// btnsubmit control.
+        /// btndelegate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsubmit;
+        protected global::System.Web.UI.WebControls.Button btndelegate;
     }
 }
