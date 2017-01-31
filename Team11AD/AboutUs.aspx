@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Team11AD.AboutUs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Stationary Store Inventory System
+    Stationery Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     About Us
@@ -62,9 +62,9 @@
 
             <div class="col-lg-3">
                 <div class="form-group" style="text-align:center">
-                    <img src="../image/panda.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
+                    <img src="../image/SY.jpg" class="img-circle" alt="Cinque Terre" width="150" height="150">
                 </div>
-                <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Lin Siyin</h4></div>
+                <div class="form-group" style="text-align:center"><h4 style="font-family:sans-serif; color:#939392">Lin SiYin</h4></div>
                 <div class="form-group" style="text-align:center"><a target="_blank" href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></div>
             </div>
 

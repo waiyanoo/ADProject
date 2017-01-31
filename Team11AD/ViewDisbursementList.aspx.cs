@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessLogic;
+using BusinessObject;
 
 namespace Team11AD
 {
@@ -14,8 +15,11 @@ namespace Team11AD
         {
             if (!IsPostBack)
             {
+                UserBO ubo = new UserBO();
+                ubo = (UserBO)Session["user"];
+                string user = ubo.UserID;
                 ViewRequisitionListBL vrbl = new ViewRequisitionListBL();
-                gvrequisition.DataSource = vrbl.FindDisbursement();
+                gvrequisition.DataSource = vrbl.FindDisbursement(user);
                 gvrequisition.DataBind();
             }
         }

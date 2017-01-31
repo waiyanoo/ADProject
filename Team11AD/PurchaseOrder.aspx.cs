@@ -55,8 +55,8 @@ namespace Team11AD
                 purchaselist.Add(pi);
                 PurchaseOrderBL.savePurchaseItem(purchaselist);
             }
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Order Successful')", true);
-            Response.Redirect("ViewLowLevelStock.aspx");
+            Response.Write("<script>alert('Order Successful.')</script>");
+            Response.Write("<script>window.location.href='ViewLowLevelStock.aspx';</script>");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewDisbursementList.aspx.cs" Inherits="Team11AD.ViewDisbursementList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Stationary Store Inventory System
+    Stationery Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     View Disbursement List

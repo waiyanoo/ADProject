@@ -17,10 +17,10 @@ namespace BusinessLogic
             return vrda.FindAllRequisition(ubo);
         }
 
-        public List<ViewRequsitionListBO> FindDisbursement()
+        public List<ViewRequsitionListBO> FindDisbursement(string id)
         {
             ViewRequisitionListDA vrda = new ViewRequisitionListDA();
-            return vrda.FindDisbursementlist();
+            return vrda.FindDisbursementlist(id);
         }
     }
 }

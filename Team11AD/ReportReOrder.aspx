@@ -2,6 +2,7 @@
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Stationery Inventory Management System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
     Reorder Report

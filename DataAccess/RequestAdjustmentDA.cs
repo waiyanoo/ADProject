@@ -29,6 +29,7 @@ namespace DataAccess
             ad.UserID = ubo.UserID;
             ad.Date = abo.Date;
             ad.ConfirmedBy = abo.ConfirmBy;
+            ad.Status = "Pending";
             model.Adjustments.Add(ad);
             model.SaveChanges();
         }
@@ -43,6 +44,7 @@ namespace DataAccess
             ia.ItemID = ibo.ItemID;
             ia.VoucherNo = abo.VoucherNo;
             ia.AdjustedQty = iabo.AdjustQty;
+            ia.AdjsutmentStatus = "Pending";
             if (iabo.Reason == null)
             {
                 ia.Reason = "";

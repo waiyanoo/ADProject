@@ -113,6 +113,7 @@
     <Content Include="Image\ei.jpg" />
     <Content Include="Image\jian.jpg" />
     <Content Include="Image\panda.jpg" />
+    <Content Include="Image\SY.jpg" />
     <Content Include="Image\waiyan.jpg" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />

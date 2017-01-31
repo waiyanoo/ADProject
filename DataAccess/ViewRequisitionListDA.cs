@@ -42,7 +42,7 @@ namespace DataAccess
             return rlist;
         }
 
-        public List<ViewRequsitionListBO> FindDisbursementlist()
+        public List<ViewRequsitionListBO> FindDisbursementlist(string id)
         {
             //q1 select the department head's department name
             //the user id need to be changed into the current user id
@@ -51,7 +51,9 @@ namespace DataAccess
             var q2 = (from r in context.Requisitions
                       join u in context.Users on r.UserID equals u.UserID
                       join d in context.Departments on u.DepartmentID equals d.DepartmentID
+                      join c in context.CollectionPoints on d.CollectionPointName equals c.CollectionPointName
                       where r.Status == "Approved"
+                      where c.UserID == id
                       orderby r.Date descending
                       select new
                       {
