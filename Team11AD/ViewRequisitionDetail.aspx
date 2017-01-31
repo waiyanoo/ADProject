@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DepartmentHead.Master" AutoEventWireup="true" CodeBehind="ViewRequisitionDetail.aspx.cs" Inherits="Team11AD.ViewRequisitionDetail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewRequisitionDetail.aspx.cs" Inherits="Team11AD.ViewRequisitionDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -40,13 +40,13 @@
                         <asp:BoundField DataField="ItemId" HeaderText="Item ID"/>
                         <asp:BoundField DataField="ItemDescription" HeaderText="Item Description"/>
                         <asp:BoundField DataField="RequiredQty" HeaderText="Required Quantity"/>
-                        <asp:BoundField DataField="FulfilledQty" HeaderText="Fulfilled Quantity"/>
+                        
                     </Columns>
                 </asp:GridView>
             </div>
         </div>
         <div class="col-lg-10" style="text-align:right">
-            <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-default" OnClick="btnApprove_Click"/>
+            <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-primary" OnClick="btnApprove_Click"/>
         </div>
     </div>
 </asp:Content>

@@ -56,50 +56,85 @@ namespace Team11AD
         {
             string qty = txtqty.Text;
             string reason = txtreason.Text;
-            dt = (DataTable)Session["AdjustItem"];
-            dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty, reason);
-            Session["AdjustItem"] = dt;
-            gvItemList.DataSource = dt;
-            gvItemList.DataBind();
-            ClearText();
+            int n;
+            bool isNumeric = int.TryParse(qty, out n);
+            if (isNumeric)
+            {
+                if (checkitem(dditemdescription.SelectedValue.ToString()))
+                {
+                    dt = (DataTable)Session["AdjustItem"];
+                    dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty, reason);
+                    Session["AdjustItem"] = dt;
+                    gvItemList.DataSource = dt;
+                    gvItemList.DataBind();
+                    ClearText();
+                }
+                else
+                {
+                    updateitemqty(dditemdescription.SelectedValue.ToString(), txtqty.Text);
+                    gvItemList.DataSource = dt;
+                    gvItemList.DataBind();
+
+                    ClearText();
+                }
+            }
+            else lblqty.Text = "Please Enter Numeric only";
+
+            
+            
+           
 
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            GeneratePrimaryKey gpk = new GeneratePrimaryKey();
-            String voucherno = gpk.getKeyforAdjustment();
-            AdjustmentBO abo = new AdjustmentBO();
-            UserBO ubo = new UserBO();
-            ubo.UserID = "U001";
-            abo.UserID = ubo;
-            abo.VoucherNo = voucherno;
-            abo.Date = DateTime.Today;
-            abo.ConfirmBy = "U002";
             dt = (DataTable)Session["AdjustItem"];
-            RequestAdjustmentBL rabll = new RequestAdjustmentBL();
-            rabll.SaveAdjustmentVocher(abo);
-            for(int i =0; i<dt.Rows.Count; i++)
+            if (dt.Rows.Count != 0)
             {
-                ItemAdjustmentBO iabo = new ItemAdjustmentBO();
-                ItemBO ibo = new ItemBO();
-                
-                ibo.ItemID = dt.Rows[i][0].ToString();
-                iabo.ItemID = ibo;
-                iabo.VoucherNo = abo;
-                iabo.AdjustQty = Convert.ToInt32( dt.Rows[i][2].ToString());
-                iabo.Reason= dt.Rows[i][3].ToString();
-                rabll.SaveItemAdjustment(iabo);
+                GeneratePrimaryKey gpk = new GeneratePrimaryKey();
+                String voucherno = gpk.getKeyforAdjustment();
+                AdjustmentBO abo = new AdjustmentBO();
+                UserBO session = new UserBO();
+                session = (UserBO)Session["user"];
+                UserBO ubo = new UserBO();
+                ubo.UserID = session.UserID;
+                abo.UserID = ubo;
+                abo.VoucherNo = voucherno;
+                abo.Date = DateTime.Today;
+                abo.ConfirmBy = "U002";
 
+                RequestAdjustmentBL rabll = new RequestAdjustmentBL();
+                rabll.SaveAdjustmentVocher(abo);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ItemAdjustmentBO iabo = new ItemAdjustmentBO();
+                    ItemBO ibo = new ItemBO();
+
+                    ibo.ItemID = dt.Rows[i][0].ToString();
+                    iabo.ItemID = ibo;
+                    iabo.VoucherNo = abo;
+                    iabo.AdjustQty = Convert.ToInt32(dt.Rows[i][2].ToString());
+                    iabo.Reason = dt.Rows[i][3].ToString();
+                    rabll.SaveItemAdjustment(iabo);
+
+                }
+                ClearTable();
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Request Successful!')", true);
             }
-            ClearTable();
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Please Add Item First!')", true);
+            }
+            
             
         }
         protected void ClearText()
         {
             txtqty.Text = "0";
             txtreason.Text = "";
-            
+            lblqty.Text = "";
+
+
         }
         protected void ClearTable()
         {
@@ -113,6 +148,50 @@ namespace Team11AD
             gvItemList.DataSource = (DataTable)Session["AdjustItem"];
             gvItemList.DataBind();
         }
+
+        protected void gvItemList_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            String id = gvItemList.Rows[e.RowIndex].Cells[1].Text;
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i].Delete();
+                }
+            }
+            Session["AdjustItem"] = dt;
+            gvItemList.DataSource = (DataTable)Session["AdjustItem"];
+            gvItemList.DataBind();
+        }
+        public Boolean checkitem(string id)
+        {
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public void updateitemqty(string id, string qty)
+        {
+            dt = (DataTable)Session["AdjustItem"];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString() == id)
+                {
+                    dt.Rows[i][2] = Convert.ToInt32(dt.Rows[i][2].ToString()) + Convert.ToInt32(qty);
+                }
+            }
+            Session["AdjustItem"] = dt;
+        }
     }
+
+
 }
 

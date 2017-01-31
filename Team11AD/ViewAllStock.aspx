@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewAllStock.aspx.cs" Inherits="Team11AD.ViewAllStock" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewAllStock.aspx.cs" Inherits="Team11AD.ViewAllStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" PageSize="20" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging" GridLines="None">
+                    <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" PageSize="13" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging" GridLines="None">
                         <Columns>
                             <asp:TemplateField HeaderText="#">
                             <ItemTemplate>
@@ -38,9 +38,34 @@
                             <asp:BoundField DataField="UnitOfMeasure" HeaderText="Unit Of Measure" />
                             <asp:BoundField DataField="CategoryName" HeaderText="Category Name" />
                         </Columns>
+                        <PagerStyle HorizontalAlign = "Right" CssClass = "GridPager" />
                     </asp:GridView>
                 </div>
             </div>
         </div>
     </div>
+    <style type="text/css">
+    
+    .GridPager a, .GridPager span
+    {
+        display: block;
+        height: 20px;
+        width: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    .GridPager a
+    {
+        background-color: #ffffff;
+        color: #969696;
+        border: 1px solid #ddd;
+    }
+    .GridPager span
+    {
+        background-color: #A1DCF2;
+        color: #000;
+        border: 1px solid #3AC0F2;
+    }
+</style>
 </asp:Content>

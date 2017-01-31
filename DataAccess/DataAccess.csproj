@@ -110,14 +110,12 @@
     </Compile>
     <Compile Include="SetCollectionPointDA.cs" />
     <Compile Include="SetReorderLevelDA.cs" />
+    <Compile Include="StockCardDA.cs" />
     <Compile Include="Supplier.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierDA.cs" />
     <Compile Include="SupplierItem.cs">
-      <DependentUpon>logicUniversity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>logicUniversity.tt</DependentUpon>
     </Compile>
     <Compile Include="UpdateRequisitionDA.cs" />

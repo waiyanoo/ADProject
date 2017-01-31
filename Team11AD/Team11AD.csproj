@@ -100,19 +100,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AddDepartment.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="ApproveAdjustmentRequest.aspx" />
     <Content Include="ApproveAdjustmentRequisitionM.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="DelegateAuthority.aspx" />
     <Content Include="DeliverOrder.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Image\ei.jpg" />
+    <Content Include="Image\jian.jpg" />
+    <Content Include="Image\panda.jpg" />
+    <Content Include="Image\waiyan.jpg" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="DUser.Master" />
+    <Content Include="MasterPage.Master" />
     <Content Include="PurchaseOrder.aspx" />
     <Content Include="ReportInventoryStatus.aspx" />
     <Content Include="ReportOrderByCategory.aspx" />
@@ -120,12 +127,10 @@
     <Content Include="ReportReOrder.aspx" />
     <Content Include="RequestAdjustment.aspx" />
     <Content Include="RequisitionDetails.aspx" />
-    <Content Include="SClerk.Master" />
-    <Content Include="DepartmentHead.Master" />
-    <Content Include="SSupervisor.Master" />
     <Content Include="Report\ReportDs.xsc">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\LogicUniversity.pubxml" />
     <None Include="Report\ReportDs.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -134,6 +139,49 @@
     <Content Include="Report\ReportDs.xss">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <Content Include="StockCard.aspx" />
+    <Content Include="style\font-awesome\css\font-awesome.css" />
+    <Content Include="style\font-awesome\css\font-awesome.min.css" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="style\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="style\font-awesome\less\bordered-pulled.less" />
+    <Content Include="style\font-awesome\less\core.less" />
+    <Content Include="style\font-awesome\less\fixed-width.less" />
+    <Content Include="style\font-awesome\less\font-awesome.less" />
+    <Content Include="style\font-awesome\less\icons.less" />
+    <Content Include="style\font-awesome\less\larger.less" />
+    <Content Include="style\font-awesome\less\list.less" />
+    <Content Include="style\font-awesome\less\mixins.less" />
+    <Content Include="style\font-awesome\less\path.less" />
+    <Content Include="style\font-awesome\less\rotated-flipped.less" />
+    <Content Include="style\font-awesome\less\spinning.less" />
+    <Content Include="style\font-awesome\less\stacked.less" />
+    <Content Include="style\font-awesome\less\variables.less" />
+    <Content Include="style\font-awesome\scss\font-awesome.scss" />
+    <Content Include="style\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="style\font-awesome\scss\_core.scss" />
+    <Content Include="style\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="style\font-awesome\scss\_icons.scss" />
+    <Content Include="style\font-awesome\scss\_larger.scss" />
+    <Content Include="style\font-awesome\scss\_list.scss" />
+    <Content Include="style\font-awesome\scss\_mixins.scss" />
+    <Content Include="style\font-awesome\scss\_path.scss" />
+    <Content Include="style\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="style\font-awesome\scss\_spinning.scss" />
+    <Content Include="style\font-awesome\scss\_stacked.scss" />
+    <Content Include="style\font-awesome\scss\_variables.scss" />
+    <Content Include="style\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="style\font-awesome\less\animated.less" />
+    <Content Include="style\font-awesome\less\screen-reader.less" />
+    <Content Include="style\font-awesome\scss\_animated.scss" />
+    <Content Include="style\font-awesome\scss\_screen-reader.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -150,6 +198,7 @@
     <Content Include="style\css\bootstrap.min.css" />
     <Content Include="style\css\custom.css" />
     <Content Include="style\css\sb-admin.css" />
+    <Content Include="style\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="style\js\bootstrap.js" />
     <Content Include="style\js\bootstrap.min.js" />
     <Content Include="style\js\jquery.js" />
@@ -171,6 +220,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddDepartment.aspx.cs">
       <DependentUpon>AddDepartment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +255,13 @@
     <Compile Include="ApproveAdjustmentRequisitionM.aspx.designer.cs">
       <DependentUpon>ApproveAdjustmentRequisitionM.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DelegateAuthority.aspx.cs">
       <DependentUpon>DelegateAuthority.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,19 +276,19 @@
     <Compile Include="DeliverOrder.aspx.designer.cs">
       <DependentUpon>DeliverOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DepartmentHead.Master.cs">
-      <DependentUpon>DepartmentHead.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DepartmentHead.Master.designer.cs">
-      <DependentUpon>DepartmentHead.Master</DependentUpon>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="DUser.Master.cs">
-      <DependentUpon>DUser.Master</DependentUpon>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DUser.Master.designer.cs">
-      <DependentUpon>DUser.Master</DependentUpon>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,13 +355,6 @@
     <Compile Include="RequisitionDetails.aspx.designer.cs">
       <DependentUpon>RequisitionDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SClerk.Master.cs">
-      <DependentUpon>SClerk.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SClerk.Master.designer.cs">
-      <DependentUpon>SClerk.Master</DependentUpon>
-    </Compile>
     <Compile Include="SetCollectionPoint.aspx.cs">
       <DependentUpon>SetCollectionPoint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,19 +369,19 @@
     <Compile Include="SetReorderLevel.aspx.designer.cs">
       <DependentUpon>SetReorderLevel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SSupervisor.Master.cs">
-      <DependentUpon>SSupervisor.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SSupervisor.Master.designer.cs">
-      <DependentUpon>SSupervisor.Master</DependentUpon>
-    </Compile>
     <Compile Include="RequestRequisition.aspx.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RequestRequisition.aspx.designer.cs">
       <DependentUpon>RequestRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockCard.aspx.cs">
+      <DependentUpon>StockCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockCard.aspx.designer.cs">
+      <DependentUpon>StockCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrendAnalysis.aspx.cs">
       <DependentUpon>TrendAnalysis.aspx</DependentUpon>
@@ -426,9 +482,7 @@
       <DependentUpon>ViewSupplier.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
@@ -451,6 +505,7 @@
     <EmbeddedResource Include="ROrder.rdlc" />
     <EmbeddedResource Include="ROrderByCat.rdlc" />
     <EmbeddedResource Include="ROrderByDept.rdlc" />
+    <EmbeddedResource Include="TrendAnalysis.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

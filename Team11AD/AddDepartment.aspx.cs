@@ -16,6 +16,19 @@ namespace Team11AD
 
         }
 
+        private void Page_Error(object sender, EventArgs e)
+        {
+            Exception exc = Server.GetLastError();
+
+            // Handle specific exception.
+            if (exc is HttpUnhandledException)
+            {
+                Server.Transfer("GenericErrorPage.aspx", true);
+            }
+            // Clear the error from the server.
+            Server.ClearError();
+        }
+
         protected void btnSave_Click(object sender, EventArgs e)
         {
             DepartmentBO department = new DepartmentBO();
@@ -26,8 +39,8 @@ namespace Team11AD
             department.Fax = txtfax.Text.Trim();
             department.Phone = txtphone.Text.Trim();
             department.HeadName = txthname.Text.Trim();
-            cpbo.CollectionPointName = txtcpoint.Text.Trim();
-            department.CollectionTime = txtctime.Text.Trim();
+            cpbo.CollectionPointName = ddcollection.SelectedValue;
+            department.CollectionTime = ddcollectiontime.SelectedValue;
             department.Representative = txtrep.Text.Trim();
           
             DepartmentBL dbl = new DepartmentBL();

@@ -37,9 +37,18 @@ namespace Team11AD
                     itemsid.Add(gvr.Cells[2].Text.ToString());
                 }
             }
-            Session["itemsid"] = itemsid;
-            Session["supplier"] = DropDownList1.SelectedValue;
-            Response.Redirect("PurchaseOrder.aspx");
+            if (itemsid.Any())
+            {
+                Session["itemsid"] = itemsid;
+                Session["supplier"] = DropDownList1.SelectedValue;
+                Response.Redirect("PurchaseOrder.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "Alert Box", "alert('Please Select the Item.')", true);
+
+            }
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

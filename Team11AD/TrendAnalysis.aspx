@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SSupervisor.Master" AutoEventWireup="true" CodeBehind="TrendAnalysis.aspx.cs" Inherits="Team11AD.Trend_Analysis" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="TrendAnalysis.aspx.cs" Inherits="Team11AD.Trend_Analysis" %>
+
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -8,41 +10,18 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
 	    <div class="row">  
-            <div class="col-lg-1">
+            <div class="col-lg-11">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <rsweb:ReportViewer ID="rvtrend" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" Width="800px" Height="700px" WaitMessageFont-Size="14pt">
+                    <LocalReport ReportPath="TrendAnalysis.rdlc">
+                        <DataSources>
+                            <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="TrendDS" />
+                        </DataSources>
+                    </LocalReport>
+                </rsweb:ReportViewer>
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" TypeName="Team11AD.ReportDsTableAdapters."></asp:ObjectDataSource>
             </div>
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <label>Name :</label>
-                    <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:TextBox ID="txtid" runat="server" Visible="False"></asp:TextBox>
-                    <asp:TextBox ID="txtpk" runat="server" Visible="false"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Contact Name :</label>
-                    <asp:TextBox ID="txtcontactname" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Phone :</label>
-                    <asp:TextBox ID="txtphone" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Fax :</label>
-                    <asp:TextBox ID="txtfax" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>Address :</label>
-                    <asp:TextBox ID="txtaddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <label>GST Number :</label>
-                    <asp:TextBox ID="txtgst" runat="server" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
-                </div>
-                <div class="form-group" style="text-align:right">
-                     <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="btnUpdate_Click"/>
-                </div>
-            </div>
-            <div class="col-lg-6">  
-            </div>
+            
         </div>
     </div>
 

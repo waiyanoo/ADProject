@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewLowLevelStock.aspx.cs" Inherits="Team11AD.ViewLowLevelStock" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewLowLevelStock.aspx.cs" Inherits="Team11AD.ViewLowLevelStock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -33,7 +33,7 @@
                         </Columns>
                         
                     </asp:GridView>
-               <div class="form-group">
+               <div class="form-group" style="text-align:right">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Make Order" CssClass="btn btn-primary"/>
                     
                 </div>

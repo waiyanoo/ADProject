@@ -67,22 +67,22 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.TextBox txthname;
         
         /// <summary>
-        /// txtcpoint control.
+        /// ddcollection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcpoint;
+        protected global::System.Web.UI.WebControls.DropDownList ddcollection;
         
         /// <summary>
-        /// txtctime control.
+        /// ddcollectiontime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtctime;
+        protected global::System.Web.UI.WebControls.DropDownList ddcollectiontime;
         
         /// <summary>
         /// txtrep control.

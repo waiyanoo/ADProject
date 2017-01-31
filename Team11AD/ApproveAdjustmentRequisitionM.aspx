@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ApproveAdjustmentRequisitionM.aspx.cs" Inherits="Team11AD.ApproveAdjustmentRequisitionM" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ApproveAdjustmentRequisitionM.aspx.cs" Inherits="Team11AD.ApproveAdjustmentRequisitionM" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -18,16 +18,16 @@
                 </div>
             </div>
 	    </div>
-         <div class="row">
+        <div class="row">
             <div class="col-lg-12">
-                <asp:GridView ID="gvlist" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowEditing="gvlist_RowEditing">
+                <asp:GridView ID="gvlist" runat="server" CssClass="table table-striped" GridLines="None" AutoGenerateColumns="false" OnRowDeleting="gvlist_RowDeleting">
                     <Columns>
                         <asp:BoundField DataField="ItemID" HeaderText="Item ID" />
                         <asp:BoundField DataField="Description" HeaderText="Description" />
                         <asp:BoundField DataField="Cat" HeaderText="Category" />
                         <asp:BoundField DataField="Qty" HeaderText="Adjustment Quantity" />
                         <asp:BoundField DataField="Price" HeaderText="Total Amount" />
-                        <asp:CommandField ShowEditButton="true" EditText="Approve" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
+                        <asp:CommandField ShowDeleteButton="true" DeleteText="Approve" ButtonType="Link" ControlStyle-CssClass="btn btn-primary" />
                     </Columns>
                 </asp:GridView>
             </div>

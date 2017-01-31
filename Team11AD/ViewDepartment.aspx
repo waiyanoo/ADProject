@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewDepartment.aspx.cs" Inherits="Team11AD.ViewDepartment" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewDepartment.aspx.cs" Inherits="Team11AD.ViewDepartment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Stationary Store Inventory System
 </asp:Content>
@@ -12,7 +12,7 @@
                <div class="form-group">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AddDepartment.aspx" CssClass="btn btn-primary" runat="server">Add New</asp:HyperLink>
                 </div>
-               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnSelectedIndexChanged="gvdepartment_SelectedIndexChanged" OnRowEditing="gvdepartment_RowEditing" GridLines="None">
+               <asp:GridView ID="gvdepartment" runat="server" CssClass="table table-striped" AutoGenerateColumns="False" OnRowEditing="gvdepartment_RowEditing" GridLines="None">
                    <Columns>
                        <asp:TemplateField HeaderText="#">
                         <ItemTemplate>
@@ -24,7 +24,6 @@
                        <asp:BoundField DataField="ContactName" HeaderText="Contact Name" />
                        <asp:BoundField DataField="Phone" HeaderText="Phone" />
                        <asp:BoundField DataField="Fax" HeaderText="Fax" />
-                       <asp:BoundField DataField="CollectionPointName" HeaderText="Collection Point" />
                        <asp:BoundField DataField="CollectionTime" HeaderText="Collection Time" />
                        <asp:BoundField DataField="Representative" HeaderText="Representative" />
 

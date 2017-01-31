@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Team11AD
 {
-    public partial class SClerk : System.Web.UI.MasterPage
+    public partial class AboutUs : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

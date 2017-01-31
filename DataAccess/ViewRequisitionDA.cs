@@ -20,7 +20,7 @@ namespace DataAccess
                 //Filters out outstanding RequisitionItem objects by checking if RequiredQty > FulfilledQty. 
                 //Only the Requisitions containing these RequisitionItems are active and should be retrieved from database
                 //Get the Requisitions objects which have these RequisitionItems in their RequisitionItems collection
-                reqList = context.Requisitions.Where(x => x.RequisitionItems.Any(y => ((y.RequiredQty - y.FulfilledQty) > 0))).Where(x=> x.UserID == id).ToList();
+                reqList = context.Requisitions.Where(x => x.RequisitionItems.Any(y => ((y.RequiredQty - y.FulfilledQty) > 0))).Where(x=> x.UserID == id).OrderByDescending(x=> x.Date).ToList();
                 
                 //loads a list of business objects to pass on to business layer
                 foreach (Requisition req in reqList)

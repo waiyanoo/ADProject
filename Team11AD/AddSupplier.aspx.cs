@@ -33,13 +33,7 @@ namespace Team11AD
             SupplierBL sbl = new SupplierBL();
             sbl.AddSupplier(supplier);
 
-            txtcode.Text = "";
-            txtname.Text = "";
-            txtcontactname.Text = "";
-            txtphone.Text = "";
-            txtfax.Text = "";
-            txtgst.Text = "";
-            txtaddress.Text = "";
+            Response.Redirect("ViewSupplier.aspx");
             
 
         }

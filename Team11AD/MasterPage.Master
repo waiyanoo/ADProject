@@ -1,0 +1,259 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="Team11AD.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder></title>
+
+    <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../style/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../style/custom/css/style.css" rel="stylesheet">
+
+     <link href="../style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Stationary Store Inventory System</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <a href="ContactUs.aspx" ><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
+                </li>
+				 <li>
+                    <a href="AboutUs.aspx"><i class="fa fa-info" aria-hidden="true"></i> About Us</a>
+                </li>
+                <li>
+                      <a href="LogIn.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+                </li>
+            </ul>
+            <asp:Panel ID="pDUser" runat="server">
+                <!-- Menu for Department User -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">                 
+                    <li>
+                        <a href="ViewRequisition.aspx"> View Requisition</a>
+                    </li>
+                    <li>
+                        <a href="RequestRequisition.aspx">Request Requisition</a>
+                    </li>
+                </ul>
+            </div>
+            </asp:Panel>
+            <!-- Menu for Department User -->
+            <asp:Panel ID="pDHedad" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
+                    </li>
+                    <li>
+                        <a href="DelegateAuthority.aspx">Delegate Employee</a>
+                    </li>
+                </ul>
+            </div>
+            </asp:Panel>
+            <!-- Menu for Department User -->
+            <asp:Panel ID="pDHeadWA" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="DelegateAuthority.aspx">Delegate Employee</a>
+                    </li>
+                </ul>
+            </div>
+            </asp:Panel>
+            <!-- Menu for Department Representative -->
+            <asp:Panel ID="pDRep" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li>
+                            <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
+                        </li>
+                        <li>
+                            <a href="DelegateAuthority.aspx">Delegate Employee</a>
+                        </li>
+                    </ul>
+                </div>
+            </asp:Panel>
+            <!-- Menu for Store Manager -->
+            <asp:Panel ID="pSManager" runat="server">
+                 <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li>
+                            <a href="ApproveAdjustmentRequestM.aspx"> Approve Adjustment Request</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo2"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo2" class="collapse">
+                            
+                                <li>
+                                    <a href="ReportInventoryStatus.aspx"> Inventory Status</a>
+                                </li>
+                                <li>
+                                    <a href="ReportReOrder.aspx"> Reorder</a>
+                                </li>
+                                <li>
+                                    <a href="ReportOrderByCategory.aspx"> Order History By Category</a>
+                                </li>
+                                <li>
+                                    <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
+                                </li>
+                                 <li>
+                                    <a href="TrendAnalysis.aspx"> Trend</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                   
+                    
+                    </ul>
+                </div>
+            </asp:Panel>
+            <!-- Menu for Store Supevisor -->
+            <asp:Panel ID="pSsupevisor" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li>
+                            <a href="ApproveAdjustmentRequest.aspx"> Approve Adjustment Request</a>
+                        </li>
+                        <li>
+                            <a href="SetReorderLevel.aspx"> Set Reorder Level</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo" class="collapse">
+                            
+                                <li>
+                                    <a href="ReportInventoryStatus.aspx"> Inventory Status</a>
+                                </li>
+                                <li>
+                                    <a href="ReportReOrder.aspx"> Reorder</a>
+                                </li>
+                                <li>
+                                    <a href="ReportOrderByCategory.aspx"> Order History By Category</a>
+                                </li>
+                                <li>
+                                    <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
+                                </li>
+                                <li>
+                                    <a href="TrendAnalysis.aspx"> Trend</a>
+                                </li>
+                            </ul>
+                        </li>
+                   
+                    
+                    </ul>
+                </div>
+            </asp:Panel>
+            <!-- Menu for Store Clerk -->
+            <asp:Panel ID="pSClerk" runat="server">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li>
+                            <a href="ViewDisbursementList.aspx">Disbursement List</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo1"> View <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo1" class="collapse">
+                                 <li>
+                                    <a href="ViewItemCatalogue.aspx"> View Item Catalogue</a>
+                                </li>
+                                <li>
+                                    <a href="ViewAllStock.aspx"> View All Stock</a>
+                                </li>
+                                <li>
+                                    <a href="StockCard.aspx"> View Stock Card</a>
+                                </li>
+                            </ul>
+                        </li>
+                   
+                        <li>
+                            <a href="ViewLowLevelStock.aspx">View Low Level Stock</a>
+                        </li>
+                        <li>
+                            <a href="DeliverOrder.aspx">Record Delivery Order</a>
+                        </li>
+                        <li>
+                            <a href="RequestAdjustment.aspx">Request Adjustment</a>
+                        </li>
+                        <li>
+                            <a href="ViewDepartment.aspx">Department</a>
+                        </li>
+                        <li>
+                            <a href="ViewSupplier.aspx">Supplier</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </asp:Panel>
+            
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="page-header">
+                            <asp:ContentPlaceHolder ID="bodytitle" runat="server">
+                                Stationery Requisition System
+                            </asp:ContentPlaceHolder>
+                        </h2>
+                        
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <!--- Body -->
+                <form id="form1" runat="server">
+                
+                <asp:ContentPlaceHolder ID="body" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+                
+                </form>
+                    
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    
+    
+    <!-- jQuery -->
+	<!-- jQuery -->
+    <script src="../style/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../style/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -83,7 +83,6 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
-                <Margin>False</Margin>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -248,17 +247,6 @@
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
         </ChartLegends>
-        <ChartTitles>
-          <ChartTitle Name="Default">
-            <Caption>Chart Title</Caption>
-            <Style>
-              <BackgroundGradientType>None</BackgroundGradientType>
-              <FontWeight>Bold</FontWeight>
-              <TextAlign>General</TextAlign>
-              <VerticalAlign>Top</VerticalAlign>
-            </Style>
-          </ChartTitle>
-        </ChartTitles>
         <Palette>BrightPastel</Palette>
         <ChartBorderSkin>
           <Style>

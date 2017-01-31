@@ -32,6 +32,7 @@ namespace Team11AD
 
             GridView1.DataSource = dobl.FindPurchaseItem(ponumber);
             GridView1.DataBind();
+            txtdonumber.Text = "";
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
@@ -43,6 +44,8 @@ namespace Team11AD
             DateTime deliverydate = DateTime.Now;
 
             dobl.SaveDeliverOrder(ponumber, deliverno, deliverydate);
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Successfully Recorded')", true);
+            Response.Redirect("DeliverOrder.aspx");
         }
     }
 }

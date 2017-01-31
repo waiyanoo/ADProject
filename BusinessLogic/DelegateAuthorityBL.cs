@@ -52,7 +52,7 @@ namespace BusinessLogic
                 }
             }
             return currentAuthority;
-        }
+         }
 
         //returns the employee (Department Head possible) who is going to be the next authorised person to approve  
         //requisitions after the current authorised person

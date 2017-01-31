@@ -38,6 +38,7 @@ namespace DataAccess
             spl.Phone = Convert.ToInt32(sbo.Phone);
             spl.Fax = Convert.ToInt32(sbo.Fax);
             spl.Address = sbo.Address;
+            spl.GSTNo = sbo.GSTNo1;
             context.SaveChanges();
             return true;
 

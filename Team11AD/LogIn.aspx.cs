@@ -13,7 +13,7 @@ namespace Team11AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["user"] = null;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Team11AD
                         Response.Redirect("ViewDisbursementList.aspx");
                         break;
                     case "Store Supervisor":
-                        Response.Redirect("ApproveAdjustmentRequisition.aspx");
+                        Response.Redirect("ApproveAdjustmentRequest.aspx");
                         break;
                     case "Store Manager":
                         Response.Redirect("ApproveAdjustmentRequisitionM.aspx");

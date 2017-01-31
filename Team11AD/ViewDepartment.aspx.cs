@@ -20,7 +20,7 @@ namespace Team11AD
                 gvdepartment.DataSource = dbl.GetAllDepartment();
                 gvdepartment.DataBind();
             }
-            
+
         }
 
         protected void gvdepartment_RowEditing(object sender, GridViewEditEventArgs e)
@@ -33,9 +33,6 @@ namespace Team11AD
         }
 
        
-        protected void gvdepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

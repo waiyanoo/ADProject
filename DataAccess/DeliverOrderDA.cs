@@ -24,9 +24,20 @@ namespace DataAccess
         {
             PurchaseOrder po = context.PurchaseOrders.Where(x => x.PONo == ponumber).First();
             po.DeliveryDate = deliverydate;
-            po.DONo = deliverno;
-            
+            po.DONo = deliverno;   
             context.SaveChanges();
+            updateItemQty(ponumber);
+        }
+
+        public void updateItemQty(string ponumber)
+        {
+            List<PurchaseItem> listpi = context.PurchaseItems.Where(x => x.PONo == ponumber).ToList();
+            foreach(var pi in listpi)
+            {
+                var i = context.Items.FirstOrDefault(x => x.ItemID == pi.ItemID);
+                i.CurrentQty = i.CurrentQty + pi.Qty;
+                context.SaveChanges();
+            }
         }
     }
 }

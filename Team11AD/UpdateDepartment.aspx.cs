@@ -30,8 +30,8 @@ namespace Team11AD
                     txthname.Text = dbo.HeadName;
                     txtphone.Text = dbo.Phone;
                     txtfax.Text = dbo.Fax;
-                    txtctime.Text = dbo.CollectionTime;
-                    txtcpoint.Text = cpbo.CollectionPointName;
+                    ddcollectiontime.SelectedValue = dbo.CollectionTime;
+                    ddcollection.SelectedValue = cpbo.CollectionPointName;
                     txtrep.Text = dbo.Representative;
 
 
@@ -58,8 +58,8 @@ namespace Team11AD
             dbo1.HeadName= txthname.Text;
             dbo1.Phone= txtphone.Text;
             dbo1.Fax = txtfax.Text;
-            dbo1.CollectionTime= txtctime.Text;
-            cpbo.CollectionPointName = txtcpoint.Text;
+            dbo1.CollectionTime= ddcollectiontime.SelectedValue;
+            cpbo.CollectionPointName = ddcollection.SelectedValue;
             dbo1.Representative= txtrep.Text;
            
             bool result=bl.updateDepartment(dbo1);

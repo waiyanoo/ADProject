@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SClerk.Master" AutoEventWireup="true" CodeBehind="ViewDisbursementDetail.aspx.cs" Inherits="Team11AD.ViewDisbursementDetail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewDisbursementDetail.aspx.cs" Inherits="Team11AD.ViewDisbursementDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Stationary Store Inventory System
 </asp:Content>
@@ -42,6 +42,11 @@ Stationary Store Inventory System
                         <asp:BoundField DataField="FulfilledQty" HeaderText="Fulfilled Quantity"/>
                     </Columns>
                 </asp:GridView>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style="text-align:right">
+                <asp:Button ID="btnback" runat="server" Text="Go To Details..." CssClass="btn btn-primary" OnClick="btnback_Click" />
             </div>
         </div>
     </div>

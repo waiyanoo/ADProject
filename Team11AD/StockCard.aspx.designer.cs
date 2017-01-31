@@ -10,42 +10,42 @@
 namespace Team11AD {
     
     
-    public partial class Main {
+    public partial class StockCard {
         
         /// <summary>
-        /// title control.
+        /// ddcategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
+        protected global::System.Web.UI.WebControls.DropDownList ddcategory;
         
         /// <summary>
-        /// bodytitle control.
+        /// dditemdescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodytitle;
+        protected global::System.Web.UI.WebControls.DropDownList dditemdescription;
         
         /// <summary>
-        /// form1 control.
+        /// btnadd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button btnadd;
         
         /// <summary>
-        /// body control.
+        /// gvstock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.GridView gvstock;
     }
 }

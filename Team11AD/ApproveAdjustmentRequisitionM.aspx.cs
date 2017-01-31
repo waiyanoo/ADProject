@@ -31,12 +31,13 @@ namespace Team11AD
             gvlist.DataBind();
         }
 
-        protected void gvlist_RowEditing(object sender, GridViewEditEventArgs e)
+
+        protected void gvlist_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string status = "Approved";
-            string id = gvlist.Rows[e.NewEditIndex].Cells[0].Text;
+            string id = gvlist.Rows[e.RowIndex].Cells[0].Text;
             abl.ApproveItem(ddrequestno.SelectedValue.ToString(), id, status);
-            gvlist.DataSource = abl.GetItemabove(ddrequestno.SelectedValue.ToString());
+            gvlist.DataSource = abl.GetItembelow(ddrequestno.SelectedValue.ToString());
             gvlist.DataBind();
         }
     }

@@ -12,6 +12,7 @@ namespace BusinessLogic
     {
         public List<ViewRequsitionListBO> FindAllRequisition(UserBO ubo)
         {
+           
             ViewRequisitionListDA vrda = new ViewRequisitionListDA();
             return vrda.FindAllRequisition(ubo);
         }
