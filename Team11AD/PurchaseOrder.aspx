@@ -12,11 +12,11 @@
         <div class="col-lg-4">
                 <div class="form-group">
                     <label>Order Date :</label>
-                    <asp:TextBox ID="txtorderdate" runat="server" CssClass="form-control">Date Need to find out</asp:TextBox>
+                    <asp:TextBox ID="txtorderdate" Enabled="false" runat="server" CssClass="form-control">Date Need to find out</asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label>Supplier :</label>
-                    <asp:TextBox ID="txtsupplier" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtsupplier" Enabled="false" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
                 
             </div>

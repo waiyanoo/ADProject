@@ -40,6 +40,15 @@ namespace Team11AD {
         protected global::System.Web.UI.WebControls.GridView gvrequisitiondetails;
         
         /// <summary>
+        /// btnReject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReject;
+        
+        /// <summary>
         /// btnApprove control.
         /// </summary>
         /// <remarks>

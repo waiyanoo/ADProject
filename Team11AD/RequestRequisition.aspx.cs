@@ -8,6 +8,8 @@ using BusinessLogic;
 using System.Data;
 using DataAccess;
 using BusinessObject;
+using System.Net.Mail;
+using System.Net;
 
 namespace Team11AD.View
 {
@@ -118,6 +120,7 @@ namespace Team11AD.View
                     rrbl.SaveItemRequisition(ribo);
                     
                 }
+                sendEmail(session.UserID);
                 dt.Clear();
                 Session["RequestItem"] = dt;
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Request Successful!')", true);
@@ -190,6 +193,27 @@ namespace Team11AD.View
             gvitemlist.DataSource = (DataTable)Session["RequestItem"];
             gvitemlist.DataBind();
 
+        }
+
+        public void sendEmail(string emailto)
+        {
+            EmailBL ebl = new EmailBL();
+            using (MailMessage mm = new MailMessage("logicuniversityteam11@gmail.com", ebl.getDepartmentHeadEmail(emailto)))
+            {
+                mm.Subject = "Notification for New Requisition";
+                mm.Body = "You have new requisition. Please check the requisition list.";
+                
+                mm.IsBodyHtml = false;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential NetworkCred = new NetworkCredential("logicuniversityteam11@gmail.com", "team11@43");
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = NetworkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
+                
+            }
         }
     }
 }

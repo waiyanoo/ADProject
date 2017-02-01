@@ -11,15 +11,17 @@
 	    <div class="row"> 
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label>Category :</label>
+                    <label>Category :<asp:Label ID="lblcat" ForeColor="Red" runat="server" Text=""></asp:Label>
+                    </label>
                     <asp:DropDownList ID="ddcategory" runat="server" CssClass="form-control" DataTextField = "CategoryName" 
                         DataValueField = "CategoryName" OnSelectedIndexChanged="ddcategory_SelectedIndexChanged1" AutoPostBack="True" >
                     </asp:DropDownList>
                      
                 </div>
                 <div class="form-group">
-                    <label>Item Description :</label>
-                    <asp:DropDownList ID="dditemdescription" runat="server" CssClass="form-control" DataTextField ="Description" DataValueField ="Description" AutoPostBack="False"></asp:DropDownList>
+                    <label>Item Description :<asp:Label ID="lbldesc" ForeColor="Red" runat="server" Text=""></asp:Label>
+                    </label>
+                    &nbsp;<asp:DropDownList ID="dditemdescription" runat="server" CssClass="form-control" DataTextField ="Description" DataValueField ="Description" AutoPostBack="False"></asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label>Adjustment Quantity:</label><asp:Label ID="lblqty" runat="server" ForeColor="Red" Text=""></asp:Label>

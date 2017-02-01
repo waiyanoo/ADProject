@@ -13,6 +13,15 @@ namespace Team11AD {
     public partial class RequestAdjustment {
         
         /// <summary>
+        /// lblcat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblcat;
+        
+        /// <summary>
         /// ddcategory control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace Team11AD {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddcategory;
+        
+        /// <summary>
+        /// lbldesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbldesc;
         
         /// <summary>
         /// dditemdescription control.

@@ -9,6 +9,31 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Start Date :</label>
+                    <asp:TextBox ID="startdate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                </div>
+            
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label>End Date :</label>
+                    <asp:TextBox ID="enddate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                </div>
+            
+            </div>
+        </div>
+            <div class="row">
+            <div class="col-lg-4"><asp:Label ID="Label1" runat="server" Text="" ForeColor="#FF3300"></asp:Label></div>
+            <div class="col-lg-2" style="text-align:right">
+                <div class="form-group">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Show" OnClick="btnSubmit_Click" CssClass="btn btn-primary"/>
+                </div>
+            
+            </div>
+        </div>
 	    <div class="row">   
             <div class="col-lg-12">
                 <asp:scriptmanager runat="server"></asp:scriptmanager>

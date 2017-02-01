@@ -43,6 +43,9 @@ namespace Team11AD
 
         protected void ddcategory_SelectedIndexChanged1(object sender, EventArgs e)
         {
+            lblqty.Text = "";
+            lbldesc.Text = "";
+            lblcat.Text = "";
             string category = ddcategory.SelectedValue;
             dditemdescription.DataSource = rabl.GetItem(category);
             dditemdescription.DataTextField = "Description";
@@ -58,10 +61,21 @@ namespace Team11AD
             string reason = txtreason.Text;
             int n;
             bool isNumeric = int.TryParse(qty, out n);
-            if (isNumeric)
+            if(ddcategory.SelectedValue == "")
+            {
+                lblcat.Text = "Please Select Category";
+            }
+            else if(dditemdescription.SelectedValue == "")
+            {
+                lbldesc.Text = "Please Select Item Description";
+            }
+            else if (isNumeric)
             {
                 if (checkitem(dditemdescription.SelectedValue.ToString()))
                 {
+                    lblqty.Text = "";
+                    lbldesc.Text = "";
+                    lblcat.Text = "";
                     dt = (DataTable)Session["AdjustItem"];
                     dt.Rows.Add(dditemdescription.SelectedValue.ToString(), dditemdescription.SelectedItem.ToString(), qty, reason);
                     Session["AdjustItem"] = dt;
@@ -71,6 +85,9 @@ namespace Team11AD
                 }
                 else
                 {
+                    lblqty.Text = "";
+                    lbldesc.Text = "";
+                    lblcat.Text = "";
                     updateitemqty(dditemdescription.SelectedValue.ToString(), txtqty.Text);
                     gvItemList.DataSource = dt;
                     gvItemList.DataBind();

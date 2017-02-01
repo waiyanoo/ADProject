@@ -46,6 +46,8 @@
             </div>
         </div>
         <div class="col-lg-10" style="text-align:right">
+            <asp:Button ID="btnReject" runat="server" Text="Reject" CssClass="btn btn-primary" OnClick="btnReject_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-primary" OnClick="btnApprove_Click"/>
         </div>
     </div>
