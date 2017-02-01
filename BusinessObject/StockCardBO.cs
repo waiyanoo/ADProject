@@ -1,18 +1,22 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class StockCardBO
     {
+        //Declaring variables for StockCardBO
         private string itemID;
         private string tDate;
         private string description;
         private string dQty;
 
+        //Getters and Setters
         public string ItemID
         {
             get
@@ -65,6 +69,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring constructor
         public StockCardBO(string itemID, string tDate, string description, string dQty)
         {
             this.itemID = itemID;

@@ -1,13 +1,16 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class SupplierBO
     {
+        //Declaring variables for SupplierBO
         private string supplierID;
         private string supplierName;
         private string contactName;
@@ -16,6 +19,7 @@ namespace BusinessObject
         private string address;
         private string GSTNo;
 
+        //Getters and Setters
         public string SupplierID
         {
             get
@@ -107,6 +111,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring Constructor
         public SupplierBO(string supplierID, string supplierName, string contactName, string phone, string fax, string address, string gSTNo)
         {
             

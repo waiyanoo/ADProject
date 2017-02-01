@@ -1,15 +1,19 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class CategoryBO
     {
+        //Declaring variable
         private string categoryName;
 
+        //Declaring constructor
         public CategoryBO(string categoryName)
         {
             this.CategoryName = categoryName;
@@ -20,6 +24,7 @@ namespace BusinessObject
 
         }
 
+        //Getter and Setter
         public string CategoryName
         {
             get

@@ -1,13 +1,16 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
    public class UserBO
     {
+        //Declaring variables for UserBO
         private string userID;
         private string password;
         private string name;
@@ -20,6 +23,7 @@ namespace BusinessObject
         private DateTime startdate;
         private DateTime enddate;
 
+        //Getters and Setters
         public string UserID
         {
             get
@@ -110,7 +114,7 @@ namespace BusinessObject
                 image = value;
             }
         }
-
+        //Declaring DepartmentBO to access DepartmentID
         public DepartmentBO DepartmentID
         {
             get
@@ -123,7 +127,7 @@ namespace BusinessObject
                 departmentID = value;
             }
         }
-
+        //Declaring RoleBO to access RoleBO
         public RoleBO RoleName
         {
             get
@@ -162,7 +166,7 @@ namespace BusinessObject
                 enddate = value;
             }
         }
-
+        //Declaring constructor
         public UserBO(string userID, string password, string name, string email, string phone, string whatsapp, string image, DepartmentBO departmentID, RoleBO roleName, DateTime startdate, DateTime enddate)
         {
             this.UserID = userID;

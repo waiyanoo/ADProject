@@ -1,19 +1,23 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class PurchaseOrderBO
     {
+        //Declaring variables
         private string poNo;
         private DateTime pOdate;
         private String dONo;
         private DateTime deliveryDate;
         private SupplierBO supplierID;
 
+        //Declaring constructor
         public PurchaseOrderBO(string poNo, DateTime pOdate, string dONo, DateTime deliveryDate, SupplierBO supplierID)
         {
             this.poNo = poNo;
@@ -22,8 +26,12 @@ namespace BusinessObject
             this.deliveryDate = deliveryDate;
             this.supplierID = supplierID;
         }
-        public PurchaseOrderBO() { }
+        public PurchaseOrderBO()
+        {
 
+        }
+
+        //Getters and Setters
         public string PoNo
         {
             get

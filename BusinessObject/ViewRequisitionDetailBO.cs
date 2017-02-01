@@ -1,16 +1,20 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class ViewRequisitionDetailBO
     {
+        //Declaring variables for ViewRequisitionDetailsBO
         private string itemId, itemDescription;
         private int requiredQty, fulfilledQty;
 
+        //Getters and Setters
         public string ItemId
         {
             get
@@ -63,6 +67,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring Constructor
         public ViewRequisitionDetailBO(string itemId, string itemDescription, int requiredQty, int fulfilledQty)
         {
             this.itemId = itemId;

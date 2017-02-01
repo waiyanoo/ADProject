@@ -1,19 +1,23 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class ItemAdjustmentBO
     {
+        //Declaring variables
         private AdjustmentBO voucherNo;
         private ItemBO itemID;
         private int adjustQty;
         private string reason;
         private string adjustedStatus;
 
+        //Getters and Setters
         public AdjustmentBO VoucherNo 
         {
             get
@@ -79,6 +83,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring constructor
         public ItemAdjustmentBO(AdjustmentBO voucherNo, ItemBO itemID, int adjustQty, string reason, string adjustedStatus)
         {
             this.VoucherNo = voucherNo;
