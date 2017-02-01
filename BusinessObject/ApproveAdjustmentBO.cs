@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Created by Ei Yadanar Kyaw
 namespace BusinessObject
 {
     public class ApproveAdjustmentBO
     {
+
+        //Declaring varialbles for ApproveAdjustmentBO
         private string itemID;
         private string cat;
         private string description;
         private string qty;
         private string price;
 
-       
+       //Empty constructor
         public ApproveAdjustmentBO()
         {
 
         }
-
+        //Declaring constructor
         public ApproveAdjustmentBO(string itemID, string cat, string description, string qty, string price)
         {
             this.itemID = itemID;
@@ -29,6 +31,7 @@ namespace BusinessObject
             this.price = price;
         }
 
+        //getters and setters
         public string ItemID
         {
             get

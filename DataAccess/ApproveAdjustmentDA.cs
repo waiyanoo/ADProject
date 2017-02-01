@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessObject;
+using BusinessObject; //For accessing busines object class
 
 namespace DataAccess
 {
@@ -15,6 +15,8 @@ namespace DataAccess
             List<Adjustment> adjustment = context.Adjustments.Where(x => x.Status == "Pending" ).ToList();
             return adjustment;
         }
+
+       
         public List<ApproveAdjustmentBO> getAdjustmentNoAbove(string id)
         {
             List<ApproveAdjustmentBO> aabo = new List<ApproveAdjustmentBO>();

@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Ei Yadanar Kyaw
 namespace BusinessObject
 {
    public class AdjustmentBO
     {
+        //Declaring the variables for the adjustmentBO
+
         private string voucherNo;
         private UserBO userID;
         private DateTime date;
         private string confirmBy;
         private string status;
 
+        //getters and setters
         public string VoucherNo
         {
             get
@@ -78,7 +82,7 @@ namespace BusinessObject
                 status = value;
             }
         }
-
+        //Declaring constructor
         public AdjustmentBO(string voucherNo, UserBO userID, DateTime date, string confirmBy, string status)
         {
             this.VoucherNo = voucherNo;
