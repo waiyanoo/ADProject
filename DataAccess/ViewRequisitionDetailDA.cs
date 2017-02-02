@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code Owner: Lin SiYin
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace DataAccess
 {
     public class ViewRequisitionDetailDA
     {
+        //Declaring entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
         public string FindDepartmentByRequsitionId (string requisitionId)
         {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +11,17 @@ namespace DataAccess
 {
     public class ApproveAdjustmentDA
     {
+        //Declaring the entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //Getting the adjustment vouchers which status are pending
         public List<Adjustment> getAdjustmentNo()
         {
             List<Adjustment> adjustment = context.Adjustments.Where(x => x.Status == "Pending" ).ToList();
             return adjustment;
         }
 
-       
+        //to get the adjustment vouchers which prices are above $250. It's for the Store Manager.
         public List<ApproveAdjustmentBO> getAdjustmentNoAbove(string id)
         {
             List<ApproveAdjustmentBO> aabo = new List<ApproveAdjustmentBO>();
@@ -48,6 +53,8 @@ namespace DataAccess
             }
             return aabo;
         }
+
+        //To get the adjustment vouchers which prices are under $250. It's for the store supervisor.
         public List<ApproveAdjustmentBO> getAdjustmentNoBelow(string id)
         {
             List<ApproveAdjustmentBO> aabo = new List<ApproveAdjustmentBO>();
@@ -80,6 +87,7 @@ namespace DataAccess
             return aabo;
         }
 
+        //To approve adjustment voucher
         public void ApproveItem(string voucher, string item, string status)
         {
             context = new LogicUniversityEntities();
@@ -101,6 +109,7 @@ namespace DataAccess
            
         }
 
+        //to update the voucher
         public void updateVoucher(string voucher)
         {
             context = new LogicUniversityEntities();
@@ -113,6 +122,7 @@ namespace DataAccess
             }
         }
 
+        //to update quantity in the adjustment voucher
         public void updateItemQty(string vonumber)
         {
             List<ItemAdjustment> listpi = context.ItemAdjustments.Where(x => x.VoucherNo == vonumber).ToList();

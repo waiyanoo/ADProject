@@ -1,13 +1,16 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class RequisitionBO 
     {
+        //Declaring variables
         private string requisitionID;
         private UserBO userID;
         private DateTime date;
@@ -15,6 +18,7 @@ namespace BusinessObject
         private string AllocatedQty;
         private string FulfilledQty;
 
+        //Getters and Setters
         public string RequisitionID
         {
             get
@@ -99,6 +103,7 @@ namespace BusinessObject
 
         }
 
+        //Declaring constructor
         public RequisitionBO(string requisitionID, UserBO userID, DateTime date, string status, string allocatedQty, string fulfilledQty)
         {
             this.requisitionID = requisitionID;

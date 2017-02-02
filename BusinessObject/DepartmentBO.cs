@@ -1,13 +1,16 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class DepartmentBO
     {
+        //Declaring variables
         private string departmentID;
         private string departmentName;
         private string contactName;
@@ -20,7 +23,7 @@ namespace BusinessObject
 
        
         
-
+        //Declaring constructor
         public DepartmentBO(string departmentID, string departmentName, string contactName, string phone, string fax, string headName, CollectionPointBO collectionPointName, string collectionTime, string representative)
         {
             this.departmentID = departmentID;
@@ -37,6 +40,8 @@ namespace BusinessObject
         {
 
         }
+
+        //Getters and Setters
         public string DepartmentID
         {
             get

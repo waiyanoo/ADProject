@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,10 @@ namespace DataAccess
 {
     public class DeliverOrderDA
     {
+        //Declaring entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //finding the PO Number without delivery date
         public List<PurchaseOrder> FindPONumber()
         {
             return context.PurchaseOrders.Where(x => x.DeliveryDate == null).ToList();
@@ -20,6 +25,7 @@ namespace DataAccess
             return context.PurchaseItems.Where(x=> x.PONo == ponumber).ToList();
         }
 
+        //To add delivery date and update the PO
         public void SaveDeliverOrder (string ponumber, string deliverno, DateTime deliverydate)
         {
             PurchaseOrder po = context.PurchaseOrders.Where(x => x.PONo == ponumber).First();
@@ -29,6 +35,7 @@ namespace DataAccess
             updateItemQty(ponumber);
         }
 
+        //Update the quantity of item purchased
         public void updateItemQty(string ponumber)
         {
             List<PurchaseItem> listpi = context.PurchaseItems.Where(x => x.PONo == ponumber).ToList();

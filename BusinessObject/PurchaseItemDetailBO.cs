@@ -1,23 +1,27 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class PurchaseItemDetailBO
     {
-        int sequence;
-        string itemno;
-        string description;
-        int recommended_reorder_qty;
-        int order_qty;
-        double price;
-        double amount;
-        string pono;
-        string dono;
+        //Declaring variables
+       private int sequence;
+       private string itemno;
+       private string description;
+       private int recommended_reorder_qty;
+       private int order_qty;
+       private double price;
+       private double amount;
+       private string pono;
+       private string dono;
 
+        //Getters and Setters
         public int Sequence
         {
             get

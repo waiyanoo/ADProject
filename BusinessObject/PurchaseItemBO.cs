@@ -1,18 +1,22 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
    public class PurchaseItemBO
     {
+        //Declaring variables
         private PurchaseItemBO poNo;
         private ItemBO itemID;
         private int qty;
         private float purchasePrice;
 
+        //Getters and Setters
         public PurchaseItemBO PoNo
         {
             get
@@ -64,7 +68,8 @@ namespace BusinessObject
                 purchasePrice = value;
             }
         }
-
+        
+        //Declaring constructor
         public PurchaseItemBO(PurchaseItemBO poNo, ItemBO itemID, int qty, float purchasePrice)
         {
             this.PoNo = poNo;

@@ -1,18 +1,22 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class ViewRequsitionListBO
     {
+        //Declaring the variables for ViewRequisitionListBO
         private string requsitionId;
         private string date;
         private string name;
         private string status;
 
+        //Declaring Constructor
         public ViewRequsitionListBO(string requsitionId, string date, string name, string status)
         {
             this.requsitionId = requsitionId;
@@ -20,8 +24,12 @@ namespace BusinessObject
             this.name = name;
             this.status = status;
         }
-        public ViewRequsitionListBO() { }
+        public ViewRequsitionListBO()
+        {
 
+        }
+
+        //Getters and Setters
         public string RequsitionId
         {
             get

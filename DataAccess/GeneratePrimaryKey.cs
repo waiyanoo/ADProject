@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+    //Auto-generating the primary keys
     public class GeneratePrimaryKey
     {
         LogicUniversityEntities context = new LogicUniversityEntities();

@@ -10,8 +10,8 @@ namespace DataAccess
 {
     public class ItemAdjustmentDA
     {
-        LogicUniversityEntities context = new LogicUniversityEntities();//Create Entity Framework Object
-
+        //Declaring entity framework
+        LogicUniversityEntities context = new LogicUniversityEntities();
 
         //Add Item Adjustment data to item adjustment table
         public void AddItemAdjustment(ItemAdjustmentBO itemAdjust )

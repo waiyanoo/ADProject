@@ -1,17 +1,22 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class SupplierItemBO
     {
+        //Declaring variables for SupplierItemBO
         private SupplierBO supplierID;
         private ItemBO itemID;
         private float price;
 
+        //Getters and Setters
+        //To access SupplierID from SupplierBO
         public SupplierBO SupplierID
         {
             get
@@ -24,7 +29,7 @@ namespace BusinessObject
                 supplierID = value;
             }
         }
-
+        //To access ItemID from ItemBO
         public ItemBO ItemID
         {
             get
@@ -51,6 +56,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring constructor
         public SupplierItemBO(SupplierBO supplierID, ItemBO itemID, float price)
         {
             this.SupplierID = supplierID;

@@ -1,5 +1,4 @@
-﻿//Code owner : Wai Yan Oo
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +8,7 @@ namespace DataAccess
 {
     public class EmailDA
     {
+        //Declaring the entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
 
         // Retrive the Department Head email by department staff ID
@@ -30,7 +30,6 @@ namespace DataAccess
             else return "fail@gmail.com";
         }
 
-        //Retrieve the StoreClerk Email address by using Department Head ID
         public string getStoreClerkEmail(string id)
         {
             var email = (from u1 in context.Users

@@ -9,17 +9,22 @@ namespace DataAccess
 {
     public class RequestAdjustmentDA
     {
+        //Declaring entity framework
         LogicUniversityEntities model = new LogicUniversityEntities();
+
+        //getting the category
         public List<Category> getCategory()
         {   
             return model.Categories.ToList<Category>();
         }
 
+        //getting the item
         public List<Item> getItem(string category)
         {
             return model.Items.Where(p => p.CategoryName == category).ToList<Item>();
         }
 
+        //saving the adjustment voucher
         public void saveAdjustmentvoucher(AdjustmentBO abo)
         {
             Adjustment ad = new Adjustment();
@@ -34,6 +39,7 @@ namespace DataAccess
             model.SaveChanges();
         }
 
+        //saving item adjustment
         public void saveItemAdjustment(ItemAdjustmentBO iabo)
         {
             ItemBO ibo = new ItemBO();

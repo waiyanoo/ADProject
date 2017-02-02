@@ -1,13 +1,16 @@
-﻿using System;
+﻿//Created by Ei Yadanar Kyaw
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Created by Ei Yadanar Kyaw
+
 namespace BusinessObject
 {
     public class ItemBO
     {
+        //Declaring variables
         private string itemID;
         private string description;
         private int reorderLevel;
@@ -18,6 +21,7 @@ namespace BusinessObject
         private string bin;
         private CategoryBO categoryName;
 
+        //Getters and Setters
         public string ItemID
         {
             get
@@ -135,6 +139,7 @@ namespace BusinessObject
             }
         }
 
+        //Declaring constructor
         public ItemBO(string itemID, string description, int reorderLevel, int reorderQty, string unitOfMeasure, int currentQty, float price, string bin, CategoryBO categoryName)
         {
             this.ItemID = itemID;

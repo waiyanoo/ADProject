@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,10 @@ namespace DataAccess
 {
     public class ApprovedRequisitionDA
     {
+        //Declaring the entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //to approve requisitions applied by the department staff
         public void approvedRequisition(RequisitionBO rbo)
         {
             Requisition r = new Requisition();
