@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,10 @@ namespace DataAccess
 {
     public class EmailDA
     {
+        //Declaring the entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //Getting the email address of the department head from the User table
         public string getDepartmentHeadEmail(string id)
         {
             var email = (from u1 in context.Users
@@ -27,6 +32,7 @@ namespace DataAccess
             else return "fail@gmail.com";
         }
 
+        //Getting the email address of the store clerk from the user table
         public string getStoreClerkEmail(string id)
         {
             var email = (from u1 in context.Users

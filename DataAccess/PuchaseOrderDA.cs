@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,10 @@ namespace DataAccess
 {
     public class PuchaseOrderDA
     {
+        //declaring entity framework
         LogicUniversityEntities ctx = new LogicUniversityEntities();
+
+        //getting the items by ID
         public List<Item> getItemsById(List<string> itemsid)
         {
             List<Item> itemlist = new List<Item>();
@@ -22,7 +26,7 @@ namespace DataAccess
             return itemlist;
         }
 
-
+        //saving items that are purchased
         public void savePurchaseItem(List<PurchaseItemDetailBO> list)
         {
             PurchaseItem pi = new PurchaseItem();
@@ -36,6 +40,8 @@ namespace DataAccess
             }
             ctx.SaveChanges();
         }
+
+        //saving the purchase order
         public void savePO(PurchaseOrderBO po)
         {
             PurchaseOrder p = new PurchaseOrder();
@@ -47,6 +53,7 @@ namespace DataAccess
             ctx.SaveChanges();
         }
 
+        //getting the supplier by ID
         public string getSupplierId(string name)
         {
             return ctx.Suppliers.Where(x => x.SupplierName == name).Select(x => x.SupplierID).FirstOrDefault();

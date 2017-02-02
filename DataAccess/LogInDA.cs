@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,10 @@ namespace DataAccess
 {
     public class LogInDA
     {
+        //Declaring the entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //checking the user whether the person is already registered for the logic university system
         public UserBO checkUser(string username, string password)
         {
             UserBO ubo = new UserBO();

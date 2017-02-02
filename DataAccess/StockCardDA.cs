@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,12 @@ namespace DataAccess
 {
     public class StockCardDA
     {
+        //Declaring entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //getting the list of stock
+        //select an item to check the transaction of that item like purchase order quantity of that item, 
+        //and how much each deaprtment has ordered
         public List<StockCardBO> getStocklist(string id)
         {
             List<StockCardBO> list = new List<StockCardBO>();

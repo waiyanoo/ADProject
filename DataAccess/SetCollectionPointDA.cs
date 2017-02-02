@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,10 @@ namespace DataAccess
 {
     public class SetCollectionPointDA
     {
+        //Declaring entity framework
         LogicUniversityEntities context = new LogicUniversityEntities();
+
+        //getting the collection point names
         public List<CollectionPointBO> getCollectionPoint()
         {
             List<CollectionPointBO> list = new List<CollectionPointBO>();
@@ -23,6 +28,7 @@ namespace DataAccess
             return list;
         }
 
+        //getting the collection point and time by department
         public DepartmentBO getCollectionDatabyID(string id)
         {
             User user = context.Users.Where(x => x.UserID == id).FirstOrDefault();
@@ -39,6 +45,7 @@ namespace DataAccess
             return dbo;
         }
 
+        //updating the collection point name and time
         public void updateCollectionPoint(DepartmentBO dbo)
         {
             Department dp = context.Departments.Where(x => x.DepartmentID == dbo.DepartmentID).First();

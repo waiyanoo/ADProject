@@ -1,11 +1,13 @@
-﻿using System;
+﻿//Code Owner: KARTHIKEYAN JAWAHAR JOTHI
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessObject; //For accessing business object class
 
-//Code Owner: KARTHIKEYAN JAWAHAR JOTHI
+
 
 namespace DataAccess
 {
@@ -14,7 +16,8 @@ namespace DataAccess
         LogicUniversityEntities context = new LogicUniversityEntities();
 
         //For passing the business object
-        public void AddDepartment(DepartmentBO dbo) //For adding a new department
+        //For adding a new department
+        public void AddDepartment(DepartmentBO dbo) 
         {
             CollectionPointBO cpbo = new CollectionPointBO();
             cpbo = dbo.CollectionPointName;
@@ -37,8 +40,8 @@ namespace DataAccess
            
         }
 
-      
-        public bool updatedepartment(DepartmentBO dbo) // For updating the department information
+        // For updating the department information
+        public bool updatedepartment(DepartmentBO dbo) 
         {
             CollectionPointBO cpbo = new CollectionPointBO();
             cpbo = dbo.CollectionPointName;
@@ -56,7 +59,8 @@ namespace DataAccess
             return true;
         }
 
-        public List<DepartmentBO> getAllDepartment() //Getting all the departments list
+        //Getting all the departments list
+        public List<DepartmentBO> getAllDepartment() 
         {
             List<DepartmentBO> list = new List<DepartmentBO>();
             var data = context.Departments.ToList<Department>();
@@ -79,7 +83,8 @@ namespace DataAccess
             return list;
         }
 
-        public DepartmentBO getDepartmentByID(String id) //To get a department retrieved by ID
+        //To get a department retrieved by ID
+        public DepartmentBO getDepartmentByID(String id) 
         {
 
             

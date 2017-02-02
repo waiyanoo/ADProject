@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code Owner: Wai Yan Oo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,10 @@ namespace DataAccess
     
     public class RequestRequisitionDA
     {
+        //declaring entity framework
         LogicUniversityEntities model = new LogicUniversityEntities();
+
+        //saving requisition
         public void saveRequisition(RequisitionBO rbo)
         {
             Requisition r = new Requisition();
@@ -25,6 +29,7 @@ namespace DataAccess
             model.SaveChanges();
         }
 
+        //saving requisition and item data in the ItemRequisition Table
         public void saveItemRequisition(RequisitionItemBO ribo)
         {
             ItemBO ibo = new ItemBO();
