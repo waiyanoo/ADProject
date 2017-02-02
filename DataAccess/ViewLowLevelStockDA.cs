@@ -26,7 +26,7 @@ namespace DataAccess
             //    itemslist.Add(item);
             //}
 
-            var data = (from i in ctx.Items
+            var d2 = (from i in ctx.Items
                         join row1 in ctx.SupplierItems
                         on new { ID = i.ItemID, Price = i.Price } equals new { ID = row1.ItemID, Price = row1.Price } into joinedData
                         from row2 in joinedData.DefaultIfEmpty()
@@ -41,7 +41,7 @@ namespace DataAccess
                             i.Price,
                             i.UnitOfMeasure
                         }).ToList();
-            var data1 = (from i in ctx.Items
+            var data = (from i in ctx.Items
                      join si in ctx.SupplierItems on i.ItemID equals si.ItemID 
                         where i.Price == si.Price
                      where i.CurrentQty < i.ReorderLevel

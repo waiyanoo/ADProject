@@ -12,19 +12,19 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label>First Date :</label>
+                    <label>First Month :</label>
                     <asp:TextBox ID="firstdate" runat="server" TextMode="Month" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label>Second Date :</label>
+                    <label>Second Month :</label>
                     <asp:TextBox ID="seconddate" runat="server" TextMode="Month" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label>Third Date :</label>
+                    <label>Third Month :</label>
                     <asp:TextBox ID="thirddate" runat="server" TextMode="Month" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="form-group">
-                    <asp:Button ID="Show" runat="server" Text="Button" CssClass="btn btn-primary" OnClick="Show_Click" />
+                    <asp:Button ID="Show" runat="server" Text="Show" CssClass="btn btn-primary" OnClick="Show_Click" />
                 </div>
                 
             </div>
