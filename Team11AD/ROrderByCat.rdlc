@@ -83,6 +83,7 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
+                <Interval>=1</Interval>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -99,6 +100,9 @@
                     </Border>
                   </Style>
                 </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <IntervalType>Auto</IntervalType>
+                </ChartMajorTickMarks>
                 <ChartMinorTickMarks>
                   <Length>0.5</Length>
                 </ChartMinorTickMarks>

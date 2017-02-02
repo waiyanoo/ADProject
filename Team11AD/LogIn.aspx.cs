@@ -46,6 +46,9 @@ namespace Team11AD
                         if (autho.UserID == ubo.UserID) { Response.Redirect("ViewRequisitionList.aspx"); }
                         else Response.Redirect("ViewRequisition.aspx");
                         break;
+                    case "Department Representative":
+                        Response.Redirect("SetCollectionPoint.aspx");
+                        break;
                     case "Department Head":
                         Response.Redirect("ViewRequisitionList.aspx");
                         break;

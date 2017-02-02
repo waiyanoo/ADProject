@@ -37,12 +37,16 @@ namespace Team11AD
 
         protected void btnSet_Click(object sender, EventArgs e)
         {
+            SetCollectionPointBL scpbl = new SetCollectionPointBL();
+            UserBO ubo = new UserBO();
+            ubo = (UserBO)Session["user"];
             DepartmentBO dbo = new DepartmentBO();
             CollectionPointBO cbo = new CollectionPointBO();
+            dbo.DepartmentID = scpbl.getdepartmentID(ubo.UserID);
             dbo.CollectionTime = ddcTime.SelectedValue;
             cbo.CollectionPointName = ddcPoint.SelectedValue;
             dbo.CollectionPointName = cbo;
-            SetCollectionPointBL scpbl = new SetCollectionPointBL();
+            
             scpbl.updateCollectionPoint(dbo);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Alert Box", "alert('Successfully Updated')", true);
             

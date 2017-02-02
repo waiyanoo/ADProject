@@ -59,7 +59,7 @@
                 </ul>
             </div>
             </asp:Panel>
-            <!-- Menu for Department User -->
+            <!-- Menu for Department Head -->
             <asp:Panel ID="pDHedad" runat="server">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
@@ -87,10 +87,7 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li>
-                            <a href="ViewRequisitionList.aspx">Incoming Requisition</a>
-                        </li>
-                        <li>
-                            <a href="DelegateAuthority.aspx">Delegate Employee</a>
+                            <a href="SetCollectionPoint.aspx">Set Collection Point</a>
                         </li>
                     </ul>
                 </div>
@@ -100,7 +97,7 @@
                  <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li>
-                            <a href="ApproveAdjustmentRequestM.aspx"> Approve Adjustment Request</a>
+                            <a href="ApproveAdjustmentRequestM.aspx"> Approve Adjustment Voucher</a>
                         </li>
                         <li>
                             <a href="javascript:;" data-toggle="collapse" data-target="#demo2"> Reports <i class="fa fa-fw fa-caret-down"></i></a>
@@ -134,7 +131,7 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li>
-                            <a href="ApproveAdjustmentRequest.aspx"> Approve Adjustment Request</a>
+                            <a href="ApproveAdjustmentRequest.aspx"> Approve Adjustment Voucher</a>
                         </li>
                         <li>
                             <a href="SetReorderLevel.aspx"> Set Reorder Level</a>
@@ -183,7 +180,7 @@
                                     <a href="ViewAllStock.aspx"> View All Stock</a>
                                 </li>
                                 <li>
-                                    <a href="StockCard.aspx"> View Stock Card</a>
+                                    <a href="StockCard.aspx"> View Transaction Hitory</a>
                                 </li>
                             </ul>
                         </li>

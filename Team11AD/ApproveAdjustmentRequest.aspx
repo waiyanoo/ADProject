@@ -3,14 +3,14 @@
     Stationery Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
-    Approve Adjustment Requisition
+    Approve Adjustment Voucher
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
 	    <div class="row"> 
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label>Adjustment Request Number :</label>
+                    <label>Adjustment Voucher Number :</label>
                     <asp:DropDownList ID="ddrequestno" runat="server" CssClass="form-control" DataTextField = "VoucherNo" 
                         DataValueField = "VoucherNo"  AutoPostBack="True" OnSelectedIndexChanged="ddrequestno_SelectedIndexChanged" >
                     </asp:DropDownList>

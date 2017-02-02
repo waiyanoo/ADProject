@@ -27,5 +27,11 @@ namespace BusinessLogic
             SetCollectionPointDA spda = new SetCollectionPointDA();
             spda.updateCollectionPoint(dbo);
         }
+
+        public string getdepartmentID(string id)
+        {
+            SetCollectionPointDA spda = new SetCollectionPointDA();
+            return spda.getDepartmentID(id);
+        }
     }
 }

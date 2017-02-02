@@ -1,16 +1,19 @@
-﻿using System;
+﻿// Code Owner : Wai Yan Oo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessObject;
+using BusinessObject;// for acessing bussiness object class
 
 namespace DataAccess
 {
     public class ItemAdjustmentDA
     {
-        LogicUniversityEntities context = new LogicUniversityEntities();
+        LogicUniversityEntities context = new LogicUniversityEntities();//Create Entity Framework Object
 
+
+        //Add Item Adjustment data to item adjustment table
         public void AddItemAdjustment(ItemAdjustmentBO itemAdjust )
         {
             ItemAdjustment ia = new ItemAdjustment();

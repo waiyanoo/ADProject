@@ -20,6 +20,7 @@ namespace Team11AD
             pSManager.Visible = false;
             pSsupevisor.Visible = false;
             pDHeadWA.Visible = false;
+            pDRep.Visible = false;
             if (Session["user"] != null)
             {
                 UserBO ubo = new UserBO();

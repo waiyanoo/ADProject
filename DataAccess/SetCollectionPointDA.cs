@@ -47,5 +47,11 @@ namespace DataAccess
             dp.CollectionTime = dbo.CollectionTime;
             context.SaveChanges();
         }
+
+        public string getDepartmentID(string id)
+        {
+            string s = context.Users.Where(x => x.UserID == id).Select(y => y.DepartmentID).FirstOrDefault();
+            return s;
+        }
     }
 }

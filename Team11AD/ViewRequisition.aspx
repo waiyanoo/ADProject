@@ -24,7 +24,7 @@
                             <asp:BoundField DataField="Date" HeaderText="Submitted Date" DataFormatString="{0: dd/MM/yyyy}" HtmlEncode="false" HeaderStyle-Width="150px" />
                             <asp:BoundField DataField="UserID.Name" HeaderText="Submitted Employee" />
                             <asp:BoundField DataField="Status" HeaderText="Status" />
-                            <asp:CommandField ShowEditButton="true" ButtonType="Button" ControlStyle-CssClass="btn btn-primary" HeaderStyle-Width="100px" />
+                            <asp:CommandField ShowEditButton="true" EditText="View & Edit" ButtonType="Button" ControlStyle-CssClass="btn btn-primary" HeaderStyle-Width="100px" />
                             <asp:CommandField ShowDeleteButton="true" ButtonType="Button" ControlStyle-CssClass="btn btn-primary" DeleteText="Cancel" HeaderStyle-Width="100px" />
                             <asp:ButtonField CommandName="btnDetails" Text="Details" ButtonType="Button" ControlStyle-CssClass="btn btn-primary" />
                         </Columns>
