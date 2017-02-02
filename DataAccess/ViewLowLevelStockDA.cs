@@ -25,8 +25,24 @@ namespace DataAccess
             //    Item item = ctx.Items.Where(x => x.ItemID == id && x.CurrentQty < x.ReorderLevel).ToList().FirstOrDefault();
             //    itemslist.Add(item);
             //}
+
             var data = (from i in ctx.Items
-                     join si in ctx.SupplierItems on i.ItemID equals si.ItemID
+                        join row1 in ctx.SupplierItems
+                        on new { ID = i.ItemID, Price = i.Price } equals new { ID = row1.ItemID, Price = row1.Price } into joinedData
+                        from row2 in joinedData.DefaultIfEmpty()
+                        where i.CurrentQty <= i.ReorderLevel && row2.SupplierID == sp
+                        select new
+                        {
+                            i.ItemID,
+                            i.Description,
+                            i.CurrentQty,
+                            i.ReorderLevel,
+                            i.ReorderQty,
+                            i.Price,
+                            i.UnitOfMeasure
+                        }).ToList();
+            var data1 = (from i in ctx.Items
+                     join si in ctx.SupplierItems on i.ItemID equals si.ItemID 
                         where i.Price == si.Price
                      where i.CurrentQty < i.ReorderLevel
                      select new

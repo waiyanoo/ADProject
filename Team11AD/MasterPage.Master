@@ -116,7 +116,7 @@
                                     <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
                                 </li>
                                  <li>
-                                    <a href="TrendAnalysis.aspx"> Trend</a>
+                                    <a href="TrendAnalysis.aspx"> Trend Analysis</a>
                                 </li>
                                 
                             </ul>
@@ -154,7 +154,7 @@
                                     <a href="ReportOrderHistoryByDepartment.aspx"> Order History By Department</a>
                                 </li>
                                 <li>
-                                    <a href="TrendAnalysis.aspx"> Trend</a>
+                                    <a href="TrendAnalysis.aspx"> Trend Analysis</a>
                                 </li>
                             </ul>
                         </li>
@@ -180,7 +180,7 @@
                                     <a href="ViewAllStock.aspx"> View All Stock</a>
                                 </li>
                                 <li>
-                                    <a href="StockCard.aspx"> View Transaction Hitory</a>
+                                    <a href="StockCard.aspx"> View Stock Card</a>
                                 </li>
                             </ul>
                         </li>

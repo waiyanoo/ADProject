@@ -120,7 +120,7 @@ namespace Team11AD
                 {
                     TextBox txtQty = (TextBox)row.Cells[3].FindControl("txtQty");
                     riBO.RequiredQty = Int32.Parse(txtQty.Text); //user may enter wrong data
-                    Response.Redirect("ViewRequisition.aspx");
+                    
                 }
                 catch(Exception)
                 {
@@ -142,7 +142,10 @@ namespace Team11AD
             //pop-up message to indicate success/failure of update operation
             if (updateResult)
             {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "AlertBox", "alert('Requisition Items Updated')", true);
+                
+
+                Response.Write("<script>alert('Requisition Items Updated.')</script>");
+                Response.Write("<script>window.location.href='ViewRequisition.aspx';</script>");
             }
             else
             {

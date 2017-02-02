@@ -3,7 +3,7 @@
     Stationery Store Inventory System
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodytitle" runat="server">
-    Approve Adjustment Voucher(Above $200)
+    Approve Adjustment Voucher(Above $250)
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div class="panel-body">
