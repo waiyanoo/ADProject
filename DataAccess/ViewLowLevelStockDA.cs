@@ -20,17 +20,15 @@ namespace DataAccess
             List<string> itemsid = ctx.SupplierItems.Where(x => x.SupplierID == spid).Select(x => x.ItemID).ToList();
             List<Item> itemslist = new List<Item>();
             //add the item whose item id is in the itemsid list above into the itemslist
-            //foreach(var id in itemsid)
-            //{
-            //    Item item = ctx.Items.Where(x => x.ItemID == id && x.CurrentQty < x.ReorderLevel).ToList().FirstOrDefault();
-            //    itemslist.Add(item);
-            //}
+            
+
+           
 
             var d2 = (from i in ctx.Items
-                        join row1 in ctx.SupplierItems
-                        on new { ID = i.ItemID, Price = i.Price } equals new { ID = row1.ItemID, Price = row1.Price } into joinedData
+                        join si in ctx.SupplierItems
+                        on new { ID = i.ItemID, Price = i.Price } equals new { ID = si.ItemID, Price = si.Price } into joinedData
                         from row2 in joinedData.DefaultIfEmpty()
-                        where i.CurrentQty <= i.ReorderLevel && row2.SupplierID == sp
+                        where i.CurrentQty <= i.ReorderLevel where row2.SupplierID == spid
                         select new
                         {
                             i.ItemID,
@@ -41,38 +39,8 @@ namespace DataAccess
                             i.Price,
                             i.UnitOfMeasure
                         }).ToList();
-            var data = (from i in ctx.Items
-                     join si in ctx.SupplierItems on i.ItemID equals si.ItemID 
-                        where i.Price == si.Price
-                     where i.CurrentQty < i.ReorderLevel
-                     select new
-                     {
-                         i.ItemID,
-                         i.Description,
-                         i.CurrentQty,
-                         i.ReorderLevel,
-                         i.ReorderQty,
-                         i.Price,
-                         i.UnitOfMeasure
-
-                     }).ToList();
-            var t = (from i in ctx.Items
-                        from si in ctx.SupplierItems
-                        where i.CurrentQty < i.ReorderLevel
-                        where i.Price == si.Price
-                        where si.SupplierID == spid
-                        select new
-                        {
-                            i.ItemID,
-                            i.Description,
-                            i.CurrentQty,
-                            i.ReorderLevel,
-                            i.ReorderQty,
-                            i.Price,
-                            i.UnitOfMeasure
-                            
-                        }).ToList();
-            foreach(var id in data)
+          
+            foreach(var id in d2)
             {
                 Item i = new Item();
                 i.ItemID = id.ItemID;

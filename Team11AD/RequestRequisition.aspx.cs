@@ -62,6 +62,10 @@ namespace Team11AD.View
             string qty = txtqty.Text;
             int n;
             bool isNumeric = int.TryParse(qty, out n);
+            if(dditemdescription.SelectedValue == "")
+            {
+                lblqty.Text = "Please Select Item First.";
+            }
             if (isNumeric && n > 0)
             {
                 if (checkitem(dditemdescription.SelectedValue.ToString())) { 

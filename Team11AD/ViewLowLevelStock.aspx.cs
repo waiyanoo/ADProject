@@ -18,6 +18,8 @@ namespace Team11AD
             {
                 DropDownList1.DataSource = ViewLowLevelStockBL.getSupplierName();
                 DropDownList1.DataBind();
+                DropDownList1.Items.Insert(0, new ListItem("Select Supplier", String.Empty));
+                DropDownList1.SelectedIndex = 0;
                 llslist = ViewLowLevelStockBL.getLowlevelStocks(DropDownList1.SelectedValue);
                 grlowlevelitem.DataSource = ViewLowLevelStockBL.generateLowLevelStockTable(llslist, DropDownList1.SelectedValue);
                 grlowlevelitem.DataBind();

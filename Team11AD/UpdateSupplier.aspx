@@ -13,7 +13,7 @@
             <div class="col-lg-5">
                 <div class="form-group">
                     <label>Name :</label>
-                    <asp:TextBox ID="txtname" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtname"  runat="server" CssClass="form-control"></asp:TextBox>
                     
                     <asp:TextBox ID="txtpk" runat="server" Visible="false"></asp:TextBox>
                 </div>
