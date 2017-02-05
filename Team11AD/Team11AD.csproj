@@ -140,6 +140,7 @@
     <Content Include="Report\ReportDs.xss">
       <DependentUpon>ReportDs.xsd</DependentUpon>
     </Content>
+    <Content Include="SQL\Team11DB.sql" />
     <Content Include="StockCard.aspx" />
     <Content Include="style\font-awesome\css\font-awesome.css" />
     <Content Include="style\font-awesome\css\font-awesome.min.css" />
