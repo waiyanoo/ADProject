@@ -21,6 +21,7 @@
                 <p>
                     Institute of Systems Science<br />
                     25 Heng Mui Keng Terrace<br />
+                    Room (2-10)<br />
                     Singapore 119615
                 </p>
             </div>

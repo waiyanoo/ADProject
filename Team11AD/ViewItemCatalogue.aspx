@@ -24,7 +24,7 @@
             <div class="col-lg-12">
                 <div class="form-group">
                     <asp:GridView ID="gvitemcatalog" runat="server" CssClass="table table-responsive" AutoGenerateColumns="False" 
-                        GridLines="None" PageSize="12" AllowPaging="True" OnPageIndexChanging="gvitemcatalog_PageIndexChanging">
+                        GridLines="None" PageSize="12" AllowPaging="True"  OnPageIndexChanging="gvitemcatalog_PageIndexChanging">
                         <Columns>
                              <asp:TemplateField HeaderText="#">
                             <ItemTemplate>
@@ -37,6 +37,7 @@
                             <asp:BoundField DataField="ReorderQty" HeaderText="Reorder Quantity" />
                             <asp:BoundField DataField="UnitOfMeasure" HeaderText="Unit Of Measure" />
                             <asp:BoundField DataField="CategoryName" HeaderText="Category Name" />
+                            <asp:BoundField DataField="Bin" HeaderText="Bin" />
                         </Columns>
                         <PagerStyle HorizontalAlign = "Right" CssClass = "GridPager" />
                     </asp:GridView>

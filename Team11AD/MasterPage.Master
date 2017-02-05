@@ -8,15 +8,15 @@
     </asp:ContentPlaceHolder></title>
     
 
-    <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Logic/style/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../style/css/sb-admin.css" rel="stylesheet">
+    <link href="/Logic/style/css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../style/custom/css/style.css" rel="stylesheet">
+    <link href="/Logic/style/custom/css/style.css" rel="stylesheet">
 
-     <link href="../style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link href="/Logic/style/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     
@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Stationary Store Inventory System</a>
+                <a class="navbar-brand" href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Stationery Store Inventory System</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -247,10 +247,10 @@
     
     <!-- jQuery -->
 	<!-- jQuery -->
-    <script src="../style/js/jquery.js"></script>
+    <script src="/Logic/style/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../style/js/bootstrap.min.js"></script>
+    <script src="/Logic/style/js/bootstrap.min.js"></script>
 
 
 </body>
